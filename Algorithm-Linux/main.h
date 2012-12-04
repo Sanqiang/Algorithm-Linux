@@ -13,5 +13,7 @@ using namespace std;
 #include "Q1-VerifyUniqueCharInString.h"
 #include "Q2-ReverseString.h"
 #include "Q3-VerifyAnagram.h"
+#include "Q4-encodeUrl.h"
+#include "Q5-compressStr.h"
 
 #endif

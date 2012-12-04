@@ -12,6 +12,8 @@
 		32BC98A4166D782C0078BBCB /* Q1-VerifyUniqueCharInString.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 32BC98A2166D782C0078BBCB /* Q1-VerifyUniqueCharInString.cpp */; };
 		32BC98AB166D94E20078BBCB /* Q2-ReverseString.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 32BC98A9166D94E20078BBCB /* Q2-ReverseString.cpp */; };
 		32BC98AF166DA5CB0078BBCB /* Q3-VerifyAnagram.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 32BC98AD166DA5CB0078BBCB /* Q3-VerifyAnagram.cpp */; };
+		32BC98B6166DACFB0078BBCB /* Q4-encodeUrl.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 32BC98B4166DACFB0078BBCB /* Q4-encodeUrl.cpp */; };
+		32BC98BD166DBE250078BBCB /* Q5-compressStr.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 32BC98BB166DBE250078BBCB /* Q5-compressStr.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -38,6 +40,10 @@
 		32BC98AC166D94FC0078BBCB /* main.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = main.h; sourceTree = "<group>"; };
 		32BC98AD166DA5CB0078BBCB /* Q3-VerifyAnagram.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "Q3-VerifyAnagram.cpp"; sourceTree = "<group>"; };
 		32BC98AE166DA5CB0078BBCB /* Q3-VerifyAnagram.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Q3-VerifyAnagram.h"; sourceTree = "<group>"; };
+		32BC98B4166DACFB0078BBCB /* Q4-encodeUrl.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "Q4-encodeUrl.cpp"; sourceTree = "<group>"; };
+		32BC98B5166DACFB0078BBCB /* Q4-encodeUrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Q4-encodeUrl.h"; sourceTree = "<group>"; };
+		32BC98BB166DBE250078BBCB /* Q5-compressStr.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "Q5-compressStr.cpp"; sourceTree = "<group>"; };
+		32BC98BC166DBE250078BBCB /* Q5-compressStr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Q5-compressStr.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +93,10 @@
 				32BC98AA166D94E20078BBCB /* Q2-ReverseString.h */,
 				32BC98AD166DA5CB0078BBCB /* Q3-VerifyAnagram.cpp */,
 				32BC98AE166DA5CB0078BBCB /* Q3-VerifyAnagram.h */,
+				32BC98B4166DACFB0078BBCB /* Q4-encodeUrl.cpp */,
+				32BC98B5166DACFB0078BBCB /* Q4-encodeUrl.h */,
+				32BC98BB166DBE250078BBCB /* Q5-compressStr.cpp */,
+				32BC98BC166DBE250078BBCB /* Q5-compressStr.h */,
 			);
 			name = ArraysAndStrings;
 			sourceTree = "<group>";
@@ -146,6 +156,8 @@
 				32BC98A4166D782C0078BBCB /* Q1-VerifyUniqueCharInString.cpp in Sources */,
 				32BC98AB166D94E20078BBCB /* Q2-ReverseString.cpp in Sources */,
 				32BC98AF166DA5CB0078BBCB /* Q3-VerifyAnagram.cpp in Sources */,
+				32BC98B6166DACFB0078BBCB /* Q4-encodeUrl.cpp in Sources */,
+				32BC98BD166DBE250078BBCB /* Q5-compressStr.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -238,6 +250,7 @@
 				32BC9891166D57B80078BBCB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
