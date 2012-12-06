@@ -9,7 +9,6 @@
 
 int main(int argc, const char * argv[])
 {
-    std::cout<<compressStr("aaaaaaabbbbb");
     
     return 0;
 }

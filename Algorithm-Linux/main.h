@@ -9,11 +9,15 @@
 #ifndef Algorithm_Linux_main_h
 #define Algorithm_Linux_main_h
 using namespace std;
+
 #include <iostream>
 #include "Q1-VerifyUniqueCharInString.h"
 #include "Q2-ReverseString.h"
 #include "Q3-VerifyAnagram.h"
 #include "Q4-encodeUrl.h"
 #include "Q5-compressStr.h"
-
+#include "Q6-rotateMatrix.h"
+#include "Q7-SetZeroOnMatrix.h"
+#include "Q8-VerifyRotation.h"
+#include "KMP.h"
 #endif

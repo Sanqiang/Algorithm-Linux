@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "KmpSearch(char*, char*):KMP.cpp">
+         <PersistentStrings>
+            <PersistentString
+               value = "pattern[pos]">
+            </PersistentString>
+            <PersistentString
+               value = "text[i]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "compressStr(char*):Q5-compressStr.cpp">
+         <PersistentStrings>
+            <PersistentString
+               value = "sizeof(result)">
+            </PersistentString>
+            <PersistentString
+               value = "strlen(runner)">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>

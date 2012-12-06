@@ -15,5 +15,5 @@
 char * compressStr(char *str);
 int getLength(char *str);
 int getDigit(int num);
-void concat(char * str, char * ch, int num);
+void concat(char * & str, char * ch, int num);
 #endif /* defined(__Algorithm_Linux__Q5_compressStr__) */
