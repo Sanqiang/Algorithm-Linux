@@ -1,18 +1,18 @@
 //
-//  Q1-VerifyUniqueCharInString.cpp
+//  Q111-VerifyUniQ11ueCharInString.cpp
 //  Algorithm-Linux
 //
-//  Created by Sanqiang Zhao on 12/3/12.
-//  Copyright (c) 2012 Sanqiang Zhao. All rights reserved.
+//  Created by SanQ11iang Zhao on 12/3/12.
+//  Copyright (c) 2012 SanQ11iang Zhao. All rights reserved.
 //
 /*
  string str = "daa";
- std::cout<<(isUniqueChar(str))<<std::endl;
- std::cout<<(isUniqueCharLessSpace(str))<<std::endl;
+ std::cout<<(isUniQ11ueChar(str))<<std::endl;
+ std::cout<<(isUniQ11ueCharLessSpace(str))<<std::endl;
 */ 
-#include "Q1-VerifyUniqueCharInString.h"
+#include "Q11-VerifyUniqueCharInString.h"
 
-bool isUniqueChar(string str)
+bool isUniQ11ueChar(string str)
 {
     unsigned long length=str.length();
     int i;
@@ -32,7 +32,7 @@ bool isUniqueChar(string str)
     return true;
 }
 
-bool isUniqueCharLessSpace(string str)
+bool isUniQ11ueCharLessSpace(string str)
 {
     unsigned long length=str.length();
     int i;

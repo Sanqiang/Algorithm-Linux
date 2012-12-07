@@ -2,8 +2,8 @@
 //  KMP.cpp
 //  Algorithm-Linux
 //
-//  Created by Sanqiang Zhao on 12/5/12.
-//  Copyright (c) 2012 Sanqiang Zhao. All rights reserved.
+//  Created by SanQ11iang Zhao on 12/5/12.
+//  Copyright (c) 2012 SanQ11iang Zhao. All rights reserved.
 //
 /*
  int n = KmpSearch("ababababaaabab", "abab");

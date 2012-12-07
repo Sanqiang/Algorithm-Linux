@@ -7,17 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		320A2E35166FE38700B70DFB /* Q6-rotateMatrix.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 320A2E33166FE38700B70DFB /* Q6-rotateMatrix.cpp */; };
-		320A2E381670152B00B70DFB /* Q7-SetZeroOnMatrix.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 320A2E361670152B00B70DFB /* Q7-SetZeroOnMatrix.cpp */; };
-		320A2E3B16701BD800B70DFB /* Q8-VerifyRotation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 320A2E3916701BD800B70DFB /* Q8-VerifyRotation.cpp */; };
+		320A2E35166FE38700B70DFB /* Q16-rotateMatrix.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 320A2E33166FE38700B70DFB /* Q16-rotateMatrix.cpp */; };
+		320A2E381670152B00B70DFB /* Q17-SetZeroOnMatrix.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 320A2E361670152B00B70DFB /* Q17-SetZeroOnMatrix.cpp */; };
+		320A2E3B16701BD800B70DFB /* Q18-VerifyRotation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 320A2E3916701BD800B70DFB /* Q18-VerifyRotation.cpp */; };
 		320A2E3E16701E5000B70DFB /* KMP.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 320A2E3C16701E5000B70DFB /* KMP.cpp */; };
+		320A2E49167061DE00B70DFB /* Entity.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 320A2E47167061DE00B70DFB /* Entity.cpp */; };
+		320A2E4C16707EB300B70DFB /* Q21-removeDuplacate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 320A2E4A16707EB300B70DFB /* Q21-removeDuplacate.cpp */; };
+		320A2E541671154E00B70DFB /* Q22-findLastNthElement.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 320A2E521671154E00B70DFB /* Q22-findLastNthElement.cpp */; };
+		320A2E571671239B00B70DFB /* Q23-deleteElement.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 320A2E551671239B00B70DFB /* Q23-deleteElement.cpp */; };
+		320A2E5A16712D5400B70DFB /* Q24-PartitionLinkedList.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 320A2E5816712D5400B70DFB /* Q24-PartitionLinkedList.cpp */; };
+		320A2E5D16718B9200B70DFB /* Q25-AddLinkedList.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 320A2E5B16718B9200B70DFB /* Q25-AddLinkedList.cpp */; };
+		320A2E601671BA9D00B70DFB /* Q26-findEntryInCircularList.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 320A2E5E1671BA9D00B70DFB /* Q26-findEntryInCircularList.cpp */; };
+		320A2E631671C59800B70DFB /* Q27-VerifyPalindrome.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 320A2E611671C59800B70DFB /* Q27-VerifyPalindrome.cpp */; };
 		32BC988A166D57B80078BBCB /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 32BC9889166D57B80078BBCB /* main.cpp */; };
 		32BC988C166D57B80078BBCB /* Algorithm_Linux.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 32BC988B166D57B80078BBCB /* Algorithm_Linux.1 */; };
-		32BC98A4166D782C0078BBCB /* Q1-VerifyUniqueCharInString.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 32BC98A2166D782C0078BBCB /* Q1-VerifyUniqueCharInString.cpp */; };
-		32BC98AB166D94E20078BBCB /* Q2-ReverseString.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 32BC98A9166D94E20078BBCB /* Q2-ReverseString.cpp */; };
-		32BC98AF166DA5CB0078BBCB /* Q3-VerifyAnagram.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 32BC98AD166DA5CB0078BBCB /* Q3-VerifyAnagram.cpp */; };
-		32BC98B6166DACFB0078BBCB /* Q4-encodeUrl.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 32BC98B4166DACFB0078BBCB /* Q4-encodeUrl.cpp */; };
-		32BC98BD166DBE250078BBCB /* Q5-compressStr.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 32BC98BB166DBE250078BBCB /* Q5-compressStr.cpp */; };
+		32BC98A4166D782C0078BBCB /* Q11-VerifyUniqueCharInString.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 32BC98A2166D782C0078BBCB /* Q11-VerifyUniqueCharInString.cpp */; };
+		32BC98AB166D94E20078BBCB /* Q12-ReverseString.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 32BC98A9166D94E20078BBCB /* Q12-ReverseString.cpp */; };
+		32BC98AF166DA5CB0078BBCB /* Q13-VerifyAnagram.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 32BC98AD166DA5CB0078BBCB /* Q13-VerifyAnagram.cpp */; };
+		32BC98B6166DACFB0078BBCB /* Q14-encodeUrl.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 32BC98B4166DACFB0078BBCB /* Q14-encodeUrl.cpp */; };
+		32BC98BD166DBE250078BBCB /* Q15-compressStr.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 32BC98BB166DBE250078BBCB /* Q15-compressStr.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -34,28 +42,44 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		320A2E33166FE38700B70DFB /* Q6-rotateMatrix.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "Q6-rotateMatrix.cpp"; sourceTree = "<group>"; };
-		320A2E34166FE38700B70DFB /* Q6-rotateMatrix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Q6-rotateMatrix.h"; sourceTree = "<group>"; };
-		320A2E361670152B00B70DFB /* Q7-SetZeroOnMatrix.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "Q7-SetZeroOnMatrix.cpp"; sourceTree = "<group>"; };
-		320A2E371670152B00B70DFB /* Q7-SetZeroOnMatrix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Q7-SetZeroOnMatrix.h"; sourceTree = "<group>"; };
-		320A2E3916701BD800B70DFB /* Q8-VerifyRotation.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "Q8-VerifyRotation.cpp"; sourceTree = "<group>"; };
-		320A2E3A16701BD800B70DFB /* Q8-VerifyRotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Q8-VerifyRotation.h"; sourceTree = "<group>"; };
+		320A2E33166FE38700B70DFB /* Q16-rotateMatrix.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "Q16-rotateMatrix.cpp"; sourceTree = "<group>"; };
+		320A2E34166FE38700B70DFB /* Q16-rotateMatrix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Q16-rotateMatrix.h"; sourceTree = "<group>"; };
+		320A2E361670152B00B70DFB /* Q17-SetZeroOnMatrix.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "Q17-SetZeroOnMatrix.cpp"; sourceTree = "<group>"; };
+		320A2E371670152B00B70DFB /* Q17-SetZeroOnMatrix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Q17-SetZeroOnMatrix.h"; sourceTree = "<group>"; };
+		320A2E3916701BD800B70DFB /* Q18-VerifyRotation.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "Q18-VerifyRotation.cpp"; sourceTree = "<group>"; };
+		320A2E3A16701BD800B70DFB /* Q18-VerifyRotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Q18-VerifyRotation.h"; sourceTree = "<group>"; };
 		320A2E3C16701E5000B70DFB /* KMP.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = KMP.cpp; sourceTree = "<group>"; };
 		320A2E3D16701E5000B70DFB /* KMP.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KMP.h; sourceTree = "<group>"; };
+		320A2E47167061DE00B70DFB /* Entity.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Entity.cpp; sourceTree = "<group>"; };
+		320A2E48167061DE00B70DFB /* Entity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Entity.h; sourceTree = "<group>"; };
+		320A2E4A16707EB300B70DFB /* Q21-removeDuplacate.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "Q21-removeDuplacate.cpp"; sourceTree = "<group>"; };
+		320A2E4B16707EB300B70DFB /* Q21-removeDuplacate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Q21-removeDuplacate.h"; sourceTree = "<group>"; };
+		320A2E521671154E00B70DFB /* Q22-findLastNthElement.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "Q22-findLastNthElement.cpp"; sourceTree = "<group>"; };
+		320A2E531671154E00B70DFB /* Q22-findLastNthElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Q22-findLastNthElement.h"; sourceTree = "<group>"; };
+		320A2E551671239B00B70DFB /* Q23-deleteElement.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "Q23-deleteElement.cpp"; sourceTree = "<group>"; };
+		320A2E561671239B00B70DFB /* Q23-deleteElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Q23-deleteElement.h"; sourceTree = "<group>"; };
+		320A2E5816712D5400B70DFB /* Q24-PartitionLinkedList.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "Q24-PartitionLinkedList.cpp"; sourceTree = "<group>"; };
+		320A2E5916712D5400B70DFB /* Q24-PartitionLinkedList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Q24-PartitionLinkedList.h"; sourceTree = "<group>"; };
+		320A2E5B16718B9200B70DFB /* Q25-AddLinkedList.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "Q25-AddLinkedList.cpp"; sourceTree = "<group>"; };
+		320A2E5C16718B9200B70DFB /* Q25-AddLinkedList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Q25-AddLinkedList.h"; sourceTree = "<group>"; };
+		320A2E5E1671BA9D00B70DFB /* Q26-findEntryInCircularList.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "Q26-findEntryInCircularList.cpp"; sourceTree = "<group>"; };
+		320A2E5F1671BA9D00B70DFB /* Q26-findEntryInCircularList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Q26-findEntryInCircularList.h"; sourceTree = "<group>"; };
+		320A2E611671C59800B70DFB /* Q27-VerifyPalindrome.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "Q27-VerifyPalindrome.cpp"; sourceTree = "<group>"; };
+		320A2E621671C59800B70DFB /* Q27-VerifyPalindrome.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Q27-VerifyPalindrome.h"; sourceTree = "<group>"; };
 		32BC9885166D57B80078BBCB /* Algorithm-Linux */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Algorithm-Linux"; sourceTree = BUILT_PRODUCTS_DIR; };
 		32BC9889166D57B80078BBCB /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		32BC988B166D57B80078BBCB /* Algorithm_Linux.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = Algorithm_Linux.1; sourceTree = "<group>"; };
-		32BC98A2166D782C0078BBCB /* Q1-VerifyUniqueCharInString.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "Q1-VerifyUniqueCharInString.cpp"; sourceTree = "<group>"; };
-		32BC98A3166D782C0078BBCB /* Q1-VerifyUniqueCharInString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Q1-VerifyUniqueCharInString.h"; sourceTree = "<group>"; };
-		32BC98A9166D94E20078BBCB /* Q2-ReverseString.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "Q2-ReverseString.cpp"; sourceTree = "<group>"; };
-		32BC98AA166D94E20078BBCB /* Q2-ReverseString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Q2-ReverseString.h"; sourceTree = "<group>"; };
+		32BC98A2166D782C0078BBCB /* Q11-VerifyUniqueCharInString.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "Q11-VerifyUniqueCharInString.cpp"; sourceTree = "<group>"; };
+		32BC98A3166D782C0078BBCB /* Q11-VerifyUniqueCharInString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Q11-VerifyUniqueCharInString.h"; sourceTree = "<group>"; };
+		32BC98A9166D94E20078BBCB /* Q12-ReverseString.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "Q12-ReverseString.cpp"; sourceTree = "<group>"; };
+		32BC98AA166D94E20078BBCB /* Q12-ReverseString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Q12-ReverseString.h"; sourceTree = "<group>"; };
 		32BC98AC166D94FC0078BBCB /* main.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = main.h; sourceTree = "<group>"; };
-		32BC98AD166DA5CB0078BBCB /* Q3-VerifyAnagram.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "Q3-VerifyAnagram.cpp"; sourceTree = "<group>"; };
-		32BC98AE166DA5CB0078BBCB /* Q3-VerifyAnagram.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Q3-VerifyAnagram.h"; sourceTree = "<group>"; };
-		32BC98B4166DACFB0078BBCB /* Q4-encodeUrl.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "Q4-encodeUrl.cpp"; sourceTree = "<group>"; };
-		32BC98B5166DACFB0078BBCB /* Q4-encodeUrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Q4-encodeUrl.h"; sourceTree = "<group>"; };
-		32BC98BB166DBE250078BBCB /* Q5-compressStr.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "Q5-compressStr.cpp"; sourceTree = "<group>"; };
-		32BC98BC166DBE250078BBCB /* Q5-compressStr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Q5-compressStr.h"; sourceTree = "<group>"; };
+		32BC98AD166DA5CB0078BBCB /* Q13-VerifyAnagram.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "Q13-VerifyAnagram.cpp"; sourceTree = "<group>"; };
+		32BC98AE166DA5CB0078BBCB /* Q13-VerifyAnagram.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Q13-VerifyAnagram.h"; sourceTree = "<group>"; };
+		32BC98B4166DACFB0078BBCB /* Q14-encodeUrl.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "Q14-encodeUrl.cpp"; sourceTree = "<group>"; };
+		32BC98B5166DACFB0078BBCB /* Q14-encodeUrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Q14-encodeUrl.h"; sourceTree = "<group>"; };
+		32BC98BB166DBE250078BBCB /* Q15-compressStr.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "Q15-compressStr.cpp"; sourceTree = "<group>"; };
+		32BC98BC166DBE250078BBCB /* Q15-compressStr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Q15-compressStr.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,28 +93,44 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		320A2E2F166FA6C400B70DFB /* InterviewStreet */ = {
+		320A2E451670570000B70DFB /* LinkedLists */ = {
 			isa = PBXGroup;
 			children = (
-				320A2E32166FA6E900B70DFB /* FindStrings */,
+				320A2E4A16707EB300B70DFB /* Q21-removeDuplacate.cpp */,
+				320A2E4B16707EB300B70DFB /* Q21-removeDuplacate.h */,
+				320A2E521671154E00B70DFB /* Q22-findLastNthElement.cpp */,
+				320A2E531671154E00B70DFB /* Q22-findLastNthElement.h */,
+				320A2E551671239B00B70DFB /* Q23-deleteElement.cpp */,
+				320A2E561671239B00B70DFB /* Q23-deleteElement.h */,
+				320A2E5816712D5400B70DFB /* Q24-PartitionLinkedList.cpp */,
+				320A2E5916712D5400B70DFB /* Q24-PartitionLinkedList.h */,
+				320A2E5B16718B9200B70DFB /* Q25-AddLinkedList.cpp */,
+				320A2E5C16718B9200B70DFB /* Q25-AddLinkedList.h */,
+				320A2E5E1671BA9D00B70DFB /* Q26-findEntryInCircularList.cpp */,
+				320A2E5F1671BA9D00B70DFB /* Q26-findEntryInCircularList.h */,
+				320A2E611671C59800B70DFB /* Q27-VerifyPalindrome.cpp */,
+				320A2E621671C59800B70DFB /* Q27-VerifyPalindrome.h */,
 			);
-			name = InterviewStreet;
+			name = LinkedLists;
 			sourceTree = "<group>";
 		};
-		320A2E32166FA6E900B70DFB /* FindStrings */ = {
+		320A2E461670613F00B70DFB /* Utility */ = {
 			isa = PBXGroup;
 			children = (
+				320A2E47167061DE00B70DFB /* Entity.cpp */,
+				320A2E48167061DE00B70DFB /* Entity.h */,
 			);
-			name = FindStrings;
+			name = Utility;
 			sourceTree = "<group>";
 		};
 		32BC987A166D57B70078BBCB = {
 			isa = PBXGroup;
 			children = (
-				320A2E2F166FA6C400B70DFB /* InterviewStreet */,
-				32BC98A1166D78030078BBCB /* ArraysAndStrings */,
 				32BC9888166D57B80078BBCB /* Algorithm-Linux */,
 				32BC9886166D57B80078BBCB /* Products */,
+				32BC98A1166D78030078BBCB /* ArraysAndStrings */,
+				320A2E451670570000B70DFB /* LinkedLists */,
+				320A2E461670613F00B70DFB /* Utility */,
 			);
 			sourceTree = "<group>";
 		};
@@ -115,22 +155,22 @@
 		32BC98A1166D78030078BBCB /* ArraysAndStrings */ = {
 			isa = PBXGroup;
 			children = (
-				32BC98A2166D782C0078BBCB /* Q1-VerifyUniqueCharInString.cpp */,
-				32BC98A3166D782C0078BBCB /* Q1-VerifyUniqueCharInString.h */,
-				32BC98A9166D94E20078BBCB /* Q2-ReverseString.cpp */,
-				32BC98AA166D94E20078BBCB /* Q2-ReverseString.h */,
-				32BC98AD166DA5CB0078BBCB /* Q3-VerifyAnagram.cpp */,
-				32BC98AE166DA5CB0078BBCB /* Q3-VerifyAnagram.h */,
-				32BC98B4166DACFB0078BBCB /* Q4-encodeUrl.cpp */,
-				32BC98B5166DACFB0078BBCB /* Q4-encodeUrl.h */,
-				32BC98BB166DBE250078BBCB /* Q5-compressStr.cpp */,
-				32BC98BC166DBE250078BBCB /* Q5-compressStr.h */,
-				320A2E33166FE38700B70DFB /* Q6-rotateMatrix.cpp */,
-				320A2E34166FE38700B70DFB /* Q6-rotateMatrix.h */,
-				320A2E361670152B00B70DFB /* Q7-SetZeroOnMatrix.cpp */,
-				320A2E371670152B00B70DFB /* Q7-SetZeroOnMatrix.h */,
-				320A2E3916701BD800B70DFB /* Q8-VerifyRotation.cpp */,
-				320A2E3A16701BD800B70DFB /* Q8-VerifyRotation.h */,
+				32BC98A2166D782C0078BBCB /* Q11-VerifyUniqueCharInString.cpp */,
+				32BC98A3166D782C0078BBCB /* Q11-VerifyUniqueCharInString.h */,
+				32BC98A9166D94E20078BBCB /* Q12-ReverseString.cpp */,
+				32BC98AA166D94E20078BBCB /* Q12-ReverseString.h */,
+				32BC98AD166DA5CB0078BBCB /* Q13-VerifyAnagram.cpp */,
+				32BC98AE166DA5CB0078BBCB /* Q13-VerifyAnagram.h */,
+				32BC98B4166DACFB0078BBCB /* Q14-encodeUrl.cpp */,
+				32BC98B5166DACFB0078BBCB /* Q14-encodeUrl.h */,
+				32BC98BB166DBE250078BBCB /* Q15-compressStr.cpp */,
+				32BC98BC166DBE250078BBCB /* Q15-compressStr.h */,
+				320A2E33166FE38700B70DFB /* Q16-rotateMatrix.cpp */,
+				320A2E34166FE38700B70DFB /* Q16-rotateMatrix.h */,
+				320A2E361670152B00B70DFB /* Q17-SetZeroOnMatrix.cpp */,
+				320A2E371670152B00B70DFB /* Q17-SetZeroOnMatrix.h */,
+				320A2E3916701BD800B70DFB /* Q18-VerifyRotation.cpp */,
+				320A2E3A16701BD800B70DFB /* Q18-VerifyRotation.h */,
 				320A2E3C16701E5000B70DFB /* KMP.cpp */,
 				320A2E3D16701E5000B70DFB /* KMP.h */,
 			);
@@ -189,15 +229,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				32BC988A166D57B80078BBCB /* main.cpp in Sources */,
-				32BC98A4166D782C0078BBCB /* Q1-VerifyUniqueCharInString.cpp in Sources */,
-				32BC98AB166D94E20078BBCB /* Q2-ReverseString.cpp in Sources */,
-				32BC98AF166DA5CB0078BBCB /* Q3-VerifyAnagram.cpp in Sources */,
-				32BC98B6166DACFB0078BBCB /* Q4-encodeUrl.cpp in Sources */,
-				32BC98BD166DBE250078BBCB /* Q5-compressStr.cpp in Sources */,
-				320A2E35166FE38700B70DFB /* Q6-rotateMatrix.cpp in Sources */,
-				320A2E381670152B00B70DFB /* Q7-SetZeroOnMatrix.cpp in Sources */,
-				320A2E3B16701BD800B70DFB /* Q8-VerifyRotation.cpp in Sources */,
+				32BC98A4166D782C0078BBCB /* Q11-VerifyUniqueCharInString.cpp in Sources */,
+				32BC98AB166D94E20078BBCB /* Q12-ReverseString.cpp in Sources */,
+				32BC98AF166DA5CB0078BBCB /* Q13-VerifyAnagram.cpp in Sources */,
+				32BC98B6166DACFB0078BBCB /* Q14-encodeUrl.cpp in Sources */,
+				32BC98BD166DBE250078BBCB /* Q15-compressStr.cpp in Sources */,
+				320A2E35166FE38700B70DFB /* Q16-rotateMatrix.cpp in Sources */,
+				320A2E381670152B00B70DFB /* Q17-SetZeroOnMatrix.cpp in Sources */,
+				320A2E3B16701BD800B70DFB /* Q18-VerifyRotation.cpp in Sources */,
 				320A2E3E16701E5000B70DFB /* KMP.cpp in Sources */,
+				320A2E49167061DE00B70DFB /* Entity.cpp in Sources */,
+				320A2E4C16707EB300B70DFB /* Q21-removeDuplacate.cpp in Sources */,
+				320A2E541671154E00B70DFB /* Q22-findLastNthElement.cpp in Sources */,
+				320A2E571671239B00B70DFB /* Q23-deleteElement.cpp in Sources */,
+				320A2E5A16712D5400B70DFB /* Q24-PartitionLinkedList.cpp in Sources */,
+				320A2E5D16718B9200B70DFB /* Q25-AddLinkedList.cpp in Sources */,
+				320A2E601671BA9D00B70DFB /* Q26-findEntryInCircularList.cpp in Sources */,
+				320A2E631671C59800B70DFB /* Q27-VerifyPalindrome.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

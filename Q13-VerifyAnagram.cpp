@@ -1,14 +1,14 @@
 //
-//  Q3-VerifyAnagram.cpp
+//  Q13-VerifyAnagram.cpp
 //  Algorithm-Linux
 //
-//  Created by Sanqiang Zhao on 12/3/12.
-//  Copyright (c) 2012 Sanqiang Zhao. All rights reserved.
+//  Created by SanQ1iang Zhao on 12/3/12.
+//  Copyright (c) 2012 SanQ1iang Zhao. All rights reserved.
 //
 /*
     std:cout<<isAnagram("sta", "tsa"); 
  */
-#include "Q3-VerifyAnagram.h"
+#include "Q13-VerifyAnagram.h"
 
 bool isAnagram(char *left, char *right)
 {

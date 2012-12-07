@@ -1,15 +1,15 @@
 //
-//  Q4-encodeUrl.cpp
+//  Q114-encodeUrl.cpp
 //  Algorithm-Linux
 //
-//  Created by Sanqiang Zhao on 12/3/12.
-//  Copyright (c) 2012 Sanqiang Zhao. All rights reserved.
+//  Created by SanQ11iang Zhao on 12/3/12.
+//  Copyright (c) 2012 SanQ11iang Zhao. All rights reserved.
 //
 /*
  char * str = "a b c";
  std::cout<<encodeUrl(str);
  */
-#include "Q4-encodeUrl.h"
+#include "Q14-encodeUrl.h"
 
 char * encodeUrl(char *url)
 {

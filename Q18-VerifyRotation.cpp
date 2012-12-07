@@ -1,14 +1,14 @@
 //
-//  Q8-VerifyRotation.cpp
+//  Q118-VerifyRotation.cpp
 //  Algorithm-Linux
 //
-//  Created by Sanqiang Zhao on 12/5/12.
-//  Copyright (c) 2012 Sanqiang Zhao. All rights reserved.
+//  Created by SanQ11iang Zhao on 12/5/12.
+//  Copyright (c) 2012 SanQ11iang Zhao. All rights reserved.
 //
 /*
  cout<<isRotation("abcd", "dabc"); 
  */
-#include "Q8-VerifyRotation.h"
+#include "Q18-VerifyRotation.h"
 
 bool isSubstring(char *text, char *pattern)
 {

@@ -1,15 +1,15 @@
 //
-//  Q5-compressStr.cpp
+//  Q115-compressStr.cpp
 //  Algorithm-Linux
 //
-//  Created by Sanqiang Zhao on 12/4/12.
-//  Copyright (c) 2012 Sanqiang Zhao. All rights reserved.
+//  Created by SanQ11iang Zhao on 12/4/12.
+//  Copyright (c) 2012 SanQ11iang Zhao. All rights reserved.
 //
 /*
  std::cout<<compressStr("aaabbccddeeeee")<<std::endl;
  std::cout<<compressStr("amp")<<std::endl;
  */
-#include "Q5-compressStr.h"
+#include "Q15-compressStr.h"
 
 
 char * compressStr(char *str)

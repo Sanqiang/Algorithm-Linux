@@ -1,16 +1,16 @@
 //
-//  Q112-ReverseString.cpp
+//  Q12-ReverseString.cpp
 //  Algorithm-Linux
 //
-//  Created by SanQ11iang Zhao on 12/3/12.
-//  Copyright (c) 2012 SanQ11iang Zhao. All rights reserved.
+//  Created by SanQ1iang Zhao on 12/3/12.
+//  Copyright (c) 2012 SanQ1iang Zhao. All rights reserved.
 //
 /*
  char str[] = "aabbcc";
  reverseStr(str);
  std::cout<<str;
  */
-#include "Q112-ReverseString.h"
+#include "Q12-ReverseString.h"
 
 void reverseStr(char *str)
 {

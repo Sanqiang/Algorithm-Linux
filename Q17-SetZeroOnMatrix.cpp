@@ -1,9 +1,9 @@
 //
-//  Q7-SetZeroOnMatrix.cpp
+//  Q117-SetZeroOnMatrix.cpp
 //  Algorithm-Linux
 //
-//  Created by Sanqiang Zhao on 12/5/12.
-//  Copyright (c) 2012 Sanqiang Zhao. All rights reserved.
+//  Created by SanQ11iang Zhao on 12/5/12.
+//  Copyright (c) 2012 SanQ11iang Zhao. All rights reserved.
 //
 /*
  int matrix[]={
@@ -18,7 +18,7 @@
  setZero(matrix, 3, 4);
  printMatrix(matrix, 3, 4);
  */
-#include "Q7-SetZeroOnMatrix.h"
+#include "Q17-SetZeroOnMatrix.h"
 
 void setZero(int matrix[], int height, int width)
 {
