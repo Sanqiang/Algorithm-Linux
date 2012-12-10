@@ -24,5 +24,13 @@
             </PersistentString>
          </PersistentStrings>
       </ContextState>
+      <ContextState
+         contextName = "Stacks&lt;char&gt;::push(int, char):Q31-ThreeStacksFromOneArray.h">
+         <PersistentStrings>
+            <PersistentString
+               value = "length_array">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
    </ContextStates>
 </VariablesViewState>

@@ -30,4 +30,6 @@ using namespace std;
 #include "Q25-AddLinkedList.h"
 #include "Q26-findEntryInCircularList.h"
 #include "Q27-VerifyPalindrome.h"
+//Chapter 3
+#include "Q31-ThreeStacksFromOneArray.h"
 #endif

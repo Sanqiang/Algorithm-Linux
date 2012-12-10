@@ -281,8 +281,32 @@
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "21"
-         endingLineNumber = "21"
-         landmarkName = "isPalindromeHelperWhole(LinkedListElement&lt;char&gt; *&amp;left, LinkedListElement&lt;char&gt; *right, int &amp;current, int length)"
+         endingLineNumber = "21">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "Q31-ThreeStacksFromOneArray.h"
+         timestampString = "376800605.603974"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "102"
+         endingLineNumber = "102"
+         landmarkName = "shift(int n)"
+         landmarkType = "7">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "Yes"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "Q31-ThreeStacksFromOneArray.h"
+         timestampString = "376801216.943657"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "120"
+         endingLineNumber = "120"
+         landmarkName = "pop(int n)"
          landmarkType = "7">
       </FileBreakpoint>
    </FileBreakpoints>
