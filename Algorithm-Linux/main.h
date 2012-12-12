@@ -32,4 +32,20 @@ using namespace std;
 #include "Q27-VerifyPalindrome.h"
 //Chapter 3
 #include "Q31-ThreeStacksFromOneArray.h"
+#include "Q32-StackWithMin.h"
+#include "Q33-SetOfStacks.h"
+#include "Q34-TowersOfHanoi.h"
+#include "Q35-QueueWithTwoStacks.h"
+#include "Q36-SortStack.h"
+#include "Q37-AnimalShelter.h"
+//Chapter 4
+#include "Q41-CheckBalanceTree.h"
+#include "Q42-FindRouteBFS.h"
+#include "Q43-BinarySearchTreeFromSortedArray.h"
+#include "Q44-BuildLinkedListFromTreeBFS.h"
+#include "Q45-CheckBinarySearchTree.h"
+#include "Q46-NextOnBinaryTree.h"
+#include "Q47-FindCommonAncester.h"
+#include "Q48-CheckSubTree.h"
+#include "Q49-FindSumBFS.h"
 #endif

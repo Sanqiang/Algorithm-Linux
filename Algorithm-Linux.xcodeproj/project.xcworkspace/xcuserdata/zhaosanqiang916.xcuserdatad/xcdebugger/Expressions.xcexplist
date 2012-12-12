@@ -3,6 +3,9 @@
    version = "1.0">
    <ContextStates>
       <ContextState
+         contextName = "Hanoi&lt;int&gt;::move(int, int, int, int):Q34-TowersOfHanoi.h">
+      </ContextState>
+      <ContextState
          contextName = "KmpSearch(char*, char*):KMP.cpp">
          <PersistentStrings>
             <PersistentString
@@ -12,6 +15,25 @@
                value = "text[i]">
             </PersistentString>
          </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "buildBinarySearchTreeFromSortedArray(int*):Q43-BinarySearchTreeFromSortedArray.cpp">
+         <PersistentStrings>
+            <PersistentString
+               value = "sizeof(arr[3])">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "Stacks&lt;char&gt;::push(int, char):Q31-ThreeStacksFromOneArray.h">
+         <PersistentStrings>
+            <PersistentString
+               value = "length_array">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "Myqueue&lt;char&gt;::dequeue():Q35-QueueWithTwoStacks.h">
       </ContextState>
       <ContextState
          contextName = "compressStr(char*):Q5-compressStr.cpp">
@@ -25,12 +47,13 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "Stacks&lt;char&gt;::push(int, char):Q31-ThreeStacksFromOneArray.h">
-         <PersistentStrings>
-            <PersistentString
-               value = "length_array">
-            </PersistentString>
-         </PersistentStrings>
+         contextName = "main:main.cpp">
+      </ContextState>
+      <ContextState
+         contextName = "Stack&lt;int&gt;::push(int):Entity.h">
+      </ContextState>
+      <ContextState
+         contextName = "Stack&lt;char&gt;::pop():Entity.h">
       </ContextState>
    </ContextStates>
 </VariablesViewState>

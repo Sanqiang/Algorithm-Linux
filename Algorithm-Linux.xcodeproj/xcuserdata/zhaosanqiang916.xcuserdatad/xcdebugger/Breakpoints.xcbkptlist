@@ -121,19 +121,6 @@
          landmarkType = "7">
       </FileBreakpoint>
       <FileBreakpoint
-         shouldBeEnabled = "Yes"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         filePath = "KMP.cpp"
-         timestampString = "376454565.60618"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "21"
-         endingLineNumber = "21"
-         landmarkName = "KmpSearch(char * text, char * pattern)"
-         landmarkType = "7">
-      </FileBreakpoint>
-      <FileBreakpoint
          shouldBeEnabled = "No"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
@@ -284,30 +271,15 @@
          endingLineNumber = "21">
       </FileBreakpoint>
       <FileBreakpoint
-         shouldBeEnabled = "No"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         filePath = "Q31-ThreeStacksFromOneArray.h"
-         timestampString = "376800605.603974"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "102"
-         endingLineNumber = "102"
-         landmarkName = "shift(int n)"
-         landmarkType = "7">
-      </FileBreakpoint>
-      <FileBreakpoint
          shouldBeEnabled = "Yes"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
-         filePath = "Q31-ThreeStacksFromOneArray.h"
-         timestampString = "376801216.943657"
+         filePath = "Q43-BinarySearchTreeFromSortedArray.h"
+         timestampString = "376906907.783068"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "120"
-         endingLineNumber = "120"
-         landmarkName = "pop(int n)"
-         landmarkType = "7">
+         startingLineNumber = "14"
+         endingLineNumber = "14">
       </FileBreakpoint>
    </FileBreakpoints>
 </Bucket>

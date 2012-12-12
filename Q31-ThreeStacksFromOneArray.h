@@ -41,11 +41,11 @@ public:
 };
 
 template <typename Type>
-class Stacks {
+class StackThree {
     Type buffer[length_array];
     StackData *collection[num_stacks];
 public:
-    Stacks();
+    StackThree();
     void push(int n, Type input);
     void expand(int n);
     void shift(int n);
@@ -58,7 +58,7 @@ public:
 };
 
 template <typename Type>
-Stacks<Type>::Stacks()
+StackThree<Type>::StackThree()
 {
     int i = 0;
     for (; i<num_stacks; ++i) {
@@ -67,7 +67,7 @@ Stacks<Type>::Stacks()
 }
 
 template <typename Type>
-void Stacks<Type>::push(int n, Type input) {
+void StackThree<Type>::push(int n, Type input) {
     StackData *sd = collection[n];
     if (sd->size >= sd->capacity) {
         if (getTotalSize() >= length_array) {
@@ -85,14 +85,14 @@ void Stacks<Type>::push(int n, Type input) {
 }
 
 template <typename Type>
-void Stacks<Type>::expand(int n) {
+void StackThree<Type>::expand(int n) {
     StackData *sd = collection[n];
     shift((n+1)%num_stacks);
     ++sd->capacity;
 }
 
 template <typename Type>
-void Stacks<Type>::shift(int n) {
+void StackThree<Type>::shift(int n) {
     StackData *sd = collection[n];
     if (sd->size >= sd->capacity) {
         shift((n+1)%num_stacks);
@@ -109,7 +109,7 @@ void Stacks<Type>::shift(int n) {
 }
 
 template <typename Type>
-Type Stacks<Type>::pop(int n) {
+Type StackThree<Type>::pop(int n) {
     StackData *sd = collection[n];
     if (sd->size <= 0) {
         std::cout<<"no element in stack!!!"<<std::endl;
@@ -124,14 +124,14 @@ Type Stacks<Type>::pop(int n) {
 }
 
 template <typename Type>
-Type Stacks<Type>::peek(int n) {
+Type StackThree<Type>::peek(int n) {
     StackData *sd = collection[n];
     int val = buffer[sd->pointer];
     return val;
 }
 
 template <typename Type>
-int Stacks<Type>::nextElement(int n)
+int StackThree<Type>::nextElement(int n)
 {
     if (n + 1 >= length_array) {
         return 0;
@@ -140,7 +140,7 @@ int Stacks<Type>::nextElement(int n)
 }
 
 template <typename Type>
-int Stacks<Type>::previousElement(int n)
+int StackThree<Type>::previousElement(int n)
 {
     if (n-1 <= 0) {
         return length_array-1;
@@ -149,7 +149,7 @@ int Stacks<Type>::previousElement(int n)
 }
 
 template <typename Type>
-int Stacks<Type>::getTotalSize()
+int StackThree<Type>::getTotalSize()
 {
     int i = 0, size = 0;
     for (; i<num_stacks; ++i) {
@@ -159,7 +159,7 @@ int Stacks<Type>::getTotalSize()
 }
 
 template <typename Type>
-void Stacks<Type>::test()
+void StackThree<Type>::test()
 {
     std::cout<<std::endl;
     int i = 0;
