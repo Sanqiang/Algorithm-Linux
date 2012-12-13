@@ -48,4 +48,11 @@ using namespace std;
 #include "Q47-FindCommonAncester.h"
 #include "Q48-CheckSubTree.h"
 #include "Q49-FindSumBFS.h"
+//Chapter 5
+#include "Q51-UpdateBitOnMN.h"
+#include "Q52-PrintBinary.h"
+#include "Q53-NextNumWithSameBit.h"
+#include "Q55-BitSwapRequired.h"
+#include "Q56-SwapOddEvenBit.h"
+#include "Q57-FindMissing.h"
 #endif

@@ -35,6 +35,13 @@
 		32A605111677E62A001B9A7F /* Q47-FindCommonAncester.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 32A6050F1677E62A001B9A7F /* Q47-FindCommonAncester.cpp */; };
 		32A6051416781DB5001B9A7F /* Q48-CheckSubTree.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 32A6051216781DB5001B9A7F /* Q48-CheckSubTree.cpp */; };
 		32A6051B16783EF2001B9A7F /* Q49-FindSumBFS.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 32A6051916783EF2001B9A7F /* Q49-FindSumBFS.cpp */; };
+		32A6052016784DEE001B9A7F /* Q51-UpdateBitOnMN.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 32A6051E16784DEE001B9A7F /* Q51-UpdateBitOnMN.cpp */; };
+		32A6052316785C21001B9A7F /* Q52-PrintBinary.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 32A6052116785C21001B9A7F /* Q52-PrintBinary.cpp */; };
+		32A605261678658E001B9A7F /* Q53-NextNumWithSameBit.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 32A605241678658E001B9A7F /* Q53-NextNumWithSameBit.cpp */; };
+		32A6052916787A67001B9A7F /* Q55-BitSwapRequired.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 32A6052716787A67001B9A7F /* Q55-BitSwapRequired.cpp */; };
+		32A6052C16790B02001B9A7F /* Q56-SwapOddEvenBit.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 32A6052A16790B02001B9A7F /* Q56-SwapOddEvenBit.cpp */; };
+		32A6052F1679142B001B9A7F /* Q57-FindMissing.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 32A6052D1679142B001B9A7F /* Q57-FindMissing.cpp */; };
+		32A60532167983FD001B9A7F /* Q58-DrawHorizontalLine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 32A60530167983FD001B9A7F /* Q58-DrawHorizontalLine.cpp */; };
 		32BC988A166D57B80078BBCB /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 32BC9889166D57B80078BBCB /* main.cpp */; };
 		32BC988C166D57B80078BBCB /* Algorithm_Linux.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 32BC988B166D57B80078BBCB /* Algorithm_Linux.1 */; };
 		32BC98A4166D782C0078BBCB /* Q11-VerifyUniqueCharInString.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 32BC98A2166D782C0078BBCB /* Q11-VerifyUniqueCharInString.cpp */; };
@@ -114,6 +121,20 @@
 		32A6051316781DB5001B9A7F /* Q48-CheckSubTree.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Q48-CheckSubTree.h"; sourceTree = "<group>"; };
 		32A6051916783EF2001B9A7F /* Q49-FindSumBFS.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "Q49-FindSumBFS.cpp"; sourceTree = "<group>"; };
 		32A6051A16783EF2001B9A7F /* Q49-FindSumBFS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Q49-FindSumBFS.h"; sourceTree = "<group>"; };
+		32A6051E16784DEE001B9A7F /* Q51-UpdateBitOnMN.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "Q51-UpdateBitOnMN.cpp"; sourceTree = "<group>"; };
+		32A6051F16784DEE001B9A7F /* Q51-UpdateBitOnMN.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Q51-UpdateBitOnMN.h"; sourceTree = "<group>"; };
+		32A6052116785C21001B9A7F /* Q52-PrintBinary.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "Q52-PrintBinary.cpp"; sourceTree = "<group>"; };
+		32A6052216785C21001B9A7F /* Q52-PrintBinary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Q52-PrintBinary.h"; sourceTree = "<group>"; };
+		32A605241678658E001B9A7F /* Q53-NextNumWithSameBit.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "Q53-NextNumWithSameBit.cpp"; sourceTree = "<group>"; };
+		32A605251678658E001B9A7F /* Q53-NextNumWithSameBit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Q53-NextNumWithSameBit.h"; sourceTree = "<group>"; };
+		32A6052716787A67001B9A7F /* Q55-BitSwapRequired.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "Q55-BitSwapRequired.cpp"; sourceTree = "<group>"; };
+		32A6052816787A67001B9A7F /* Q55-BitSwapRequired.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Q55-BitSwapRequired.h"; sourceTree = "<group>"; };
+		32A6052A16790B02001B9A7F /* Q56-SwapOddEvenBit.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "Q56-SwapOddEvenBit.cpp"; sourceTree = "<group>"; };
+		32A6052B16790B02001B9A7F /* Q56-SwapOddEvenBit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Q56-SwapOddEvenBit.h"; sourceTree = "<group>"; };
+		32A6052D1679142B001B9A7F /* Q57-FindMissing.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "Q57-FindMissing.cpp"; sourceTree = "<group>"; };
+		32A6052E1679142B001B9A7F /* Q57-FindMissing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Q57-FindMissing.h"; sourceTree = "<group>"; };
+		32A60530167983FD001B9A7F /* Q58-DrawHorizontalLine.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "Q58-DrawHorizontalLine.cpp"; sourceTree = "<group>"; };
+		32A60531167983FD001B9A7F /* Q58-DrawHorizontalLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Q58-DrawHorizontalLine.h"; sourceTree = "<group>"; };
 		32BC9885166D57B80078BBCB /* Algorithm-Linux */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Algorithm-Linux"; sourceTree = BUILT_PRODUCTS_DIR; };
 		32BC9889166D57B80078BBCB /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		32BC988B166D57B80078BBCB /* Algorithm_Linux.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = Algorithm_Linux.1; sourceTree = "<group>"; };
@@ -217,9 +238,31 @@
 			name = TreesAndGraphs;
 			sourceTree = "<group>";
 		};
+		32A6051D16784CCB001B9A7F /* BitManupulation */ = {
+			isa = PBXGroup;
+			children = (
+				32A6051E16784DEE001B9A7F /* Q51-UpdateBitOnMN.cpp */,
+				32A6051F16784DEE001B9A7F /* Q51-UpdateBitOnMN.h */,
+				32A6052116785C21001B9A7F /* Q52-PrintBinary.cpp */,
+				32A6052216785C21001B9A7F /* Q52-PrintBinary.h */,
+				32A605241678658E001B9A7F /* Q53-NextNumWithSameBit.cpp */,
+				32A605251678658E001B9A7F /* Q53-NextNumWithSameBit.h */,
+				32A6052716787A67001B9A7F /* Q55-BitSwapRequired.cpp */,
+				32A6052816787A67001B9A7F /* Q55-BitSwapRequired.h */,
+				32A6052A16790B02001B9A7F /* Q56-SwapOddEvenBit.cpp */,
+				32A6052B16790B02001B9A7F /* Q56-SwapOddEvenBit.h */,
+				32A6052D1679142B001B9A7F /* Q57-FindMissing.cpp */,
+				32A6052E1679142B001B9A7F /* Q57-FindMissing.h */,
+				32A60530167983FD001B9A7F /* Q58-DrawHorizontalLine.cpp */,
+				32A60531167983FD001B9A7F /* Q58-DrawHorizontalLine.h */,
+			);
+			name = BitManupulation;
+			sourceTree = "<group>";
+		};
 		32BC987A166D57B70078BBCB = {
 			isa = PBXGroup;
 			children = (
+				32A6051D16784CCB001B9A7F /* BitManupulation */,
 				32A604FC16770359001B9A7F /* TreesAndGraphs */,
 				3257BF1D1675264F002B28BC /* StacksAndQueues */,
 				32BC9888166D57B80078BBCB /* Algorithm-Linux */,
@@ -358,6 +401,13 @@
 				32A605111677E62A001B9A7F /* Q47-FindCommonAncester.cpp in Sources */,
 				32A6051416781DB5001B9A7F /* Q48-CheckSubTree.cpp in Sources */,
 				32A6051B16783EF2001B9A7F /* Q49-FindSumBFS.cpp in Sources */,
+				32A6052016784DEE001B9A7F /* Q51-UpdateBitOnMN.cpp in Sources */,
+				32A6052316785C21001B9A7F /* Q52-PrintBinary.cpp in Sources */,
+				32A605261678658E001B9A7F /* Q53-NextNumWithSameBit.cpp in Sources */,
+				32A6052916787A67001B9A7F /* Q55-BitSwapRequired.cpp in Sources */,
+				32A6052C16790B02001B9A7F /* Q56-SwapOddEvenBit.cpp in Sources */,
+				32A6052F1679142B001B9A7F /* Q57-FindMissing.cpp in Sources */,
+				32A60532167983FD001B9A7F /* Q58-DrawHorizontalLine.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
