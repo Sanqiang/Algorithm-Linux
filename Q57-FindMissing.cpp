@@ -10,7 +10,18 @@
  cout<<findMissingNumInArray(arr, 9);
 */
 #include "Q57-FindMissing.h"
-
+/*
+ byte screen[] =
+ {
+ 49,50,51,52,53,54,55,49,
+ 51,52,53,54,55,56,57,58,
+ 59,60,61,62,58,48,58,58
+ };
+ printGraph(screen, 24, 64);
+ drawHorizontalLine(screen, 64, 1, 5, 0);
+ cout<<"=========="<<endl;
+ printGraph(screen, 24, 64);
+*/
 bool getBitOnArray(int arr[], int i, int n)
 {
     int num = arr[i];

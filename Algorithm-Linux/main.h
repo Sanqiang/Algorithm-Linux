@@ -12,6 +12,25 @@ using namespace std;
 
 #include <iostream>
 #include "Entity.h"
+//chapter 11
+#include "Q111-MergeSortedArray.h"
+#include "Q112-SortString.h"
+#include "Q113-FindInRotatedArr.h"
+#include "Q115-FindStringInIntersperse.h"
+#include "Q116-SearchOnMatrix.h"
+#include "QuickSort.h"
+//Chapter 9
+#include "Q91-CountWaysOnStairs.h"
+#include "Q92-RobotMovement.h"
+#include "Q93-FindMagicIndex.h"
+#include "Q94-Subsets.h"
+#include "Q95-Permutation.h"
+#include "Q96-ValidParenthesis.h"
+#include "Q97-FillColor.h"
+#include "Q98-MakeCoinCharges.h"
+#include "Q99-PlaceQueen.h"
+#include "Q910-CreateStackBox.h"
+#include "Q911-BinaryPresentation.h"
 //Chapter 1
 #include "Q11-VerifyUniqueCharInString.h"
 #include "Q12-ReverseString.h"
@@ -55,4 +74,6 @@ using namespace std;
 #include "Q55-BitSwapRequired.h"
 #include "Q56-SwapOddEvenBit.h"
 #include "Q57-FindMissing.h"
+#include "Q58-DrawHorizontalLine.h"
+
 #endif

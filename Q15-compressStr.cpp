@@ -84,12 +84,3 @@ void concat(char * &str, char *ch, int num)
         ++str;
     }
 }
-
-//useless
-void itoa(int n, char* s) {
-	int i = 0;
-	do {
-	    s[i++] = n%10+'0';
-	} while ((n/=10) > 0);
-    s[i] = '\0';
-}

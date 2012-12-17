@@ -49,6 +49,25 @@
 		32BC98AF166DA5CB0078BBCB /* Q13-VerifyAnagram.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 32BC98AD166DA5CB0078BBCB /* Q13-VerifyAnagram.cpp */; };
 		32BC98B6166DACFB0078BBCB /* Q14-encodeUrl.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 32BC98B4166DACFB0078BBCB /* Q14-encodeUrl.cpp */; };
 		32BC98BD166DBE250078BBCB /* Q15-compressStr.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 32BC98BB166DBE250078BBCB /* Q15-compressStr.cpp */; };
+		32E2C447167C028800B0A2AC /* Q91-CountWaysOnStairs.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 32E2C445167C028800B0A2AC /* Q91-CountWaysOnStairs.cpp */; };
+		32E2C44E167C0FDD00B0A2AC /* Q92-RobotMovement.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 32E2C44C167C0FDD00B0A2AC /* Q92-RobotMovement.cpp */; };
+		32E2C451167C41DD00B0A2AC /* Q93-FindMagicIndex.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 32E2C44F167C41DC00B0A2AC /* Q93-FindMagicIndex.cpp */; };
+		32E2C454167C794100B0A2AC /* Q94-Subsets.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 32E2C452167C794100B0A2AC /* Q94-Subsets.cpp */; };
+		32E2C457167C8C3000B0A2AC /* Q95-Permutation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 32E2C455167C8C3000B0A2AC /* Q95-Permutation.cpp */; };
+		32E2C45A167D0A8200B0A2AC /* Q96-ValidParenthesis.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 32E2C458167D0A8200B0A2AC /* Q96-ValidParenthesis.cpp */; };
+		32E2C45D167D1BBD00B0A2AC /* Q97-FillColor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 32E2C45B167D1BBD00B0A2AC /* Q97-FillColor.cpp */; };
+		32E2C463167D21B800B0A2AC /* Q98-MakeCoinCharges.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 32E2C461167D21B800B0A2AC /* Q98-MakeCoinCharges.cpp */; };
+		32E2C466167D317500B0A2AC /* Q99-PlaceQueen.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 32E2C464167D317400B0A2AC /* Q99-PlaceQueen.cpp */; };
+		32E2C469167D9CF200B0A2AC /* Q910-CreateStackBox.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 32E2C467167D9CF100B0A2AC /* Q910-CreateStackBox.cpp */; };
+		32E2C46C167DD58300B0A2AC /* Q911-BinaryPresentation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 32E2C46A167DD58300B0A2AC /* Q911-BinaryPresentation.cpp */; };
+		32E2C46F167DEC3F00B0A2AC /* Util.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 32E2C46D167DEC3F00B0A2AC /* Util.cpp */; };
+		32E2C473167DEEF100B0A2AC /* Q111-MergeSortedArray.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 32E2C471167DEEF100B0A2AC /* Q111-MergeSortedArray.cpp */; };
+		32E2C476167E676200B0A2AC /* Q112-SortString.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 32E2C474167E676200B0A2AC /* Q112-SortString.cpp */; };
+		32E2C479167E677200B0A2AC /* QuickSort.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 32E2C477167E677200B0A2AC /* QuickSort.cpp */; };
+		32E2C47C167E7A5800B0A2AC /* Q113-FindInRotatedArr.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 32E2C47A167E7A5800B0A2AC /* Q113-FindInRotatedArr.cpp */; };
+		32E2C47F167E863300B0A2AC /* Q115-FindStringInIntersperse.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 32E2C47D167E863300B0A2AC /* Q115-FindStringInIntersperse.cpp */; };
+		32E2C482167E945F00B0A2AC /* Q116-SearchOnMatrix.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 32E2C480167E945F00B0A2AC /* Q116-SearchOnMatrix.cpp */; };
+		32E2C485167ECBDF00B0A2AC /* Q117-LongestIncreasingSequence.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 32E2C483167ECBDF00B0A2AC /* Q117-LongestIncreasingSequence.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -149,6 +168,44 @@
 		32BC98B5166DACFB0078BBCB /* Q14-encodeUrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Q14-encodeUrl.h"; sourceTree = "<group>"; };
 		32BC98BB166DBE250078BBCB /* Q15-compressStr.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "Q15-compressStr.cpp"; sourceTree = "<group>"; };
 		32BC98BC166DBE250078BBCB /* Q15-compressStr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Q15-compressStr.h"; sourceTree = "<group>"; };
+		32E2C445167C028800B0A2AC /* Q91-CountWaysOnStairs.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "Q91-CountWaysOnStairs.cpp"; sourceTree = "<group>"; };
+		32E2C446167C028800B0A2AC /* Q91-CountWaysOnStairs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Q91-CountWaysOnStairs.h"; sourceTree = "<group>"; };
+		32E2C44C167C0FDD00B0A2AC /* Q92-RobotMovement.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "Q92-RobotMovement.cpp"; sourceTree = "<group>"; };
+		32E2C44D167C0FDD00B0A2AC /* Q92-RobotMovement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Q92-RobotMovement.h"; sourceTree = "<group>"; };
+		32E2C44F167C41DC00B0A2AC /* Q93-FindMagicIndex.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "Q93-FindMagicIndex.cpp"; sourceTree = "<group>"; };
+		32E2C450167C41DC00B0A2AC /* Q93-FindMagicIndex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Q93-FindMagicIndex.h"; sourceTree = "<group>"; };
+		32E2C452167C794100B0A2AC /* Q94-Subsets.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "Q94-Subsets.cpp"; sourceTree = "<group>"; };
+		32E2C453167C794100B0A2AC /* Q94-Subsets.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Q94-Subsets.h"; sourceTree = "<group>"; };
+		32E2C455167C8C3000B0A2AC /* Q95-Permutation.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "Q95-Permutation.cpp"; sourceTree = "<group>"; };
+		32E2C456167C8C3000B0A2AC /* Q95-Permutation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Q95-Permutation.h"; sourceTree = "<group>"; };
+		32E2C458167D0A8200B0A2AC /* Q96-ValidParenthesis.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "Q96-ValidParenthesis.cpp"; sourceTree = "<group>"; };
+		32E2C459167D0A8200B0A2AC /* Q96-ValidParenthesis.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Q96-ValidParenthesis.h"; sourceTree = "<group>"; };
+		32E2C45B167D1BBD00B0A2AC /* Q97-FillColor.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "Q97-FillColor.cpp"; sourceTree = "<group>"; };
+		32E2C45C167D1BBD00B0A2AC /* Q97-FillColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Q97-FillColor.h"; sourceTree = "<group>"; };
+		32E2C461167D21B800B0A2AC /* Q98-MakeCoinCharges.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "Q98-MakeCoinCharges.cpp"; sourceTree = "<group>"; };
+		32E2C462167D21B800B0A2AC /* Q98-MakeCoinCharges.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Q98-MakeCoinCharges.h"; sourceTree = "<group>"; };
+		32E2C464167D317400B0A2AC /* Q99-PlaceQueen.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "Q99-PlaceQueen.cpp"; sourceTree = "<group>"; };
+		32E2C465167D317400B0A2AC /* Q99-PlaceQueen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Q99-PlaceQueen.h"; sourceTree = "<group>"; };
+		32E2C467167D9CF100B0A2AC /* Q910-CreateStackBox.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "Q910-CreateStackBox.cpp"; sourceTree = "<group>"; };
+		32E2C468167D9CF200B0A2AC /* Q910-CreateStackBox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Q910-CreateStackBox.h"; sourceTree = "<group>"; };
+		32E2C46A167DD58300B0A2AC /* Q911-BinaryPresentation.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "Q911-BinaryPresentation.cpp"; sourceTree = "<group>"; };
+		32E2C46B167DD58300B0A2AC /* Q911-BinaryPresentation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Q911-BinaryPresentation.h"; sourceTree = "<group>"; };
+		32E2C46D167DEC3F00B0A2AC /* Util.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Util.cpp; sourceTree = "<group>"; };
+		32E2C46E167DEC3F00B0A2AC /* Util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Util.h; sourceTree = "<group>"; };
+		32E2C471167DEEF100B0A2AC /* Q111-MergeSortedArray.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "Q111-MergeSortedArray.cpp"; sourceTree = "<group>"; };
+		32E2C472167DEEF100B0A2AC /* Q111-MergeSortedArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Q111-MergeSortedArray.h"; sourceTree = "<group>"; };
+		32E2C474167E676200B0A2AC /* Q112-SortString.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "Q112-SortString.cpp"; sourceTree = "<group>"; };
+		32E2C475167E676200B0A2AC /* Q112-SortString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Q112-SortString.h"; sourceTree = "<group>"; };
+		32E2C477167E677200B0A2AC /* QuickSort.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = QuickSort.cpp; sourceTree = "<group>"; };
+		32E2C478167E677200B0A2AC /* QuickSort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuickSort.h; sourceTree = "<group>"; };
+		32E2C47A167E7A5800B0A2AC /* Q113-FindInRotatedArr.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "Q113-FindInRotatedArr.cpp"; sourceTree = "<group>"; };
+		32E2C47B167E7A5800B0A2AC /* Q113-FindInRotatedArr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Q113-FindInRotatedArr.h"; sourceTree = "<group>"; };
+		32E2C47D167E863300B0A2AC /* Q115-FindStringInIntersperse.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "Q115-FindStringInIntersperse.cpp"; sourceTree = "<group>"; };
+		32E2C47E167E863300B0A2AC /* Q115-FindStringInIntersperse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Q115-FindStringInIntersperse.h"; sourceTree = "<group>"; };
+		32E2C480167E945F00B0A2AC /* Q116-SearchOnMatrix.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "Q116-SearchOnMatrix.cpp"; sourceTree = "<group>"; };
+		32E2C481167E945F00B0A2AC /* Q116-SearchOnMatrix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Q116-SearchOnMatrix.h"; sourceTree = "<group>"; };
+		32E2C483167ECBDF00B0A2AC /* Q117-LongestIncreasingSequence.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "Q117-LongestIncreasingSequence.cpp"; sourceTree = "<group>"; };
+		32E2C484167ECBDF00B0A2AC /* Q117-LongestIncreasingSequence.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Q117-LongestIncreasingSequence.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -188,6 +245,8 @@
 			children = (
 				320A2E47167061DE00B70DFB /* Entity.cpp */,
 				320A2E48167061DE00B70DFB /* Entity.h */,
+				32E2C46D167DEC3F00B0A2AC /* Util.cpp */,
+				32E2C46E167DEC3F00B0A2AC /* Util.h */,
 			);
 			name = Utility;
 			sourceTree = "<group>";
@@ -262,6 +321,8 @@
 		32BC987A166D57B70078BBCB = {
 			isa = PBXGroup;
 			children = (
+				32E2C470167DEECC00B0A2AC /* SortingAndSearching */,
+				32E2C443167BE83100B0A2AC /* RecursiveAndDynamicProgramming */,
 				32A6051D16784CCB001B9A7F /* BitManupulation */,
 				32A604FC16770359001B9A7F /* TreesAndGraphs */,
 				3257BF1D1675264F002B28BC /* StacksAndQueues */,
@@ -314,6 +375,56 @@
 				320A2E3D16701E5000B70DFB /* KMP.h */,
 			);
 			name = ArraysAndStrings;
+			sourceTree = "<group>";
+		};
+		32E2C443167BE83100B0A2AC /* RecursiveAndDynamicProgramming */ = {
+			isa = PBXGroup;
+			children = (
+				32E2C445167C028800B0A2AC /* Q91-CountWaysOnStairs.cpp */,
+				32E2C446167C028800B0A2AC /* Q91-CountWaysOnStairs.h */,
+				32E2C44C167C0FDD00B0A2AC /* Q92-RobotMovement.cpp */,
+				32E2C44D167C0FDD00B0A2AC /* Q92-RobotMovement.h */,
+				32E2C44F167C41DC00B0A2AC /* Q93-FindMagicIndex.cpp */,
+				32E2C450167C41DC00B0A2AC /* Q93-FindMagicIndex.h */,
+				32E2C452167C794100B0A2AC /* Q94-Subsets.cpp */,
+				32E2C453167C794100B0A2AC /* Q94-Subsets.h */,
+				32E2C455167C8C3000B0A2AC /* Q95-Permutation.cpp */,
+				32E2C456167C8C3000B0A2AC /* Q95-Permutation.h */,
+				32E2C458167D0A8200B0A2AC /* Q96-ValidParenthesis.cpp */,
+				32E2C459167D0A8200B0A2AC /* Q96-ValidParenthesis.h */,
+				32E2C45B167D1BBD00B0A2AC /* Q97-FillColor.cpp */,
+				32E2C45C167D1BBD00B0A2AC /* Q97-FillColor.h */,
+				32E2C461167D21B800B0A2AC /* Q98-MakeCoinCharges.cpp */,
+				32E2C462167D21B800B0A2AC /* Q98-MakeCoinCharges.h */,
+				32E2C464167D317400B0A2AC /* Q99-PlaceQueen.cpp */,
+				32E2C465167D317400B0A2AC /* Q99-PlaceQueen.h */,
+				32E2C467167D9CF100B0A2AC /* Q910-CreateStackBox.cpp */,
+				32E2C468167D9CF200B0A2AC /* Q910-CreateStackBox.h */,
+				32E2C46A167DD58300B0A2AC /* Q911-BinaryPresentation.cpp */,
+				32E2C46B167DD58300B0A2AC /* Q911-BinaryPresentation.h */,
+			);
+			name = RecursiveAndDynamicProgramming;
+			sourceTree = "<group>";
+		};
+		32E2C470167DEECC00B0A2AC /* SortingAndSearching */ = {
+			isa = PBXGroup;
+			children = (
+				32E2C471167DEEF100B0A2AC /* Q111-MergeSortedArray.cpp */,
+				32E2C472167DEEF100B0A2AC /* Q111-MergeSortedArray.h */,
+				32E2C474167E676200B0A2AC /* Q112-SortString.cpp */,
+				32E2C475167E676200B0A2AC /* Q112-SortString.h */,
+				32E2C477167E677200B0A2AC /* QuickSort.cpp */,
+				32E2C478167E677200B0A2AC /* QuickSort.h */,
+				32E2C47A167E7A5800B0A2AC /* Q113-FindInRotatedArr.cpp */,
+				32E2C47B167E7A5800B0A2AC /* Q113-FindInRotatedArr.h */,
+				32E2C47D167E863300B0A2AC /* Q115-FindStringInIntersperse.cpp */,
+				32E2C47E167E863300B0A2AC /* Q115-FindStringInIntersperse.h */,
+				32E2C480167E945F00B0A2AC /* Q116-SearchOnMatrix.cpp */,
+				32E2C481167E945F00B0A2AC /* Q116-SearchOnMatrix.h */,
+				32E2C483167ECBDF00B0A2AC /* Q117-LongestIncreasingSequence.cpp */,
+				32E2C484167ECBDF00B0A2AC /* Q117-LongestIncreasingSequence.h */,
+			);
+			name = SortingAndSearching;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -408,6 +519,25 @@
 				32A6052C16790B02001B9A7F /* Q56-SwapOddEvenBit.cpp in Sources */,
 				32A6052F1679142B001B9A7F /* Q57-FindMissing.cpp in Sources */,
 				32A60532167983FD001B9A7F /* Q58-DrawHorizontalLine.cpp in Sources */,
+				32E2C447167C028800B0A2AC /* Q91-CountWaysOnStairs.cpp in Sources */,
+				32E2C44E167C0FDD00B0A2AC /* Q92-RobotMovement.cpp in Sources */,
+				32E2C451167C41DD00B0A2AC /* Q93-FindMagicIndex.cpp in Sources */,
+				32E2C454167C794100B0A2AC /* Q94-Subsets.cpp in Sources */,
+				32E2C457167C8C3000B0A2AC /* Q95-Permutation.cpp in Sources */,
+				32E2C45A167D0A8200B0A2AC /* Q96-ValidParenthesis.cpp in Sources */,
+				32E2C45D167D1BBD00B0A2AC /* Q97-FillColor.cpp in Sources */,
+				32E2C463167D21B800B0A2AC /* Q98-MakeCoinCharges.cpp in Sources */,
+				32E2C466167D317500B0A2AC /* Q99-PlaceQueen.cpp in Sources */,
+				32E2C469167D9CF200B0A2AC /* Q910-CreateStackBox.cpp in Sources */,
+				32E2C46C167DD58300B0A2AC /* Q911-BinaryPresentation.cpp in Sources */,
+				32E2C46F167DEC3F00B0A2AC /* Util.cpp in Sources */,
+				32E2C473167DEEF100B0A2AC /* Q111-MergeSortedArray.cpp in Sources */,
+				32E2C476167E676200B0A2AC /* Q112-SortString.cpp in Sources */,
+				32E2C479167E677200B0A2AC /* QuickSort.cpp in Sources */,
+				32E2C47C167E7A5800B0A2AC /* Q113-FindInRotatedArr.cpp in Sources */,
+				32E2C47F167E863300B0A2AC /* Q115-FindStringInIntersperse.cpp in Sources */,
+				32E2C482167E945F00B0A2AC /* Q116-SearchOnMatrix.cpp in Sources */,
+				32E2C485167ECBDF00B0A2AC /* Q117-LongestIncreasingSequence.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

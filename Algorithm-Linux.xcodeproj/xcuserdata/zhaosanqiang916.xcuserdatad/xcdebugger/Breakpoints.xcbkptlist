@@ -281,5 +281,18 @@
          startingLineNumber = "14"
          endingLineNumber = "14">
       </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "Yes"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "Q58-DrawHorizontalLine.cpp"
+         timestampString = "377219155.781239"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "32"
+         endingLineNumber = "32"
+         landmarkName = "drawHorizontalLine(byte screen[], int width, int x1, int x2, int y)"
+         landmarkType = "7">
+      </FileBreakpoint>
    </FileBreakpoints>
 </Bucket>

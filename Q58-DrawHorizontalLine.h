@@ -10,5 +10,8 @@
 #define __Algorithm_Linux__Q58_DrawHorizontalLine__
 
 #include <iostream>
+#include "Q52-PrintBinary.h"
 #define byte unsigned char
+void drawHorizontalLine(byte screen[], int width, int x1, int x2, int y);
+void printGraph(byte screen[], int length, int width);
 #endif /* defined(__Algorithm_Linux__Q58_DrawHorizontalLine__) */
