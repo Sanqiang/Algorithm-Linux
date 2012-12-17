@@ -18,6 +18,8 @@ using namespace std;
 #include "Q113-FindInRotatedArr.h"
 #include "Q115-FindStringInIntersperse.h"
 #include "Q116-SearchOnMatrix.h"
+#include "Q117-LongestIncreasingSequence.h"
+#include "Q118-TrackBinarySearchTree.h"
 #include "QuickSort.h"
 //Chapter 9
 #include "Q91-CountWaysOnStairs.h"

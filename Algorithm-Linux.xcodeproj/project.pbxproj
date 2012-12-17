@@ -23,6 +23,7 @@
 		3257BF21167529EB002B28BC /* Q31-ThreeStacksFromOneArray.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3257BF1F167529EB002B28BC /* Q31-ThreeStacksFromOneArray.cpp */; };
 		3257BF2416759C79002B28BC /* Q32-StackWithMin.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3257BF2216759C79002B28BC /* Q32-StackWithMin.cpp */; };
 		3257BF271675A652002B28BC /* Q33-SetOfStacks.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3257BF251675A652002B28BC /* Q33-SetOfStacks.cpp */; };
+		32A30875167EF2C400BDB740 /* Q118-TrackBinarySearchTree.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 32A30873167EF2C400BDB740 /* Q118-TrackBinarySearchTree.cpp */; };
 		32A604F41676BD2F001B9A7F /* Q35-QueueWithTwoStacks.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 32A604F21676BD2F001B9A7F /* Q35-QueueWithTwoStacks.cpp */; };
 		32A604F81676C5BE001B9A7F /* Q36-SortStack.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 32A604F61676C5BE001B9A7F /* Q36-SortStack.cpp */; };
 		32A604FB1676E910001B9A7F /* Q37-AnimalShelter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 32A604F91676E910001B9A7F /* Q37-AnimalShelter.cpp */; };
@@ -116,6 +117,8 @@
 		3257BF2316759C79002B28BC /* Q32-StackWithMin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Q32-StackWithMin.h"; sourceTree = "<group>"; };
 		3257BF251675A652002B28BC /* Q33-SetOfStacks.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "Q33-SetOfStacks.cpp"; sourceTree = "<group>"; };
 		3257BF261675A652002B28BC /* Q33-SetOfStacks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Q33-SetOfStacks.h"; sourceTree = "<group>"; };
+		32A30873167EF2C400BDB740 /* Q118-TrackBinarySearchTree.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "Q118-TrackBinarySearchTree.cpp"; sourceTree = "<group>"; };
+		32A30874167EF2C400BDB740 /* Q118-TrackBinarySearchTree.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Q118-TrackBinarySearchTree.h"; sourceTree = "<group>"; };
 		32A604F21676BD2F001B9A7F /* Q35-QueueWithTwoStacks.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "Q35-QueueWithTwoStacks.cpp"; sourceTree = "<group>"; };
 		32A604F31676BD2F001B9A7F /* Q35-QueueWithTwoStacks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Q35-QueueWithTwoStacks.h"; sourceTree = "<group>"; };
 		32A604F61676C5BE001B9A7F /* Q36-SortStack.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "Q36-SortStack.cpp"; sourceTree = "<group>"; };
@@ -423,6 +426,8 @@
 				32E2C481167E945F00B0A2AC /* Q116-SearchOnMatrix.h */,
 				32E2C483167ECBDF00B0A2AC /* Q117-LongestIncreasingSequence.cpp */,
 				32E2C484167ECBDF00B0A2AC /* Q117-LongestIncreasingSequence.h */,
+				32A30873167EF2C400BDB740 /* Q118-TrackBinarySearchTree.cpp */,
+				32A30874167EF2C400BDB740 /* Q118-TrackBinarySearchTree.h */,
 			);
 			name = SortingAndSearching;
 			sourceTree = "<group>";
@@ -538,6 +543,7 @@
 				32E2C47F167E863300B0A2AC /* Q115-FindStringInIntersperse.cpp in Sources */,
 				32E2C482167E945F00B0A2AC /* Q116-SearchOnMatrix.cpp in Sources */,
 				32E2C485167ECBDF00B0A2AC /* Q117-LongestIncreasingSequence.cpp in Sources */,
+				32A30875167EF2C400BDB740 /* Q118-TrackBinarySearchTree.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

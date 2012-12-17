@@ -51,6 +51,28 @@
          contextName = "printSubset2(std::__1::basic_string&lt;char, std::__1::char_traits&lt;char&gt;, std::__1::allocator&lt;char&gt; &gt;, int):Q94-Subsets.cpp">
       </ContextState>
       <ContextState
+         contextName = "printBinaryPresentation(std::__1::basic_string&lt;char, std::__1::char_traits&lt;char&gt;, std::__1::allocator&lt;char&gt; &gt;, bool, int, int):Q911-BinaryPresentation.cpp">
+      </ContextState>
+      <ContextState
+         contextName = "findLongestSequence(HtWt**, int, HtWt*):Q117-LongestIncreasingSequence.cpp">
+         <PersistentStrings>
+            <PersistentString
+               value = "list[i]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "findLongestSequence:Q117-LongestIncreasingSequence.cpp">
+         <PersistentStrings>
+            <PersistentString
+               value = "list[i]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "findElementOnMatrix(int*, int, int, int, Coordinate*, Coordinate*):Q116-SearchOnMatrix.cpp">
+      </ContextState>
+      <ContextState
          contextName = "Stacks&lt;char&gt;::push(int, char):Q31-ThreeStacksFromOneArray.h">
          <PersistentStrings>
             <PersistentString
