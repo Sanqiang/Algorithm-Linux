@@ -25,6 +25,16 @@ public class TestUtil {
         return arr;
     }
 
+    public static String generateArrayString(int n, int max) {
+        int[] arr = generateArray(n, max, false);
+        StringBuilder sb = new StringBuilder();
+        for (int num : arr) {
+            sb.append(num);
+        }
+        return sb.toString();
+    }
+
     public static void main(String[] args) {
+        System.out.println(generateArrayString(100, 10));
     }
 }

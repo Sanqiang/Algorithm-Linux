@@ -10,7 +10,7 @@ public class Q22_ContainerWithMostWater {
         int MaxArea = Integer.MIN_VALUE;
         while (s < e) {
             int Height = Math.min(height[s], height[e]);
-            int Area = Height * (e - s);
+            int Area = Height * (e - s + 1);
             MaxArea = Area > MaxArea ? Area : MaxArea;
             if (height[s] > height[e]) {
                 while (height[e] >= height[--e]) {

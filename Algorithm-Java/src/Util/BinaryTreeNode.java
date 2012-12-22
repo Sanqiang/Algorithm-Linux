@@ -43,7 +43,20 @@ public class BinaryTreeNode<T> {
         BinaryTreeNode<Integer> btn10 = new BinaryTreeNode<Integer>(10, btn5, btn15);
         return btn10;
     }
+    
+    private static void ReverseOrder(BinaryTreeNode<Integer> root)
+    {
+        if (root == null) {
+            return;
+        }
+        ReverseOrder(root.Right);
+        System.out.println(root.Data);
+        
+        ReverseOrder(root.Left);
+    }
 
     public static void main(String[] args) {
+        BinaryTreeNode<Integer> sample = getSampleTree();
+        ReverseOrder(sample);
     }
 }
