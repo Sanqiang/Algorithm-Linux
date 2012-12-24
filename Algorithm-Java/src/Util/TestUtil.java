@@ -34,6 +34,17 @@ public class TestUtil {
         return sb.toString();
     }
 
+    public static int[][] generateMatrix(int height, int width, int max) {
+        int matrix[][] = new int[height][width];
+        Random r = new Random(Calendar.getInstance().MILLISECOND);
+        for (int i = 0; i < height; ++i) {
+            for (int j = 0; j < width; ++j) {
+                matrix[i][j] = r.nextInt(max);
+            }
+        }
+        return matrix;
+    }
+
     public static void main(String[] args) {
         System.out.println(generateArrayString(100, 10));
     }

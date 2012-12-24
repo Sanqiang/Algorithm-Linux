@@ -51,7 +51,6 @@ public class BinaryTreeNode<T> {
         }
         ReverseOrder(root.Right);
         System.out.println(root.Data);
-        
         ReverseOrder(root.Left);
     }
 
