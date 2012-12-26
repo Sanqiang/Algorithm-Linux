@@ -49,6 +49,7 @@ public class LinkedListNode<V> {
         LinkedListNode<Integer> n5 = new LinkedListNode<>(5, n4);
         LinkedListNode<Integer> n6 = new LinkedListNode<>(6, n5);
         LinkedListNode<Integer> n7 = new LinkedListNode<>(7, n6);
+        LinkedListNode<Integer> n8 = new LinkedListNode<>(8, n7);
         return n1;
     }
 

@@ -43,9 +43,19 @@ public class BinaryTreeNode<T> {
         BinaryTreeNode<Integer> btn10 = new BinaryTreeNode<Integer>(10, btn5, btn15);
         return btn10;
     }
-    
-    private static void ReverseOrder(BinaryTreeNode<Integer> root)
-    {
+
+    public static BinaryTreeNode<Integer> getSampleTree2() {
+        BinaryTreeNode<Integer> btn2 = new BinaryTreeNode<Integer>(3);
+        BinaryTreeNode<Integer> btn7 = new BinaryTreeNode<Integer>(3);
+        BinaryTreeNode<Integer> btn5 = new BinaryTreeNode<Integer>(2, btn2, btn7);
+        BinaryTreeNode<Integer> btn12 = new BinaryTreeNode<Integer>(4);
+        BinaryTreeNode<Integer> btn17 = new BinaryTreeNode<Integer>(4);
+        BinaryTreeNode<Integer> btn15 = new BinaryTreeNode<Integer>(2, btn12, btn17);
+        BinaryTreeNode<Integer> btn10 = new BinaryTreeNode<Integer>(1, btn5, btn15);
+        return btn10;
+    }
+
+    private static void ReverseOrder(BinaryTreeNode<Integer> root) {
         if (root == null) {
             return;
         }

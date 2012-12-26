@@ -33,7 +33,7 @@ public class Q101_SpiralMatrix2 {
     }
 
     public static void main(String[] args) {
-        int n = 50;
+        int n = 100;
         int matrix[][] = new Q101_SpiralMatrix2().generateMatrix(n);
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < n; j++) {
