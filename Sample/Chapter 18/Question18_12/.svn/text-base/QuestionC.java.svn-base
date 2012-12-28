@@ -1,0 +1,64 @@
+package Question20_12;
+
+import CareerCupLibrary.AssortedMethods;
+
+public class QuestionC {
+	
+	public static void clearArray(int[] array) {
+		for (int i = 0; i < array.length; i++) {
+			array[i] = 0;
+		}
+	}
+	
+	public static int maxSubMatrix(int[][] matrix) {
+		int row_count = matrix.length;
+		int col_count = matrix[0].length;
+	
+		int[] partial_sum = new int[col_count]; 
+		int max_sum = 0; // Max sum is an empty matrix
+	
+		for (int row_start = 0; row_start < row_count; row_start++) {
+			clearArray(partial_sum);
+		
+			for (int row_end = row_start; row_end < row_count; row_end++) {
+				for (int i = 0; i < col_count; i++) {
+					partial_sum[i] += matrix[row_end][i];
+				}
+		
+				int temp_max_sum = maxSubArray(partial_sum, col_count);
+				
+				// if you want to track the coordinates, add code here to do that
+
+				max_sum = Math.max(max_sum, temp_max_sum);
+			}
+		}
+		return max_sum;
+	}
+
+	public static int maxSubArray(int array[], int N)
+	{
+		int max_sum = 0;
+
+		int running_sum = 0;
+
+		for (int i = 0; i < N; i++) {
+			running_sum += array[i];
+			max_sum = Math.max(max_sum, running_sum);
+			
+			// if running_sum is < 0 no point in trying to continue the series. Reset
+			if (running_sum < 0) {
+				running_sum = 0;
+			}
+		}
+
+		return max_sum;
+	}
+	
+	public static void main(String[] args) {
+		int[][] matrix = AssortedMethods.randomMatrix(5, 7, -100, 100);
+		int sum = maxSubMatrix(matrix);
+		AssortedMethods.printMatrix(matrix);
+		System.out.println(sum);
+	}
+
+}

@@ -1,0 +1,90 @@
+package Question20_11;
+
+import CareerCupLibrary.AssortedMethods;
+
+public class QuestionEff {
+	public static Subsquare findSquareWithSize(SquareCell[][] processed, int square_size) {
+		// On an edge of length N, there are (N - sz + 1) squares of length sz.
+		int count = processed.length - square_size + 1; 
+		
+		// Iterate through all squares with side length square_size.
+		for (int row = 0; row < count; row++) {
+			for (int col = 0; col < count; col++) {
+				if (isSquare(processed, row, col, square_size)) {
+					return new Subsquare(row, col, square_size);
+				}
+			}
+		}
+		return null;
+	}
+	
+	public static Subsquare findSquare(int[][] matrix){
+		assert(matrix.length > 0);
+		for (int row = 0; row < matrix.length; row++){
+			assert(matrix[row].length == matrix.length);
+		}
+		
+		SquareCell[][] processed = processSquare(matrix);
+		
+		int N = matrix.length;
+		
+		for (int i = N; i >= 1; i--) {
+			Subsquare square = findSquareWithSize(processed, i);
+			if (square != null) {
+				return square;
+			}
+		}
+		return null;
+	}	
+
+	private static boolean isSquare(SquareCell[][] matrix, int row, int col, int size) {
+		SquareCell top_left = matrix[row][col];
+		SquareCell top_right = matrix[row][col + size - 1];
+		SquareCell bottom_left = matrix[row + size - 1][col];
+		if (top_left.zeros_right < size) { // Check top edge
+			return false;
+		}
+		if (top_left.zeros_below < size) { // Check left edge
+			return false;
+		}
+		if (top_right.zeros_below < size) { // Check right edge
+			return false;
+		}
+		if (bottom_left.zeros_right < size) { // Check bottom edge
+			return false;
+		}
+		return true;
+	}
+	
+	public static SquareCell[][] processSquare(int[][] matrix) {
+		SquareCell[][] processed = new SquareCell[matrix.length][matrix.length];
+		
+		for (int r = matrix.length - 1; r >= 0; r--) {
+			for (int c = matrix.length - 1; c >= 0; c--) {
+				int right_zeros = 0;
+				int below_zeros = 0;
+				if (matrix[r][c] == 0) { // only need to process if it's a black cell
+					right_zeros++;
+					below_zeros++;
+					if (c + 1 < matrix.length) { // next column over is on same row
+						SquareCell previous = processed[r][c + 1];
+						right_zeros += previous.zeros_right;
+					}
+					if (r + 1 < matrix.length) {
+						SquareCell previous = processed[r + 1][c];
+						below_zeros += previous.zeros_below;
+					}
+				}
+				processed[r][c] = new SquareCell(right_zeros, below_zeros);
+			}
+		}	
+		return processed;
+	}
+	
+	public static void main(String[] args) {
+		int[][] matrix = AssortedMethods.randomMatrix(7, 7, 0, 1);
+		AssortedMethods.printMatrix(matrix);
+		Subsquare square = findSquare(matrix);
+		square.print();
+	}
+}

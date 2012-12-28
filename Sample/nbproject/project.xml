@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://www.netbeans.org/ns/project/1">
+    <type>org.netbeans.modules.java.j2seproject</type>
+    <configuration>
+        <data xmlns="http://www.netbeans.org/ns/j2se-project/3">
+            <name>Algorithm</name>
+            <source-roots>
+                <root id="src.dir"/>
+                <root id="Chapter 10.dir"/>
+                <root id="Chapter 11.dir"/>
+                <root id="Chapter 12.dir"/>
+                <root id="Chapter 14.dir"/>
+                <root id="Chapter 16.dir"/>
+                <root id="Chapter 17.dir"/>
+                <root id="Chapter 18.dir"/>
+                <root id="Chapter 2.dir"/>
+                <root id="Chapter 3.dir"/>
+                <root id="Chapter 4.dir"/>
+                <root id="Chapter 5.dir"/>
+                <root id="Chapter 7.dir"/>
+                <root id="Chapter 8.dir"/>
+                <root id="Chapter 9.dir"/>
+                <root id="CtCILibrary.dir"/>
+                <root id="Introduction.dir"/>
+                <root id="Other Problems.dir"/>
+            </source-roots>
+            <test-roots/>
+        </data>
+    </configuration>
+</project>
