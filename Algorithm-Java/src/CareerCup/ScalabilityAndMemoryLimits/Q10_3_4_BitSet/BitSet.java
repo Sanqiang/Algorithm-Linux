@@ -19,11 +19,7 @@ public class BitSet {
         if (buffer_size) {
             this.buffer = new long[_size];
         } else {
-            if (_size >> 10 == 0) {
-                this.buffer = new long[1];
-            } else {
-                this.buffer = new long[_size >> 10];
-            }
+            //
         }
     }
 
