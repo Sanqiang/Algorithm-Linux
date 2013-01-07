@@ -33,6 +33,19 @@ public class BinaryTreeNode<T> {
         this.Parent = _parent;
     }
 
+    public int getHeight() {
+        return getHeightHelper(this);
+    }
+
+    private int getHeightHelper(BinaryTreeNode<T> node) {
+        if (node == null) {
+            return 0;
+        }
+        int l = getHeightHelper(node.Left);
+        int r = getHeightHelper(node.Right);
+        return Math.max(l, r) + 1;
+    }
+
     public static BinaryTreeNode<Integer> getSampleTree() {
         BinaryTreeNode<Integer> btn2 = new BinaryTreeNode<Integer>(2);
         BinaryTreeNode<Integer> btn7 = new BinaryTreeNode<Integer>(7);
@@ -52,6 +65,13 @@ public class BinaryTreeNode<T> {
         BinaryTreeNode<Integer> btn17 = new BinaryTreeNode<Integer>(4);
         BinaryTreeNode<Integer> btn15 = new BinaryTreeNode<Integer>(2, btn12, btn17);
         BinaryTreeNode<Integer> btn10 = new BinaryTreeNode<Integer>(1, btn5, btn15);
+        return btn10;
+    }
+
+    public static BinaryTreeNode<Integer> getSampleTree3() {
+        BinaryTreeNode<Integer> btn2 = new BinaryTreeNode<Integer>(3);
+        BinaryTreeNode<Integer> btn5 = new BinaryTreeNode<Integer>(2, btn2, null);
+        BinaryTreeNode<Integer> btn10 = new BinaryTreeNode<Integer>(1, btn5, null);
         return btn10;
     }
 
