@@ -99,7 +99,7 @@ public class Q100_SpiralMatrix {
             {5, 6, 7, 8},
             {9, 10, 11, 12}
         };
-        ArrayList<Integer> solution = new Q100_SpiralMatrix().spiralOrderEx(matrix);
+        ArrayList<Integer> solution = new Q100_SpiralMatrix().spiralOrderMy(matrix, 0, 0, matrix[0].length, matrix.length);
         for (Integer integer : solution) {
             System.out.print(integer + " ");
         }
@@ -108,5 +108,30 @@ public class Q100_SpiralMatrix {
         for (Integer integer : solution2) {
             System.out.print(integer + " ");
         }
+    }
+
+    public ArrayList<Integer> spiralOrderMy(int[][] matrix, int col, int row, int width, int height) {
+        ArrayList<Integer> solution = new ArrayList<>();
+        if (width <= 0 || height <= 0) {
+            return solution;
+        }
+        for (int i = 0; i < width; i++) {
+            solution.add(matrix[col][row + i]);
+        }
+        for (int i = 1; i < height; i++) {
+            solution.add(matrix[col + i][row + width - 1]);
+        }
+        if (height > 1) {
+            for (int i = 1; i < width; i++) {
+                solution.add(matrix[col + height - 1][row + width - 1 - i]);
+            }
+        }
+        if (width > 1) {
+            for (int i = 1; i < height - 1; i++) {
+                solution.add(matrix[col + height - 1 - i][row]);
+            }
+        }
+        solution.addAll(spiralOrderMy(matrix, col + 1, row + 1, width - 2, height - 2));
+        return solution;
     }
 }

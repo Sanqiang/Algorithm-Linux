@@ -53,7 +53,57 @@ public class Q108_SwapNodesInPairs {
         LinkedListNode<Integer> head = LinkedListNode.getSampleLinkedList();
         head.print();
         System.out.println("-=-=-=-=-=-=-");
-        LinkedListNode<Integer> NewHead = new Q108_SwapNodesInPairs().swapPairs(head);
+        LinkedListNode<Integer> NewHead = new Q108_SwapNodesInPairs().swapPairsMy(head);
         NewHead.print();
+    }
+
+    public LinkedListNode<Integer> swapPairsSample(LinkedListNode<Integer> head) {
+        LinkedListNode<Integer> sent = new LinkedListNode<Integer>(0);
+        sent.Next = head;
+
+        if (head == null) {
+            return null;
+        }
+        LinkedListNode<Integer> cur = head, pre = sent, next = head.Next;
+        while (next != null) {
+            cur.Next = next.Next;
+            next.Next = cur;
+            pre.Next = next;
+
+            pre = next;
+            next = cur.Next;
+            if (next != null) {
+                pre = cur;
+                cur = next;
+                next = next.Next;
+            }
+        }
+
+
+        return sent.Next;
+    }
+
+    public LinkedListNode<Integer> swapPairsMy(LinkedListNode<Integer> head) {
+        LinkedListNode<Integer> sent = new LinkedListNode<Integer>(0);
+        sent.Next = head;
+
+        if (head == null) {
+            return null;
+        }
+        LinkedListNode<Integer> pre = sent, cur = head, next = head.Next;
+        while (next != null) {
+            cur.Next = next.Next;
+            next.Next = cur;
+            pre.Next = next;
+
+            pre = cur;
+            cur = cur.Next;
+            if (cur != null) {
+                next = cur.Next;
+            } else {
+                break;
+            }
+        }
+        return sent.Next;
     }
 }

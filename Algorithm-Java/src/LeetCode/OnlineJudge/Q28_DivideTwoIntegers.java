@@ -45,7 +45,6 @@ public class Q28_DivideTwoIntegers {
              //break;
              }*/
         }
-
         return divide(dividend - temp, divisor) + (1 << bit_count);
     }
 
@@ -55,10 +54,26 @@ public class Q28_DivideTwoIntegers {
 
     public static void main(String[] args) {
         System.out.println(new Q28_DivideTwoIntegers().toPos(100));
-        int divident = 21;
-        int divisor = -1;
-        int result = new Q28_DivideTwoIntegers().divide(divident, divisor);
+        int divident = 10;
+        int divisor = 3;
+        int result = new Q28_DivideTwoIntegers().divideMy(divident, divisor);
         System.out.println(result);
         System.out.println("Sample:" + divident / divisor);
+    }
+
+    //my way
+    int divideMy(int dividend, int divisor) {
+        if (dividend == divisor) {
+            return 1;
+        } else if (dividend < divisor) {
+            return 0;
+        }
+        int count = 0;
+        int temp = divisor;
+        while (dividend > (temp << 1)) {
+            temp <<= 1;
+            count++;
+        }
+        return (1 << count) + divideMy(dividend - temp, divisor);
     }
 }

@@ -53,7 +53,7 @@ public class Q106_SubstringWithConcatenation {
     }
 
     private boolean testPerm(int perm[], ArrayList<Integer> counts) {
-        int length = counts.size(),i;
+        int length = counts.size(), i;
         int tab[] = new int[length];
         for (i = 0; i < perm.length; i++) {
             ++tab[perm[i]];
@@ -69,9 +69,55 @@ public class Q106_SubstringWithConcatenation {
     public static void main(String[] args) {
         String L[] = {"bar", "foo"};
         String S = "barbarxxxfoobar";
-        ArrayList<Integer> solution = new Q106_SubstringWithConcatenation().findSubstring(S, L);
+        ArrayList<Integer> solution = new Q106_SubstringWithConcatenation().findSubstringMy(S, L);
         for (Integer integer : solution) {
             System.out.println(integer);
+        }
+    }
+
+    public ArrayList<Integer> findSubstringMy(String S, String[] L) {
+        ArrayList<Integer> solution = new ArrayList<>();
+        int s_len = S.length(), l_len = L.length;
+        int[] pos = new int[s_len];
+        for (int i = 0; i < s_len; i++) {
+            pos[i] = -1;
+        }
+        for (int i = 0; i < s_len; i++) {
+            for (int g = 0; g < l_len; g++) {
+                if (S.startsWith(L[g], i)) {
+                    pos[i] = g;
+                    break;
+                }
+            }
+        }
+        for (int i = 0; i < s_len; i++) {
+            if (pos[i] != -1) {
+                boolean[] find = new boolean[l_len];
+                if (match(pos, find, i, L[0].length())) {
+                    solution.add(i);
+                }
+            }
+        }
+        return solution;
+    }
+
+    boolean match(int[] pos, boolean[] find, int i, int len) {
+        int match = 0;
+        for (int j = i; j < pos.length; j += len) {
+            int p = pos[j];
+            if (p != - 1) {
+                if (find[p]) {
+                    return false;
+                } else {
+                    ++match;
+                    find[p] = true;
+                }
+            }
+        }
+        if (match == find.length) {
+            return true;
+        } else {
+            return false;
         }
     }
 }

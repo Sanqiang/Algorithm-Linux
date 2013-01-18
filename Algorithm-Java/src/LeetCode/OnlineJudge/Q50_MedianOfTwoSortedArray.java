@@ -90,10 +90,87 @@ public class Q50_MedianOfTwoSortedArray {
 
     public static void main(String[] args) {
         int A[] = {1, 3, 5};
-        int B[] = {2, 4, 6};
-        double median = new Q50_MedianOfTwoSortedArray().findMedianSortedArrays(A, B);
+        int B[] = {2, 4, 6, 7};
+        double median = new Q50_MedianOfTwoSortedArray().findMedianSortedArraysMy(A, B);
         System.out.println(median);
         double median2 = new Q50_MedianOfTwoSortedArray().findMedianSortedArraysLog(A, B);
         System.out.println(median2);
+    }
+
+    public double findMedianSortedArraysMy(int A[], int B[]) {
+        int a_len = A.length, b_len = B.length, len = a_len + b_len, a_ind = 0, b_ind = 0;
+        int mid1, mid2, median1 = 0, median2 = 0;
+        if (len % 2 == 0) {
+            mid1 = len / 2 - 1;
+            mid2 = len / 2;
+            while (a_ind + b_ind < len) {
+                if (a_ind == a_len) {
+                    ++b_ind;
+                    if (a_ind + b_ind == mid1) {
+                        median1 = A[b_ind];
+                    } else if (a_ind + b_ind == mid2) {
+                        median2 = A[b_ind];
+                    }
+                    continue;
+                }
+                if (b_ind == b_len) {
+                    ++a_ind;
+                    if (a_ind + b_ind == mid1) {
+                        median1 = A[a_ind];
+                    } else if (a_ind + b_ind == mid2) {
+                        median2 = A[a_ind];
+                    }
+                    continue;
+                }
+
+                if (A[a_ind] <= B[b_ind]) {
+                    if (a_ind + b_ind == mid1) {
+                        median1 = A[a_ind];
+                    } else if (a_ind + b_ind == mid2) {
+                        median2 = A[a_ind];
+                    }
+                    ++a_ind;
+                } else {
+                    if (a_ind + b_ind == mid1) {
+                        median1 = B[b_ind];
+                    } else if (a_ind + b_ind == mid2) {
+                        median2 = B[b_ind];
+                    }
+                    ++b_ind;
+                }
+            }
+            return (float) median1 / 2 + (float) median2 / 2;
+        } else {
+            mid1 = len / 2 ;
+            while (a_ind + b_ind < len) {
+                if (a_ind == a_len) {
+                    ++b_ind;
+                    if (a_ind + b_ind == mid1) {
+                        median1 = A[b_ind];
+                    }
+                    continue;
+                }
+                if (b_ind == b_len) {
+                    ++a_ind;
+                    if (a_ind + b_ind == mid1) {
+                        median1 = A[a_ind];
+                    }
+                    continue;
+                }
+
+                if (A[a_ind] <= B[b_ind]) {
+                    if (a_ind + b_ind == mid1) {
+                        median1 = A[a_ind];
+                    }
+                    ++a_ind;
+                } else {
+                    if (a_ind + b_ind == mid1) {
+                        median1 = B[b_ind];
+                    }
+                    ++b_ind;
+                }
+            }
+            return (float) median1;
+        }
     }
 }

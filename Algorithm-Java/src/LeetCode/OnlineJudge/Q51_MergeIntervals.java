@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.Iterator;
 
 public class Q51_MergeIntervals {
-
+    
     public ArrayList<Interval> merge(ArrayList<Interval> intervals) {
         ArrayList<Interval> solution = new ArrayList<>();
         int i, length = intervals.size();
@@ -25,23 +25,23 @@ public class Q51_MergeIntervals {
         solution.add(pre);
         return solution;
     }
-
+    
     public class Interval {
-
+        
         int start;
         int end;
-
+        
         Interval() {
             start = 0;
             end = 0;
         }
-
+        
         Interval(int s, int e) {
             start = s;
             end = e;
         }
     }
-
+    
     public static void main(String[] args) {
         Q51_MergeIntervals.Interval i1 = new Q51_MergeIntervals().new Interval(1, 3);
         Q51_MergeIntervals.Interval i2 = new Q51_MergeIntervals().new Interval(2, 6);
@@ -52,10 +52,37 @@ public class Q51_MergeIntervals {
         old.add(i2);
         old.add(i3);
         old.add(i4);
-        ArrayList<Q51_MergeIntervals.Interval> solution = new Q51_MergeIntervals().merge(old);
+        ArrayList<Q51_MergeIntervals.Interval> solution = new Q51_MergeIntervals().mergeMy(old);
         for (Iterator<Interval> it = solution.iterator(); it.hasNext();) {
             Q51_MergeIntervals.Interval interval = it.next();
             System.out.println("[" + interval.start + "," + interval.end + "]");
         }
+    }
+
+    //my way
+    public ArrayList<Interval> mergeMy(ArrayList<Interval> intervals) {
+        ArrayList<Interval> solution = new ArrayList<>();
+        int i = 1, len = intervals.size();
+        for (; i < len; i++) {
+            if (intervals.get(i).start <= intervals.get(i - 1).end) {
+                Interval temp = new Interval();
+                temp.start = Math.min(intervals.get(i).start, intervals.get(i - 1).start);
+                temp.end = Math.max(intervals.get(i).end, intervals.get(i - 1).end);
+                while (i++ < len) {
+                    if (intervals.get(i).start <= intervals.get(i - 1).end) {
+                        temp.end = Math.max(intervals.get(i).end, intervals.get(i - 1).end);
+                    } else {
+                        break;
+                    }
+                }
+                solution.add(temp);
+            } else {
+                solution.add(intervals.get(i - 1));
+                if (i == len - 1) {
+                    solution.add(intervals.get(i));
+                }
+            }
+        }
+        return solution;
     }
 }

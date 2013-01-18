@@ -48,51 +48,89 @@ public class Q3_4Sum {
         return solutions;
     }
 
+    /*
+     public ArrayList<ArrayList<Integer>> fourSumEx(int[] num, int target) {
+     java.util.Arrays.sort(num);
+     ArrayList<ArrayList<Integer>> solutions = new ArrayList<>();
+     int length = num.length, l = 0, r = length - 1, ml = l + 1, mr = r - 1;
+     while (r - l >= 2) {
+     int current_sum = num[l] + num[r];
+     if (current_sum >= target) {
+     ml = l + 1;
+     } else if (current_sum < target) {
+     ml = r - 1;
+     }
+     current_sum += num[ml];
+     if (current_sum >= target) {
+     mr = l + 1;
+     if (mr == ml) {
+     mr = ml + 1;
+     }
+     } else if (current_sum < target) {
+     mr = r - 1;
+     if (mr == ml) {
+     mr = ml - 1;
+     }
+     }
+     current_sum += num[mr];
+     while (ml < mr) {
+     if (current_sum == target) {
+     ArrayList<Integer> solution = new ArrayList<>();
+     solution.add(num[r]);
+     solution.add(num[mr]);
+     solution.add(num[ml]);
+     solution.add(num[l]);
+     solutions.add(solution);
+     --mr;
+     ++ml;
+     } else if (current_sum > target) {
+     --mr;
+     } else {
+     ++ml;
+     }
+     }
+     --r;
+     ++l;
+     }
+     return solutions;
+
+     }
+     */
+    //my way
     public ArrayList<ArrayList<Integer>> fourSumEx(int[] num, int target) {
         java.util.Arrays.sort(num);
         ArrayList<ArrayList<Integer>> solutions = new ArrayList<>();
-        int length = num.length, l = 0, r = length - 1, ml = l + 1, mr = r - 1;
-        while (r - l >= 2) {
-            int current_sum = num[l] + num[r];
-            if (current_sum >= target) {
-                ml = l + 1;
-            } else if (current_sum < target) {
-                ml = r - 1;
-            }
-            current_sum += num[ml];
-            if (current_sum >= target) {
-                mr = l + 1;
-                if (mr == ml) {
-                    mr = ml + 1;
-                }
-            } else if (current_sum < target) {
-                mr = r - 1;
-                if (mr == ml) {
-                    mr = ml - 1;
-                }
-            }
-            current_sum += num[mr];
-            while (ml < mr) {
-                if (current_sum == target) {
-                    ArrayList<Integer> solution = new ArrayList<>();
-                    solution.add(num[r]);
-                    solution.add(num[mr]);
-                    solution.add(num[ml]);
-                    solution.add(num[l]);
-                    solutions.add(solution);
-                    --mr;
-                    ++ml;
-                } else if (current_sum > target) {
-                    --mr;
-                } else {
-                    ++ml;
+        HashSet<String> cache = new HashSet<>();
+        int length = num.length, i, j, s, e;
+        for (i = 0; i < length - 4; i++) {
+            for (j = i + 1; j < length - 3; j++) {
+                s = j + 1;
+                e = length - 1;
+                while (s < e) {
+                    int sum = num[i] + num[j] + num[s] + num[e];
+                    if (sum == target) {
+                        String key = String.valueOf(num[i]) + String.valueOf(num[j]) + String.valueOf(num[s]) + String.valueOf(num[e]);
+                        if (cache.contains(key)) {
+                            continue;
+                        }else{
+                        cache.add(key);
+                        ArrayList<Integer> solution = new ArrayList<>();
+                        solution.add(num[i]);
+                        solution.add(num[j]);
+                        solution.add(num[s]);
+                        solution.add(num[e]);
+                        solutions.add(solution);}
+                        ++s;
+                        --e;
+                    } else if (sum < target) {
+                        ++s;
+                    } else if (sum > target) {
+                        --e;
+                    }
                 }
             }
-            --r;
-            ++l;
         }
         return solutions;
-
     }
 
     public static void main(String[] args) {
@@ -108,7 +146,7 @@ public class Q3_4Sum {
         }
 
         //test
-        int[] arr = Util.TestUtil.generateArray(100);
+        int[] arr = Util.TestUtil.generateArray(30);
         long t1 = System.currentTimeMillis();
         ArrayList<ArrayList<Integer>> solutions1 = new Q3_4Sum().fourSum(arr, 0);
         long t2 = System.currentTimeMillis();

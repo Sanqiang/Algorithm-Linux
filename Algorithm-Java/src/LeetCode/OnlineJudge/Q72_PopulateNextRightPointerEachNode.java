@@ -6,6 +6,7 @@ package LeetCode.OnlineJudge;
 
 public class Q72_PopulateNextRightPointerEachNode {
 
+    // the same as 73
     public static void main(String[] args) {
 
     }

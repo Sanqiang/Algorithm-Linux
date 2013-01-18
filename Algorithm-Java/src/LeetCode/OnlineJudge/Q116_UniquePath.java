@@ -52,19 +52,36 @@ public class Q116_UniquePath {
 
     public static void main(String[] args) {
         int m = 1, n = 1;
-        int ways = new Q116_UniquePath().uniquePaths(m, n);
+        int ways = new Q116_UniquePath().uniquePathsMy(m, n);
         System.out.println(ways);
         int ways2 = new Q116_UniquePath().uniquePathsDP(m, n);
         System.out.println(ways2);
 
         int tm = 100, tn = 100;
         long l1 = System.currentTimeMillis();
-        int tways = new Q116_UniquePath().uniquePaths(tm, tn);
+        int tways = new Q116_UniquePath().uniquePathsMy(tm, tn);
         long l2 = System.currentTimeMillis();
         int tways2 = new Q116_UniquePath().uniquePathsDP(tm, tn);
         long l3 = System.currentTimeMillis();
         long span1 = l2 - l1, span2 = l3 - l2;
         System.out.println(tways + " Cost " + span1);
         System.out.println(tways2 + " Cost " + span2);
+    }
+
+    public int uniquePathsMy(int m, int n) {
+        int[][] matrix = new int[m][n];
+        matrix[0][0] = 1;
+        for (int i = 1; i < m; i++) {
+            matrix[i][0] = 1;
+        }
+        for (int i = 1; i < n; i++) {
+            matrix[0][i] = 1;
+        }
+        for (int i = 1; i < m; i++) {
+            for (int j = 1; j < n; j++) {
+                matrix[i][j] = matrix[i - 1][j] + matrix[i][j - 1];
+            }
+        }
+        return matrix[m - 1][n - 1];
     }
 }

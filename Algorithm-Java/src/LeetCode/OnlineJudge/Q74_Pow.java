@@ -47,5 +47,19 @@ public class Q74_Pow {
         double result2 = new Q74_Pow().powBinary(2, 4);
         System.out.println(result);
         System.out.println(result2);
+        double result3 = new Q74_Pow().powMy(2, 4);
+        System.out.println(result3);
+    }
+
+    public double powMy(double x, int n) {
+        if (n == 0) {
+            return 1;
+        }
+        double val = powMy(x, n >> 1);
+        if (n % 2 == 0) {
+            return val * val;
+        } else {
+            return val * val * x;
+        }
     }
 }

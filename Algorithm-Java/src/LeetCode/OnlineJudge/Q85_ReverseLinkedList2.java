@@ -36,7 +36,30 @@ public class Q85_ReverseLinkedList2 {
         LinkedListNode<Integer> root = LinkedListNode.getSampleLinkedList();
         root.print();
         System.out.println("-=-=-=-=-=-=-");
-        LinkedListNode<Integer> root2 = new Q85_ReverseLinkedList2().reverseBetween(root, 2, 6);
+        LinkedListNode<Integer> root2 = new Q85_ReverseLinkedList2().reverseBetweenMy(root, 1, 4);
         root2.print();
+    }
+
+    //most correct one
+    public LinkedListNode<Integer> reverseBetweenMy(LinkedListNode<Integer> head, int m, int n) {
+        LinkedListNode<Integer> solution = new LinkedListNode<>(0), cur = head, pre = solution, next = head.Next, LS = null, LE = null;
+        solution.Next = head;
+        int a = m, b = n;
+        while (--a > 0) {
+            next = cur.Next;
+            pre = cur;
+            cur = next;
+        }
+        LS = pre;
+        LE = cur;
+        while (b-- >= m) {
+            next = cur.Next;
+            cur.Next = pre;
+            pre = cur;
+            cur = next;
+        }
+        LS.Next = pre;
+        LE.Next = cur;
+        return solution.Next;
     }
 }

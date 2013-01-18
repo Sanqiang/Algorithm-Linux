@@ -64,12 +64,47 @@ public class Q123_WordSearch {
 
     public static void main(String[] args) {
         char[][] board = {
-            {'A','B','C','E'},
-            {'S','F','C','S'},
-            {'A','D','E','E'}
+            {'A', 'B', 'C', 'E'},
+            {'S', 'F', 'C', 'S'},
+            {'A', 'D', 'E', 'E'}
         };
         String word = "ABCCE";
-        boolean result = new Q123_WordSearch().exist(board, word);
+        boolean result = new Q123_WordSearch().existMy(board, word);
         System.out.println(result);
+    }
+
+    public boolean existMy(char[][] board, String word) {
+        if (word.length() == 0) {
+            return true;
+        }
+        for (int i = 0; i < board.length; i++) {
+            for (int j = 0; j < board[0].length; j++) {
+                if (board[i][j] == word.charAt(0) && go(board, word, 1, i, j)) {
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+
+    boolean go(char[][] board, String word, int i, int col, int row) {
+        if (word.length() == i) {
+            return true;
+        } else if (col < 0 || col >= board.length || row < 0 || row >= board[0].length) {
+            return false;
+        }
+        if (col + 1 < board.length && board[col + 1][row] == word.charAt(i) && go(board, word, i + 1, col + 1, row)) {
+            return true;
+        }
+        if (col - 1 >= 0 && board[col - 1][row] == word.charAt(i) && go(board, word, i + 1, col - 1, row)) {
+            return true;
+        }
+        if (row + 1 < board[0].length && board[col][row + 1] == word.charAt(i) && go(board, word, i + 1, col, row + 1)) {
+            return true;
+        }
+        if (row - 1 >= 0 && board[col][row - 1] == word.charAt(i) && go(board, word, i + 1, col, row - 1)) {
+            return true;
+        }
+        return false;
     }
 }

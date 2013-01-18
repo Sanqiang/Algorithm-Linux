@@ -60,7 +60,7 @@ public class Q40_LargestRectangleInHistogram {
 
     public static void main(String[] args) {
         int[] height = {2, 1, 5, 6, 2, 3};
-        int area = new Q40_LargestRectangleInHistogram().largestRectangleArea(height);
+        int area = new Q40_LargestRectangleInHistogram().largestRectangleAreaMy(height);
         System.out.println(area);
         int area2 = new Q40_LargestRectangleInHistogram().largestRectangleAreaEx(height);
         System.out.println(area2);
@@ -74,5 +74,42 @@ public class Q40_LargestRectangleInHistogram {
         long span1 = l2 - l1, span2 = l3 - l2;
         System.out.println(area_t1 + " Cost " + span1);
         System.out.println(area_t2 + " Cost " + span2);
+    }
+
+    //my way correct
+    public int largestRectangleAreaMy(int[] height) {
+        Stack<Wrapper> stack = new Stack<>();
+        int len = height.length, i = 0;
+        int max = 0;
+        while (i < len) {
+            if (stack.isEmpty() || height[i] > stack.peek()._height) {
+                stack.push(new Wrapper(height[i], i));
+            } else if (stack.peek()._height > height[i]) {
+                int prev = 0;
+                while (!stack.isEmpty() && stack.peek()._height > height[i]) {
+                    Wrapper wr = stack.pop();
+                    prev = wr._index;
+                    max = Math.max(max, (i - prev) * wr._height);
+                }
+                stack.push(new Wrapper(height[i], prev));
+            }
+            ++i;
+        }
+        while (!stack.isEmpty()) {
+            Wrapper wr = stack.pop();
+            max = Math.max(max, (i - wr._index) * wr._height);
+        }
+        return max;
+    }
+
+    class Wrapper {
+
+        int _height;
+        int _index;
+
+        public Wrapper(int height, int index) {
+            this._height = height;
+            this._index = index;
+        }
     }
 }

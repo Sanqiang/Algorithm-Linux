@@ -33,8 +33,8 @@ public class Q101_SpiralMatrix2 {
     }
 
     public static void main(String[] args) {
-        int n = 100;
-        int matrix[][] = new Q101_SpiralMatrix2().generateMatrix(n);
+        int n = 5;
+        int matrix[][] = new Q101_SpiralMatrix2().generateMatrixMy(n);
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < n; j++) {
                 System.out.print(matrix[i][j] + " ");
@@ -48,7 +48,7 @@ public class Q101_SpiralMatrix2 {
             for (int i = 0; i < n; i++) {
                 fw.write("<tr>");
                 for (int j = 0; j < n; j++) {
-                    fw.write("<td>"+matrix[i][j]+"</td>");
+                    fw.write("<td>" + matrix[i][j] + "</td>");
                 }
                 fw.write("</tr>");
             }
@@ -57,5 +57,32 @@ public class Q101_SpiralMatrix2 {
         } catch (Exception ex) {
             Logger.getLogger(Q101_SpiralMatrix2.class.getName()).log(Level.SEVERE, null, ex);
         }
+    }
+
+    public int[][] generateMatrixMy(int n) {
+        int[][] matrix = new int[n][n];
+        filloutMatrix(matrix, 0, n, 1);
+        return matrix;
+    }
+
+    private void filloutMatrix(int[][] matrix, int n, int edge, int num) {
+        if (edge <= 0) {
+            return;
+        }
+        for (int i = 0; i < edge; i++) {
+            matrix[n][n + i] = num++;
+        }
+        for (int i = 1; i < edge; i++) {
+            matrix[n + i][n + edge - 1] = num++;
+        }
+        if (edge > 1) {
+            for (int i = 1; i < edge; i++) {
+                matrix[n + edge - 1][n + edge - 1 - i] = num++;
+            }
+            for (int i = 1; i < edge - 1; i++) {
+                matrix[n + edge - 1 - i][n] = num++;
+            }
+        }
+        filloutMatrix(matrix, n + 1, edge - 2, num);
     }
 }

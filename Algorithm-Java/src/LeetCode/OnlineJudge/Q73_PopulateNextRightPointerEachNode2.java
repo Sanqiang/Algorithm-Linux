@@ -39,6 +39,16 @@ public class Q73_PopulateNextRightPointerEachNode2 {
         connect(next);
     }
 
+    public class TreeLinkNode {
+
+        int val;
+        TreeLinkNode left, right, next;
+
+        TreeLinkNode(int x) {
+            val = x;
+        }
+    }
+
     public static void main(String[] args) {
         Q73_PopulateNextRightPointerEachNode2 q73 = new Q73_PopulateNextRightPointerEachNode2();
         TreeLinkNode tln1 = q73.new TreeLinkNode(1);
@@ -52,21 +62,46 @@ public class Q73_PopulateNextRightPointerEachNode2 {
         tln1.left = tln2;
         tln1.right = tln3;
         tln2.left = tln4;
-        //tln2.right = tln5;
-        //tln3.right = tln6;
+        tln2.right = tln5;
+        tln3.right = tln6;
         tln4.left = tln7;
         tln4.right = tln8;
-        q73.connect(tln1);
+        q73.connectMy(tln1);
         System.out.println();
     }
 
-    public class TreeLinkNode {
-
-        int val;
-        TreeLinkNode left, right, next;
-
-        TreeLinkNode(int x) {
-            val = x;
+    private void connectMy(TreeLinkNode node) {
+        TreeLinkNode horizontal = node, vertical = node, last = null;
+        while (vertical != null) {
+            horizontal = vertical;
+            TreeLinkNode next = null;
+            last = null;
+            while (horizontal != null) {
+                if (horizontal.left != null) {
+                    if (last == null) {
+                        last = horizontal.left;
+                    } else {
+                        last.next = horizontal.left;
+                        last = horizontal.left;
+                    }
+                    if (next == null) {
+                        next = horizontal.left;
+                    }
+                }
+                if (horizontal.right != null) {
+                    if (last == null) {
+                        last = horizontal.right;
+                    } else {
+                        last.next = horizontal.right;
+                        last = horizontal.right;
+                    }
+                    if (next == null) {
+                        next = last.right;
+                    }
+                }
+                horizontal = horizontal.next;
+            }
+            vertical = next;
         }
     }
 }

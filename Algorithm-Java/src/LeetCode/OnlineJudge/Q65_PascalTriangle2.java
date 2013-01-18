@@ -27,9 +27,27 @@ public class Q65_PascalTriangle2 {
     }
 
     public static void main(String[] args) {
-        ArrayList<Integer> solution = new Q65_PascalTriangle2().getRow(0xff);
+        ArrayList<Integer> solution = new Q65_PascalTriangle2().getRowMy(4);
         for (Integer integer : solution) {
             System.out.print(integer + " ");
         }
+    }
+
+    public ArrayList<Integer> getRowMy(int rowIndex) {
+        ArrayList<Integer> solution = new ArrayList<>(rowIndex);
+        for (int row = 0; row <= rowIndex; row++) {
+            if (row == 0) {
+                solution.add(1);
+            } else {
+                for (int i = row; i >= 1; i--) {
+                    if (i == row) {
+                        solution.add(1);
+                    } else {
+                        solution.set(i, solution.get(i) + solution.get(i - 1));
+                    }
+                }
+            }
+        }
+        return solution;
     }
 }

@@ -21,9 +21,25 @@ public class Q9_BestTimeBuySellStock2 {
         return MaxProfitVal;
     }
 
+    //my way
+    public int maxProfitEx(int[] prices) {
+        int max = 0;
+        int buy_date = 0, i, length = prices.length;
+        for (i = 1; i < length; i++) {
+            if (prices[i] < prices[i - 1]) {
+                max += prices[i - 1] - prices[buy_date];
+                buy_date = i;
+            }
+        }
+        max += prices[length - 1] - prices[buy_date];
+        return max;
+    }
+
     public static void main(String[] args) {
         int[] prices = {2, 3, 1, 2, 3, 2, 9, 10};
         int profit = new Q9_BestTimeBuySellStock2().maxProfit(prices);
         System.out.println(profit);
+        int profit2 = new Q9_BestTimeBuySellStock2().maxProfitEx(prices);
+        System.out.println(profit2);
     }
 }

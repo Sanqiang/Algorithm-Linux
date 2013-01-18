@@ -77,7 +77,7 @@ public class LinkedListNode<V> {
 
     public static LinkedListNode<Integer> getSampleLinkedList4() {
         LinkedListNode<Integer> n1 = new LinkedListNode<>(0);
-        LinkedListNode<Integer> n2 = new LinkedListNode<>(1, n1);
+        LinkedListNode<Integer> n2 = new LinkedListNode<>(0, n1);
         LinkedListNode<Integer> n3 = new LinkedListNode<>(1, n2);
         LinkedListNode<Integer> n4 = new LinkedListNode<>(2, n3);
         LinkedListNode<Integer> n5 = new LinkedListNode<>(2, n4);

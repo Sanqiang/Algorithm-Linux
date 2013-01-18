@@ -31,16 +31,44 @@ public class Q24_ConvertLinkedListToBinaryTree {
         return parent;
     }
 
-    class Wrapper{
+    class Wrapper {
+
         LinkedListNode<Integer> Node;
-        public Wrapper(LinkedListNode<Integer> _node)
-        {
-            this.Node=_node;
+
+        public Wrapper(LinkedListNode<Integer> _node) {
+            this.Node = _node;
         }
     }
-    
+
     public static void main(String[] args) {
         LinkedListNode<Integer> list = LinkedListNode.getSampleLinkedList();
-        BinaryTreeNode<Integer> root = new Q24_ConvertLinkedListToBinaryTree().sortedListToBST(list);
+        BinaryTreeNode<Integer> root = new Q24_ConvertLinkedListToBinaryTree().sortedListToBSTMy(list);
+    }
+
+    //my way
+    public BinaryTreeNode<Integer> sortedListToBSTMy(LinkedListNode<Integer> head) {
+        int len = head.getLength();
+        wm = new WrapperMy();
+        wm.node = head;
+        BinaryTreeNode<Integer> node = sortedListToBSTMyHelper(0, len - 1);
+        return node;
+    }
+    WrapperMy wm = null;
+
+    private BinaryTreeNode<Integer> sortedListToBSTMyHelper(int s, int e) {
+        if (s > e) {
+            return null;
+        }
+        int m = s + (e - s) / 2;
+        BinaryTreeNode<Integer> node = new BinaryTreeNode<>(-1);
+        node.Left = sortedListToBSTMyHelper(s, m - 1);
+        node.Data = wm.node.Data;
+        wm.node = wm.node.Next;
+        node.Right = sortedListToBSTMyHelper(m + 1, e);
+        return node;
+    }
+
+    class WrapperMy {
+        LinkedListNode<Integer> node;
     }
 }

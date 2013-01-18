@@ -63,6 +63,7 @@ public class Q4_AddBinary {
         return Integer.toBinaryString(Integer.parseInt(a, 2) + Integer.parseInt(b, 2));
     }
 
+
     public static void main(String[] args) {
         String solution = new Q4_AddBinary().addBinary("11", "1");
         System.out.println(solution);

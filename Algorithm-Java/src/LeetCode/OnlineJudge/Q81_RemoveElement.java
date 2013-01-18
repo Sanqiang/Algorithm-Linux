@@ -31,7 +31,7 @@ public class Q81_RemoveElement {
 
     public static void main(String[] args) {
         int A[] = {1, 3, 2, 3, 4, 3, 5, 6, 3};
-        int len = new Q81_RemoveElement().removeElement(A, 3);
+        int len = new Q81_RemoveElement().removeElementMy(A, 3);
         for (int i : A) {
             System.out.print(i);
         }
@@ -46,5 +46,15 @@ public class Q81_RemoveElement {
         long span1 = l2 - l1, span2 = l3 - l2;
         System.out.println(t1 + " Cost " + span1);
         System.out.println(t2 + " Cost " + span2);
+    }
+
+    public int removeElementMy(int[] A, int elem) {
+        int len = A.length, pos = 0;
+        for (int i = 0; i < len; i++) {
+            if (A[i] != elem) {
+                A[pos++] = A[i];
+            }
+        }
+        return pos;
     }
 }

@@ -47,10 +47,72 @@ public class Q83_RestoreIPAddress {
 
     public static void main(String[] args) {
         String s = "25525511135";
-        ArrayList<String> solution = new Q83_RestoreIPAddress().restoreIpAddresses(s);
+        ArrayList<String> solution = new Q83_RestoreIPAddress().restoreIpAddressesMy(s);
         for (String string : solution) {
             System.out.println(string);
         }
-   
+    }
+
+    //most correct one
+    public ArrayList<String> restoreIpAddressesMy(String s) {
+        ArrayList<String> solution = new ArrayList<>();
+        int dot1, dot2, dot3, len = s.length();
+        for (dot1 = 0; dot1 < len - 3; dot1++) {
+            for (dot2 = dot1 + 1; dot2 < len - 2; dot2++) {
+                for (dot3 = dot2 + 1; dot3 < len - 1; dot3++) {
+                    if (validateIP(s.substring(0, dot1))
+                            && validateIP(s.substring(dot1, dot2))
+                            && validateIP(s.substring(dot2, dot3))
+                            && validateIP(s.substring(dot3, len))) {
+                        StringBuilder sb = new StringBuilder();
+                        sb.append(s.substring(0, dot1)).append(".");
+                        sb.append(s.substring(dot1, dot2)).append(".");
+                        sb.append(s.substring(dot2, dot3)).append(".");
+                        sb.append(s.substring(dot3, len));
+                        solution.add(sb.toString());
+                    }
+                }
+            }
+        }
+        return solution;
+    }
+
+    boolean validateIP(String IP) {
+        int len = IP.length();
+        if (len <= 0 || len > 3) {
+            return false;
+        }
+        if (len == 3) {
+            if (IP.charAt(0) > '2' || IP.charAt(0) <= '0') {
+                return false;
+            }
+            if (IP.charAt(0) == '2') {
+                if (IP.charAt(1) > '5' || IP.charAt(1) < '0') {
+                    return false;
+                }
+                if (IP.charAt(2) > '6' || IP.charAt(2) < '0') {
+                    return false;
+                }
+            } else {
+                if (IP.charAt(1) > '9' || IP.charAt(1) < '0') {
+                    return false;
+                }
+                if (IP.charAt(2) > '9' || IP.charAt(2) < '0') {
+                    return false;
+                }
+            }
+        } else if (len == 2) {
+            if (IP.charAt(0) > '9' || IP.charAt(0) <= '0') {
+                return false;
+            }
+            if (IP.charAt(1) > '9' || IP.charAt(1) < '0') {
+                return false;
+            }
+        } else if (len == 1) {
+            if (IP.charAt(0) > '9' || IP.charAt(0) < '0') {
+                return false;
+            }
+        }
+        return true;
     }
 }

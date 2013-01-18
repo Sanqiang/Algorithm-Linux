@@ -28,8 +28,44 @@ public class Q29_EditDistance {
 
     public static void main(String[] args) {
         String word1 = "abc";
-        String word2 = "abc";
-        int dis = new Q29_EditDistance().minDistance(word1, word2);
+        String word2 = "aeec";
+        int dis = new Q29_EditDistance().minDistanceMy(word1, word2);
         System.out.println(dis);
+    }
+
+    //my way
+    int minDistanceMy(String word1, String word2) {
+        int w1_len = word1.length(), w2_len = word2.length(), i, j;
+        int[][] tab = new int[w1_len][w2_len];
+        if (word1.charAt(0) == word2.charAt(0)) {
+            tab[0][0] = 0;
+        } else {
+            tab[0][0] = 1;
+        }
+        for (i = 1; i < w1_len; i++) {
+            if (word1.charAt(i) == word2.charAt(0)) {
+                tab[i][0] = tab[i - 1][0];
+            } else {
+                tab[i][0] = 1 + tab[i - 1][0];
+            }
+        }
+        for (i = 1; i < w2_len; i++) {
+            if (word1.charAt(0) == word2.charAt(i)) {
+                tab[0][i] = tab[0][i - 1];
+            } else {
+                tab[0][i] = 1 + tab[0][i - 1];
+            }
+        }
+        for (i = 1; i < w1_len; i++) {
+            for (j = 1; j < w2_len; j++) {
+                int min = Math.min(Math.min(tab[i - 1][j], tab[i][j - 1]), tab[i - 1][j - 1]);
+                if (word1.charAt(i) == word2.charAt(j)) {
+                    tab[i][j] = min;
+                } else {
+                    tab[i][j] = 1 + min;
+                }
+            }
+        }
+        return tab[w1_len - 1][w2_len - 1];
     }
 }

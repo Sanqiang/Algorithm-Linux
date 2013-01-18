@@ -54,12 +54,53 @@ public class Q52_MergeKSortedList {
         lists.add(LinkedListNode.getSampleLinkedList());
         lists.add(LinkedListNode.getSampleLinkedList2());
         lists.add(LinkedListNode.getSampleLinkedList3());
-        LinkedListNode<Integer> solution = new Q52_MergeKSortedList().mergeKLists(lists);
+        LinkedListNode<Integer> solution = new Q52_MergeKSortedList().mergeKListsMy(lists);
         LinkedListNode<Integer> cur = solution;
         while (cur != null) {
             System.out.println(cur.Data);
             cur = cur.Next;
         }
+    }
 
+    public LinkedListNode<Integer> mergeKListsMy(ArrayList<LinkedListNode<Integer>> lists) {
+        int len = lists.size();
+        boolean pass = true;
+        LinkedListNode<Integer> head = null, runner = null;
+        while (pass) {
+            pass = false;
+            LinkedListNode<Integer> smallest = new LinkedListNode<>(Integer.MAX_VALUE);
+            int smallest_ind = 0;
+            for (int i = 0; i < len; i++) {
+                if (lists.get(i) != null) {
+                    pass = true;
+                }
+                if (lists.get(i) != null && lists.get(i).Data < smallest.Data) {
+                    smallest = lists.get(i);
+                    smallest_ind = i;
+                }
+            }
+            if (pass) {
+                if (runner == null) {
+                    runner = smallest;
+                } else {
+                    runner.Next = smallest;
+                }
+                runner = smallest;
+                if (head == null) {
+                    head = smallest;
+                }
+                lists.set(smallest_ind, lists.get(smallest_ind).Next);
+            }
+        }
+        return head;
+    }
+
+    private LinkedListNode<Integer> setSmallest(LinkedListNode<Integer> a, LinkedListNode<Integer> b) {
+        if (a == null) {
+            return b;
+        } else if (b == null) {
+            return a;
+        }
+        return a.Data >= b.Data ? b : a;
     }
 }

@@ -43,40 +43,32 @@ public class Q1_3Sum {
         return solutions;
     }
 
+    //My way
     public ArrayList<ArrayList<Integer>> threeSumEx(int[] num) {
         java.util.Arrays.sort(num);
         ArrayList<ArrayList<Integer>> solutions = new ArrayList<>();
-        int l = 0, length = num.length, r = length - 1, m = 0;
-        while (r - l > 1) {
-            int current_sum = num[l] + num[r];
-            if (current_sum <= 0) {
-                m = r - 1;
-            } else if (current_sum > 0) {
-                m = l + 1;
-            }
-
-            current_sum += num[m];
-            if (current_sum > 0) {
-                --r;
-                /*if (r == m) {
-                 --m;
-                 }*/
-            } else if (current_sum < 0) {
-                ++l;
-                /*if (l == m) {
-                 ++m;
-                 }*/
-            } else {
-                ArrayList<Integer> solution = new ArrayList<>(3);
-                solution.add(num[r]);
-                solution.add(num[m]);
-                solution.add(num[l]);
-                solutions.add(solution);
-                ++l;
-                --r;
-                /*if (r == m) {
-                 --m;
-                 }*/
+        HashSet<String> cache = new HashSet<>();
+        int length = num.length, i, s, e;
+        for (i = 0; i < length - 3; i++) {
+            s = i + 1;
+            e = length - 1;
+            while (s < e) {
+                if (num[s] + num[e] + num[i] == 0) {
+                    if (cache.contains(String.valueOf(num[i])+String.valueOf(num[s])+String.valueOf(num[e]))) {
+                        continue;
+                    }
+                    cache.add(String.valueOf(num[i])+String.valueOf(num[s])+String.valueOf(num[e]));
+                    ArrayList<Integer> solution = new ArrayList<>();
+                    solution.add(num[i]);
+                    solution.add(num[s]);
+                    solution.add(num[e]);
+                    solutions.add(solution);
+                   ++s;--e;
+                } else if (num[s] + num[e] + num[i] < 0) {
+                    ++s;
+                } else if (num[s] + num[e] + num[i] > 0) {
+                    --e;
+                }
             }
         }
         return solutions;
@@ -95,7 +87,7 @@ public class Q1_3Sum {
         }
 
         //test1
-        int[] arr = Util.TestUtil.generateArray(100);
+        int[] arr = Util.TestUtil.generateArray(30);
         long t1 = System.currentTimeMillis();
         ArrayList<ArrayList<Integer>> solutions1 = new Q1_3Sum().threeSum(arr);
         long t2 = System.currentTimeMillis();

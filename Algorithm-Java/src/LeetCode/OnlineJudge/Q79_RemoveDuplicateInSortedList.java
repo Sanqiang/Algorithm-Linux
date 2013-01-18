@@ -4,6 +4,8 @@
 package LeetCode.OnlineJudge;
 
 import Util.LinkedListNode;
+import java.util.HashMap;
+import java.util.HashSet;
 
 public class Q79_RemoveDuplicateInSortedList {
 
@@ -30,7 +32,22 @@ public class Q79_RemoveDuplicateInSortedList {
 
     public static void main(String[] args) {
         LinkedListNode<Integer> n1 = LinkedListNode.getSampleLinkedList4();
-        new Q79_RemoveDuplicateInSortedList().deleteDuplicates(n1);
+        new Q79_RemoveDuplicateInSortedList().deleteDuplicatesMy(n1);
         n1.print();
+    }
+
+    public LinkedListNode<Integer> deleteDuplicatesMy(LinkedListNode<Integer> head) {
+        LinkedListNode<Integer> runner = head, newhead = head, loop;
+        
+        while (runner != null) {
+            loop = runner.Next;
+            while (loop != null && loop.Data == runner.Data) {
+                loop = loop.Next;
+            }
+            runner.Next = loop;
+            runner = loop;
+        }
+        
+        return newhead;
     }
 }

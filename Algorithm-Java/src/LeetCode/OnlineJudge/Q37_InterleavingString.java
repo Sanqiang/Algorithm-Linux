@@ -25,10 +25,33 @@ public class Q37_InterleavingString {
     }
 
     public static void main(String[] args) {
-        String s1 = "c";
-        String s2 = "a";
-        String s3 = "ca";
-        boolean result = new Q37_InterleavingString().isInterleave(s1, s2, s3);
+        String s1 = "ac";
+        String s2 = "ca";
+        String s3 = "caca";
+        boolean result = new Q37_InterleavingString().isInterleaveMy(s1, s2, s3);
         System.out.println(result);
+    }
+
+    //my way
+    public boolean isInterleaveMy(String s1, String s2, String s3) {
+        int s1_len = s1.length(), s2_len = s2.length(), s3_len = s3.length();
+        if (s1_len + s2_len != s3_len) {
+            return false;
+        }
+        boolean[][] tab = new boolean[1 + s1_len][1 + s2_len];
+        tab[0][0] = true;
+        for (int i = 1; i <= s1_len; i++) {
+            tab[i][0] = tab[i - 1][0] && (s1.charAt(i - 1) == s3.charAt(i - 1));
+        }
+        for (int i = 1; i <= s2_len; i++) {
+            tab[0][i] = tab[0][i - 1] && (s2.charAt(i - 1) == s3.charAt(i - 1));
+        }
+        for (int i = 1; i <= s1_len; i++) {
+            for (int j = 1; j <= s2_len; j++) {
+                tab[i][j] = tab[i - 1][j] && (s3.charAt(i + j - 1) == s1.charAt(i - 1))
+                        || tab[i][j - 1] && (s3.charAt(i + j - 1) == s2.charAt(j - 1));
+            }
+        }
+        return tab[s1_len][s2_len];
     }
 }

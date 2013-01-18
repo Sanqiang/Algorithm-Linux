@@ -6,7 +6,7 @@ package LeetCode.OnlineJudge;
 import java.util.ArrayList;
 
 public class Q64_PascalTriangle {
-    
+
     public ArrayList<ArrayList<Integer>> generate(int numRows) {
         ArrayList<ArrayList<Integer>> solution = new ArrayList<ArrayList<Integer>>();
         for (int i = 0; i <= numRows; i++) {
@@ -29,14 +29,37 @@ public class Q64_PascalTriangle {
         }
         return solution;
     }
-    
+
     public static void main(String[] args) {
-        ArrayList<ArrayList<Integer>> solution = new Q64_PascalTriangle().generate(9);
+        ArrayList<ArrayList<Integer>> solution = new Q64_PascalTriangle().generateMy(9);
         for (ArrayList<Integer> arrayList : solution) {
             for (Integer integer : arrayList) {
-                System.out.print(integer+" ");
+                System.out.print(integer + " ");
             }
             System.out.println();
         }
+    }
+
+    public ArrayList<ArrayList<Integer>> generateMy(int numRows) {
+        ArrayList<ArrayList<Integer>> solution = new ArrayList<>();
+        for (int row = 0; row <= numRows; row++) {
+            ArrayList<Integer> level = new ArrayList<>();
+            if (row == 0) {
+                level.add(1);
+            } else {
+                ArrayList<Integer> pre_solution = solution.get(row - 1);
+                for (int i = 0; i <= pre_solution.size(); i++) {
+                    if (i == 0) {
+                        level.add(1);
+                    } else if (i == pre_solution.size()) {
+                        level.add(1);
+                    } else {
+                        level.add(pre_solution.get(i) + pre_solution.get(i - 1));
+                    }
+                }
+            }
+            solution.add(level);
+        }
+        return solution;
     }
 }

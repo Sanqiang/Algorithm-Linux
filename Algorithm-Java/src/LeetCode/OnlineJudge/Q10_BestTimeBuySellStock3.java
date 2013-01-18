@@ -3,11 +3,9 @@
  */
 package LeetCode.OnlineJudge;
 
-import java.util.ArrayList;
-import sun.misc.JavaxSecurityAuthKerberosAccess;
-
 public class Q10_BestTimeBuySellStock3 {
-    
+
+    //wrong
     public int maxProfit(int[] prices) {
         int i = 1, length = prices.length, MaxProfitVal = Integer.MIN_VALUE;
         int[] left = new int[length];
@@ -30,10 +28,47 @@ public class Q10_BestTimeBuySellStock3 {
         }
         return MaxProfitVal;
     }
-    
+
+    //my way
+    public int maxProfitEx(int[] prices) {
+        int max = Integer.MIN_VALUE;
+        int length = prices.length, i;
+        int[] left = new int[length];
+        int sell_date = 0;
+        int buy_date = 0;
+        for (i = 1; i < length; i++) {
+            if (prices[i] < prices[buy_date]) {
+                buy_date = i;
+            }
+            if (prices[sell_date] < prices[i] && i > buy_date) {
+                sell_date = i;
+            }
+            left[i] = prices[sell_date] - prices[buy_date];
+        }
+        int[] right = new int[length];
+        sell_date = length - 1;
+        buy_date = length - 1;
+        for (i = length - 2; i >= 0; i--) {
+            if (prices[i] > prices[sell_date]) {
+                sell_date = i;
+            }
+            if (prices[buy_date] > prices[i] && i < sell_date) {
+                buy_date = i;
+            }
+            right[i] = prices[sell_date] - prices[buy_date];
+
+        }
+        for (i = 1; i < length; i++) {
+            max = Math.max(max, left[i - 1] + right[i]);
+        }
+        return max;
+    }
+
     public static void main(String[] args) {
-        int[] prices = {2, 3, 1, 2, 7, 2, 9, 10};
+        int[] prices = {2, 3, 1, 100, 7, 2, 9, 10};
         int profit = new Q10_BestTimeBuySellStock3().maxProfit(prices);
         System.out.println(profit);
+        int profit2 = new Q10_BestTimeBuySellStock3().maxProfitEx(prices);
+        System.out.println(profit2);
     }
 }

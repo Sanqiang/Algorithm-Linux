@@ -25,7 +25,24 @@ public class Q22_ContainerWithMostWater {
 
     public static void main(String[] args) {
         int[] height = {1, 2, 4, 3};
-        int MaxArea = new Q22_ContainerWithMostWater().maxArea(height);
+        int MaxArea = new Q22_ContainerWithMostWater().maxAreaMy(height);
         System.out.println(MaxArea);
+    }
+
+    public int maxAreaMy(int[] height) {
+        int s = 0, e = height.length - 1;
+        int max = Integer.MIN_VALUE;
+        while (s < e) {
+            int cur = (e - s + 1) * Math.min(height[s], height[e]);
+            max = Math.max(max, cur);
+            if (height[s] > height[e]) {
+                while (e >= 0 && height[e] >= height[--e]) {
+                }
+            } else {
+                while (s < height.length && height[s] >= height[++s]) {
+                }
+            }
+        }
+        return max;
     }
 }

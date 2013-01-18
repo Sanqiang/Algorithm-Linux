@@ -35,7 +35,27 @@ public class Q103_StringToInteger {
 
     public static void main(String[] args) {
         String str = "-1234567890";
-        int num = new Q103_StringToInteger().atoi(str);
+        int num = new Q103_StringToInteger().atoiMy(str);
         System.out.println(num);
+    }
+
+    public int atoiMy(String str) {
+        int num = 0, len = str.length(), i = 0;
+        boolean neg = false;
+        if (str.charAt(0) == '+') {
+            ++i;
+        } else if (str.charAt(0) == '-') {
+            ++i;
+            neg = true;
+        }
+        for (; i < len; i++) {
+            int digit = str.charAt(i) - '0';
+            num *= 10;
+            num += digit;
+        }
+        if (neg) {
+            num = -num;
+        }
+        return num;
     }
 }

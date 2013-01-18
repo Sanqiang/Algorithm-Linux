@@ -20,7 +20,7 @@ public class Q39_JumpGame2 {
             int dis = A[i];
             for (j = 1; j <= dis; ++j) {
                 if (i + j < length) {
-                    cache[i + j] = Math.min(cache[i + j], 1 + pre_dis); 
+                    cache[i + j] = Math.min(cache[i + j], 1 + pre_dis);
                 }
             }
         }
@@ -48,21 +48,38 @@ public class Q39_JumpGame2 {
     }
 
     public static void main(String[] args) {
-        int[] A = {2, 3, 1, 1, 4};
-        int step = new Q39_JumpGame2().jump(A);
+        int[] A = {1, 5, 4, 3, 1, 2, 0, 1};
+        int step = new Q39_JumpGame2().jumpMy(A);
         System.out.println(step);
         int step2 = new Q39_JumpGame2().jumpEx(A);
         System.out.println(step2);
 
 
-        int[] testA = TestUtil.generateArray(99999, 50, false);
+        int[] testA = TestUtil.generateArray(999, 50, false);
         long l1 = System.currentTimeMillis();
-        int stepa = new Q39_JumpGame2().jump(testA);
+        int stepa = new Q39_JumpGame2().jumpMy(testA);
         long l2 = System.currentTimeMillis();
         int stepb = new Q39_JumpGame2().jumpEx(testA);
         long l3 = System.currentTimeMillis();
         long span1 = l2 - l1, span2 = l3 - l2;
         System.out.println(stepa + " Cost " + span1);
         System.out.println(stepb + " Cost " + span2);
+    }
+
+    //most correct one
+    public int jumpMy(int[] A) {
+        int[] tab = new int[A.length];
+        for (int i = 0; i < A.length; i++) {
+            tab[i] = Integer.MAX_VALUE;
+        }
+        for (int i = 0; i < A.length; i++) {
+            for (int j = i; j <= i + A[i]; j++) {
+                tab[j] = Math.min(tab[j], 1 + i);
+                if (j == A.length - 1) {
+                    return tab[j];
+                }
+            }
+        }
+        return tab[A.length - 1];
     }
 }

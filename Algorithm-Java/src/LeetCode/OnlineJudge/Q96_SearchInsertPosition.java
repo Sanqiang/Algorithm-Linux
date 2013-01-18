@@ -22,7 +22,24 @@ public class Q96_SearchInsertPosition {
 
     public static void main(String[] args) {
         int A[] = {1, 3, 5, 7, 9, 11};
-        int pos = new Q96_SearchInsertPosition().searchInsert(A, 2);
+        int pos = new Q96_SearchInsertPosition().searchInsertMy(A, 2);
         System.out.println(pos);
+    }
+
+    //remind: default in the left
+    public int searchInsertMy(int[] A, int target) {
+        int s = 0, len = A.length, e = len - 1;
+        while (s < e) {
+            int m = s + (e - s) / 2;
+            if (A[m] == target) {
+                return m;
+            } else if (A[m] < target) {
+                s = m + 1;
+            } else {
+                e = m - 1;
+            }
+        }
+
+        return s;
     }
 }

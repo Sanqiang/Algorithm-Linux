@@ -26,8 +26,22 @@ public class Q49_MaxSubarray {
     }
 
     public static void main(String[] args) {
-        int[] A = {-3, -2, -1};
-        int max = new Q49_MaxSubarray().maxSubArray(A);
+        int[] A = {1, 2, 3, -2};
+        int max = new Q49_MaxSubarray().maxSubArrayMy(A);
         System.out.println(max);
+    }
+
+    //my way
+    public int maxSubArrayMy(int[] A) {
+        int max = 0, len = A.length, count = 0;;
+        for (int i = 0; i < len; i++) {
+            count += A[i];
+            if (count < 0) {
+                count = 0;
+            } else {
+                max = Math.max(max, count);
+            }
+        }
+        return max;
     }
 }

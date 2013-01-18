@@ -48,12 +48,31 @@ public class Q56_MinPathSum {
     public static void main(String[] args) {
         int grid[][] = TestUtil.generateMatrix(10, 10, 5);
         long l1 = System.currentTimeMillis();
-        int sum1 = new Q56_MinPathSum().minPathSum(grid);
+        int sum1 = new Q56_MinPathSum().minPathSumMy(grid);
         long l2 = System.currentTimeMillis();
         int sum2 = new Q56_MinPathSum().minPathSumDP(grid);
         long l3 = System.currentTimeMillis();
         long span1 = l2 - l1, span2 = l3 - l2;
         System.out.println(sum1 + " Cost " + span1);
         System.out.println(sum2 + " Cost " + span2);
+    }
+
+    public int minPathSumMy(int[][] grid) {
+        int height = grid.length, width = grid[0].length, col, row;
+        int[][] tab = new int[height][width];
+        tab[0][0] = grid[0][0];
+        for (col = 1; col < height; col++) {
+            tab[col][0] = grid[col][0] + tab[col - 1][0];
+        }
+        for (row = 1; row < width; row++) {
+            tab[0][row] = grid[0][row] + tab[0][row - 1];
+        }
+        for (col = 1; col < height; col++) {
+            for (row = 1; row < width; row++) {
+                tab[col][row] = grid[col][row] + Math.min(tab[col][row - 1], tab[col - 1][row]);
+            }
+        }
+
+        return tab[col - 1][row - 1];
     }
 }

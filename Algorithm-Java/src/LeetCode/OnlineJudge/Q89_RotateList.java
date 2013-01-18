@@ -27,7 +27,22 @@ public class Q89_RotateList {
         LinkedListNode<Integer> list = LinkedListNode.getSampleLinkedList();
         list.print();
         System.out.println("-=-=-=-=-=-=-");
-        LinkedListNode<Integer> new_list = new Q89_RotateList().rotateRight(list, 3);
+        LinkedListNode<Integer> new_list = new Q89_RotateList().rotateRightMy(list, 3);
         new_list.print();
+    }
+
+    public LinkedListNode<Integer> rotateRightMy(LinkedListNode<Integer> head, int n) {
+        LinkedListNode<Integer> left = head, right = head, newhead = null;
+        while (n-- > 0) {
+            right = right.Next;
+        }
+        while (right.Next != null) {
+            left = left.Next;
+            right = right.Next;
+        }
+        newhead = left.Next;
+        left.Next = null;
+        right.Next = head;
+        return newhead;
     }
 }

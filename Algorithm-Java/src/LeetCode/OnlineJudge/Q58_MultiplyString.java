@@ -30,9 +30,34 @@ public class Q58_MultiplyString {
     }
 
     public static void main(String[] args) {
-        String num1 = "99999999999999999999";
-        String num2 = "99999999999999999999";
-        String num = new Q58_MultiplyString().multiply(num1, num2);
+        String num1 = "12";
+        String num2 = "23";
+        String num = new Q58_MultiplyString().multiplyMy(num1, num2);
         System.out.println(num);
+    }
+
+    public String multiplyMy(String num1, String num2) {
+        int a_length = num1.length(), b_length = num2.length(), i, j;
+        int solution[] = new int[b_length + a_length];
+        for (i = 0; i < a_length; i++) {
+            for (j = 0; j < b_length; j++) {
+                int n1 = num1.charAt(a_length - 1 - i) - '0';
+                int n2 = num2.charAt(b_length - 1 - j) - '0';
+                solution[i + j] += n1 * n2;
+            }
+        }
+        int carry = 0;
+        for (i = 0; i < a_length + b_length; i++) {
+            int sum = solution[i] + carry;
+            solution[i] = sum % 10;
+            carry = sum / 10;
+        }
+
+
+        int val = 0;
+        for (i = 0; i < a_length + b_length; ++i) {
+            val += Math.pow(10, i) * solution[i];
+        }
+        return String.valueOf(val);
     }
 }

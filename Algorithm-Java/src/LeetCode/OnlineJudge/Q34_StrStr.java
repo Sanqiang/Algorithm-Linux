@@ -101,6 +101,8 @@ public class Q34_StrStr {
         System.out.println(str);
         String str2 = new Q34_StrStr().strStrEx(haystack, needle);
         System.out.println(str2);
+        int c = new Q34_StrStr().search(haystack, needle);
+        System.out.println(c);
 
         String haystack_test = TestUtil.generateArrayString(65535000, 9);
         String needle_test = TestUtil.generateArrayString(500, 9);;
@@ -117,5 +119,46 @@ public class Q34_StrStr {
         }
         System.out.println("KMP:" + span1);
         System.out.println("ZSQ:" + span2);
+    }
+
+    //kmp
+    public int search(String text, String needle) {
+        int count = 0, pos = 0;
+        int[] tab = Next(needle);
+        for (int i = 0; i < text.length(); i++) {
+            if (text.charAt(i) == needle.charAt(pos)) {
+                pos++;
+                if (pos == needle.length()) {
+                    ++count;
+                    pos = 0;
+                }
+            } else {
+                if (tab[pos] > 0) {
+                    pos = tab[pos - 1];
+                } else {
+                    pos = 0;
+                }
+            }
+        }
+        return count;
+    }
+
+    public int[] Next(String needle) {
+        int len = needle.length(), i = 1, pos = 0;
+        int[] tab = new int[len];
+        while (i < len) {
+            if (needle.charAt(i) == needle.charAt(pos)) {
+                tab[i] = pos;
+                pos++;
+            } else {
+                if (pos == 0) {
+                    tab[i] = 0;
+                } else {
+                    pos--;
+                }
+            }
+            ++i;
+        }
+        return tab;
     }
 }

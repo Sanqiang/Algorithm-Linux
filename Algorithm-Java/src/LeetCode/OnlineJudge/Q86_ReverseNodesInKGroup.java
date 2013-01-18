@@ -29,7 +29,22 @@ public class Q86_ReverseNodesInKGroup {
         LinkedListNode<Integer> head = LinkedListNode.getSampleLinkedList();
         head.print();
         System.out.println("-=-=-=-=-=-=-");
-        LinkedListNode<Integer> head2 = new Q86_ReverseNodesInKGroup().reverseKGroup(head, 3);
+        LinkedListNode<Integer> head2 = new Q86_ReverseNodesInKGroup().reverseKGroupMy(head, 3);
         head2.print();
+    }
+
+    public LinkedListNode<Integer> reverseKGroupMy(LinkedListNode<Integer> head, int k) {
+        LinkedListNode<Integer> pre_head = new LinkedListNode<>(0);
+        pre_head.Next = head;
+        LinkedListNode<Integer> pre = pre_head, cur = head, next = head.Next;
+        while (k-- > 0) {
+            next = cur.Next;
+            cur.Next = pre;
+            pre = cur;
+            cur = next;
+        }
+        pre_head.Next.Next = cur;
+        pre_head.Next = pre;
+        return pre_head.Next;
     }
 }

@@ -3,8 +3,6 @@
  */
 package LeetCode.OnlineJudge;
 
-import org.omg.PortableInterceptor.SYSTEM_EXCEPTION;
-
 public class Q30_FirstMissingPositive {
 
     public int firstMissingPositive(int[] A) {
@@ -27,7 +25,24 @@ public class Q30_FirstMissingPositive {
 
     public static void main(String[] args) {
         int[] A = {6, 4, 3, 1, 2, -1, -3};
-        int missing = new Q30_FirstMissingPositive().firstMissingPositive(A);
+        int missing = new Q30_FirstMissingPositive().firstMissingPositiveMy(A);
         System.out.println(missing);
+    }
+
+    //my way
+    public int firstMissingPositiveMy(int[] A) {
+        int len = A.length;
+        boolean[] helper = new boolean[len];
+        for (int i = 0; i < len; i++) {
+            if (A[i] > 0) {
+                helper[A[i]] = true;
+            }
+        }
+        for (int i = 1; i < len; i++) {
+            if (!helper[i]) {
+                return i;
+            }
+        }
+        return -1;
     }
 }

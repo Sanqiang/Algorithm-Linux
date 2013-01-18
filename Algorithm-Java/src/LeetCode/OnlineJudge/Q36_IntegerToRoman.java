@@ -89,5 +89,53 @@ public class Q36_IntegerToRoman {
         System.out.println(text);
         String text2 = new Q36_IntegerToRoman().intToRoman2(num);
         System.out.println(text2);
+        String text3 = new Q36_IntegerToRoman().intToRomanMy(num);
+        System.out.println(text3);
+    }
+
+    public String intToRomanMy(int num) {
+        StringBuilder sb = new StringBuilder();
+        int digit = 1;
+        String s1 = "", s2 = "", s3 = "";
+        while (num > 0) {
+            int c = num % 10;
+            switch (digit) {
+                case 1:
+                    s1 = "I";
+                    s2 = "V";
+                    s3 = "X";
+                    break;
+                case 2:
+                    s1 = "X";
+                    s2 = "L";
+                    s3 = "C";
+                    break;
+                case 3:
+                    s1 = "C";
+                    s2 = "D";
+                    s3 = "M";
+                    break;
+                case 4:
+                    s1 = "M";
+                    break;
+            }
+            if (c <= 3 && c >= 1) {
+                for (int i = 0; i < c; i++) {
+                    sb.insert(0, s1);
+                }
+            } else if (c == 4) {
+                sb.insert(0, s1 + s2);
+            } else if (c >= 5 && c <= 8) {
+                for (int i = 0; i < c - 5; i++) {
+                    sb.insert(0, s1);
+                }
+                sb.insert(0, s2);
+            } else if (c == 9) {
+                sb.insert(0, s1 + s3);
+            }
+            ++digit;
+            num /= 10;
+        }
+        return sb.toString();
     }
 }

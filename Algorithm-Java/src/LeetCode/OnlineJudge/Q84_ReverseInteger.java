@@ -22,7 +22,25 @@ public class Q84_ReverseInteger {
     }
 
     public static void main(String[] args) {
-        int solution = new Q84_ReverseInteger().reverse(12345);
+        int solution = new Q84_ReverseInteger().reverseMy(-12345);
         System.out.println(solution);
+    }
+
+    public int reverseMy(int x) {
+        boolean neg = false;
+        if (x < 0) {
+            neg = true;
+            x = -x;
+        }
+        int num = 0;
+        while (x > 0) {
+            num *= 10;
+            num += x % 10;
+            x /= 10;
+        }
+        if (neg) {
+            num *= -1;
+        }
+        return num;
     }
 }

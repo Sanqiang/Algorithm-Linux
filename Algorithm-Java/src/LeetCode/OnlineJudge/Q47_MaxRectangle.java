@@ -46,7 +46,41 @@ public class Q47_MaxRectangle {
             {'1', '0', '0', '0'},
             {'1', '0', '0', '0'}
         };
-        int area = new Q47_MaxRectangle().maximalRectangle(matrix);
+        int area = new Q47_MaxRectangle().maximalRectangleMy(matrix);
         System.out.println(area);
+    }
+
+    //my way
+    public int maximalRectangleMy(char[][] matrix) {
+        int height = matrix.length, width = matrix[0].length, col, row, max = 0;
+        int[][] tab = new int[height][width];
+        for (col = 0; col < height; col++) {
+            for (row = 0; row < width; row++) {
+                if (matrix[col][row] == '1') {
+                    if (row >= 1) {
+                        tab[col][row] = tab[col][row - 1] + 1;
+                    } else {
+                        tab[col][row] = 1;
+                    }
+                } else if (matrix[col][row] == '0') {
+                    tab[col][row] = 0;
+                }
+            }
+        }
+        for (col = 0; col < height; col++) {
+            for (row = 0; row < width; row++) {
+                if (matrix[col][row] == '1') {
+                    if (col >= 1) {
+                        tab[col][row] = tab[col - 1][row] + tab[col][row];
+                    }
+                }
+            }
+        }
+        for (col = 0; col < height; col++) {
+            for (row = 0; row < width; row++) {
+                max = Math.max(max, tab[col][row]);
+            }
+        }
+        return max;
     }
 }

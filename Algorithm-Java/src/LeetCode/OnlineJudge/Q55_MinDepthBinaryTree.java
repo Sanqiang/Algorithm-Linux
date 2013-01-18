@@ -56,5 +56,17 @@ public class Q55_MinDepthBinaryTree {
         System.out.println(level);
         int level2 = new Q55_MinDepthBinaryTree().minDepthRC(root);
         System.out.println(level2);
+        int level3 = new Q55_MinDepthBinaryTree().minDepthMy(root);
+        System.out.println(level3);
+    }
+
+    public int minDepthMy(BinaryTreeNode<Integer> root) {
+        if (root == null) {
+            return 0;
+        }
+        int l = minDepthRC(root.Left);
+        int r = minDepthRC(root.Right);
+        int result = 1 + Math.min(l, r);
+        return result;
     }
 }

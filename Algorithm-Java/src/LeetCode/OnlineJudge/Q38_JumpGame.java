@@ -25,8 +25,27 @@ public class Q38_JumpGame {
     }
 
     public static void main(String[] args) {
-        int[] A = {3, 2, 3, 0, 4};
-        boolean result = new Q38_JumpGame().canJump(A);
+        int[] A = {3, 2, 2, 0, 4};
+        boolean result = new Q38_JumpGame().canJumpMy(A);
         System.out.println(result);
+    }
+
+    //my way
+    public boolean canJumpMy(int[] A) {
+        for (int i = 0; i < A.length; i++) {
+            if (A[i] == 0) {
+                boolean pass = false;
+                for (int j = i - 1; j >= 0; j--) {
+                    if (i - j < A[j]) {
+                        pass = true;
+                        break;
+                    }
+                }
+                if (!pass) {
+                    return false;
+                }
+            }
+        }
+        return true;
     }
 }

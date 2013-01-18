@@ -18,7 +18,7 @@ public class Q14_MaximumPathSum {
         Wrapper l = maxPathSumHelper(root.Left);
         Wrapper r = maxPathSumHelper(root.Right);
         int depthval = Math.max(l.DepthVal, r.DepthVal) + root.Data;
-        int routeval = Math.max(Math.max(l.RouteVal, r.RouteVal), l.DepthVal + r.DepthVal + root.Data);
+        int routeval = l.DepthVal + r.DepthVal + root.Data;
         Wrapper wr = new Wrapper(depthval, routeval);
         return wr;
     }

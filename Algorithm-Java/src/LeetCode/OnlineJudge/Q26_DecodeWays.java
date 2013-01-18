@@ -4,6 +4,7 @@
 package LeetCode.OnlineJudge;
 
 import Util.TestUtil;
+import com.apple.jobjc.PrimitiveCoder;
 import java.util.HashMap;
 
 public class Q26_DecodeWays {
@@ -93,11 +94,11 @@ public class Q26_DecodeWays {
     }
 
     public static void main(String[] args) {
-        String text = TestUtil.generateArrayString(150, 10);
+        String text = "11231213112312312312310021211213";//TestUtil.generateArrayString(20, 9);
         long l1 = System.currentTimeMillis();
         int ways = new Q26_DecodeWays().numDecodingsEx(text);
         long l2 = System.currentTimeMillis();
-        int ways2 = new Q26_DecodeWays().numDecodingsDP(text);
+        int ways2 = new Q26_DecodeWays().numDecodingsMy(text);
         long l3 = System.currentTimeMillis();
         int ways3 = new Q26_DecodeWays().numDecodingsDP2(text);
         long l4 = System.currentTimeMillis();
@@ -105,5 +106,33 @@ public class Q26_DecodeWays {
         System.out.println("EX:" + ways + " Cost " + span1);
         System.out.println("DP:" + ways2 + " Cost " + span2);
         System.out.println("DP2:" + ways3 + " Cost " + span3);
+    }
+
+    //most correct one
+    public int numDecodingsMy(String s) {
+        int len = s.length(), index;
+        int[] tab = new int[len];
+        if (s.charAt(0) >= '1' && s.charAt(0) <= '9') {
+            tab[0] = 1;
+        } else {
+            tab[0] = 0;
+        }
+        for (index = 1; index < len; index++) {
+            char ch = s.charAt(index);
+            char last_ch = s.charAt(index - 1);
+            int count = 0;
+            if (ch >= '1' && ch <= '9') {
+                count += tab[index - 1];
+            }
+            if (last_ch >= '1' && last_ch <= '2' && ch >= '0' && ch <= '6') {
+                if (index - 2 >= 0) {
+                    count += tab[index - 2];
+                } else {
+                    count += 1;
+                }
+            }
+            tab[index] = count;
+        }
+        return tab[len - 1];
     }
 }

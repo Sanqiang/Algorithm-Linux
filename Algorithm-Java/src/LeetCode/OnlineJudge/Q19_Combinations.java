@@ -3,12 +3,11 @@
  */
 package LeetCode.OnlineJudge;
 
-import Util.TestUtil;
 import java.util.ArrayList;
 import java.util.Iterator;
 
 public class Q19_Combinations {
-    
+
     public ArrayList<ArrayList<Integer>> combine(int n, int k) {
         ArrayList<ArrayList<ArrayList<Integer>>> solutions = new ArrayList<ArrayList<ArrayList<Integer>>>(2);
         solutions.add(new ArrayList<ArrayList<Integer>>());
@@ -39,13 +38,13 @@ public class Q19_Combinations {
         }
         return solutions.get(i % 2);
     }
-    
+
     public ArrayList<ArrayList<Integer>> combineEx(int n, int k) {
         ArrayList<ArrayList<Integer>> solutions = new ArrayList<ArrayList<Integer>>();
         combineHelper(0, 1, k, n, new ArrayList<Integer>(), solutions);
         return solutions;
     }
-    
+
     private void combineHelper(int last_val, int current_bit, int k, int n, ArrayList<Integer> solution, ArrayList<ArrayList<Integer>> solutions) {
         if (current_bit > k) {
             solutions.add(solution);
@@ -60,9 +59,9 @@ public class Q19_Combinations {
             }
         }
     }
-    
+
     public static void main(String[] args) {
-        ArrayList<ArrayList<Integer>> solutions = new Q19_Combinations().combine(4, 2);
+        ArrayList<ArrayList<Integer>> solutions = new Q19_Combinations().combineMy(4, 2);
         for (Iterator<ArrayList<Integer>> it = solutions.iterator(); it.hasNext();) {
             ArrayList<Integer> arrayList = it.next();
             for (Iterator<Integer> it1 = arrayList.iterator(); it1.hasNext();) {
@@ -71,8 +70,8 @@ public class Q19_Combinations {
             }
             System.out.println();
         }
-        
-        int k = 15, n = 25;        
+
+        int k = 15, n = 25;
         long l1 = System.currentTimeMillis();
         ArrayList<ArrayList<Integer>> solutions1 = new Q19_Combinations().combine(n, k);
         long l2 = System.currentTimeMillis();
@@ -81,5 +80,34 @@ public class Q19_Combinations {
         long span1 = l2 - l1, span2 = l3 - l2;
         System.out.println(solutions1.size() + " Cost " + span1);
         System.out.println(solutions2.size() + " Cost " + span2);
+    }
+
+    //my way
+    public ArrayList<ArrayList<Integer>> combineMy(int n, int k) {
+        ArrayList<ArrayList<Integer>>[] solutions = new ArrayList[2];
+        solutions[0] = new ArrayList<>();
+        solutions[1] = new ArrayList<>();
+        int i = 0;
+        for (int j = 1; j <= n; j++) {
+            ArrayList<Integer> solution = new ArrayList<>();
+            solution.add(j);
+            solutions[0].add(solution);
+        }
+        while (++i < k) {
+            ArrayList<ArrayList<Integer>> pre = solutions[(i + 1) % 2];
+            ArrayList<ArrayList<Integer>> cur = solutions[i % 2];
+            cur.clear();
+            for (ArrayList<Integer> arrayList : pre) {
+                for (int j = 1; j <= n; j++) {
+                    if (arrayList.get(arrayList.size() - 1) < j) {
+                        ArrayList<Integer> solution = new ArrayList<>();
+                        solution.addAll(arrayList);
+                        solution.add(j);
+                        cur.add(solution);
+                    }
+                }
+            }
+        }
+        return solutions[(i + 1) % 2];
     }
 }

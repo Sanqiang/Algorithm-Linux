@@ -3,10 +3,12 @@
  */
 package LeetCode.OnlineJudge;
 
+import com.sun.org.apache.xml.internal.serializer.ToTextSAXHandler;
 import java.util.ArrayList;
+import sun.reflect.generics.tree.IntSignature;
 
 public class Q110_TextJustification {
-    
+
     public ArrayList<String> fullJustify(String[] words, int L) {
         ArrayList<String> solution = new ArrayList<>();
         int i, length = words.length;
@@ -25,7 +27,7 @@ public class Q110_TextJustification {
         }
         return solution;
     }
-    
+
     private String fullJustifyHelper(String[] words, int s, int e, int L) {
         for (int i = s; i <= e; i++) {
             L -= words[i].length();
@@ -50,13 +52,62 @@ public class Q110_TextJustification {
         }
         return sb.toString();
     }
-    
+
     public static void main(String[] args) {
         String words[] = {"This", "is", "an", "example", "of", "text", "justification."};
         int L = 16;
-        ArrayList<String> solution = new Q110_TextJustification().fullJustify(words, L);
+        ArrayList<String> solution = new Q110_TextJustification().fullJustifyMy(words, L);
         for (String string : solution) {
             System.out.println(string);
         }
+    }
+
+    public ArrayList<String> fullJustifyMy(String[] words, int L) {
+        ArrayList<String> solution = new ArrayList<>();
+        int s = 0, count = words[0].length();
+        for (int i = 1; i < words.length; i++) {
+            count += 1 + words[i].length();
+            if (count > L) {
+                String temp = generateLine(words, s, i - 1, L);
+                s = i;
+                count = 0;
+                solution.add(temp);
+            }
+        }
+        if (s <= words.length - 1) {
+            String temp = generateLine(words, s, words.length - 1, L);
+            solution.add(temp);
+        }
+        return solution;
+    }
+
+    String generateLine(String[] words, int s, int e, int L) {
+        StringBuilder sb = new StringBuilder();
+        int word_num = e - s + 1, total_empty = L;
+        if (word_num > 1) {
+            for (int i = s; i <= e; i++) {
+                total_empty -= words[i].length();
+            }
+            int per_empty = total_empty / (word_num - 1);
+            int per_empty_offset = total_empty % (word_num - 1);
+            for (int i = s; i <= e; i++) {
+                sb.append(words[i]);
+                if (i == s) {
+                    for (int count = 0; count < per_empty + per_empty_offset; count++) {
+                        sb.append("_");
+                    }
+                } else if (i <= e - 1) {
+                    for (int count = 0; count < per_empty; count++) {
+                        sb.append("_");
+                    }
+                }
+            }
+        } else if (word_num == 1) {
+            sb.append(words[s]);
+            for (int count = 0; count < L - words[s].length(); count++) {
+                sb.append("_");
+            }
+        }
+        return sb.toString();
     }
 }

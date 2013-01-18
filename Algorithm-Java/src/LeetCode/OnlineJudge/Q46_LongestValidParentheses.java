@@ -33,8 +33,33 @@ public class Q46_LongestValidParentheses {
     }
 
     public static void main(String[] args) {
-        String s = "()(()()";
-        int max = new Q46_LongestValidParentheses().longestValidParentheses(s);
+        String s = "()()(()";
+        int max = new Q46_LongestValidParentheses().longestValidParenthesesMy(s);
         System.out.println(max);
+    }
+
+    //my way
+    public int longestValidParenthesesMy(String s) {
+        int len = s.length(), max = 0, i = 0, left = 0;
+        Stack<Integer> stack = new Stack<>();
+        while (i < len) {
+            char ch = s.charAt(i);
+            if (ch == '(') {
+                stack.push(i);
+            } else if (ch == ')') {
+                if (!stack.isEmpty()) {
+                    int pos = stack.pop();
+                    if (stack.isEmpty()) {
+                        max = Math.max(max, i - left + 1);
+                    } else {
+                        max = Math.max(max, i - (stack.peek() + 1) + 1);
+                    }
+                } else {
+                    left = i + 1;
+                }
+            }
+            ++i;
+        }
+        return max;
     }
 }

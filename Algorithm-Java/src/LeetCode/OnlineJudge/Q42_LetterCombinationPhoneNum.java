@@ -73,7 +73,7 @@ public class Q42_LetterCombinationPhoneNum {
 
     public static void main(String[] args) {
         String digits = "23";
-        ArrayList<String> solution = new Q42_LetterCombinationPhoneNum().letterCombinations(digits);
+        ArrayList<String> solution = new Q42_LetterCombinationPhoneNum().letterCombinationsMy(digits);
         for (Iterator<String> it = solution.iterator(); it.hasNext();) {
             String string = it.next();
             System.out.println(string);
@@ -88,5 +88,43 @@ public class Q42_LetterCombinationPhoneNum {
         long span1 = l2 - l1, span2 = l3 - l2;
         System.out.println(solution1.size() + " Cost " + span1);
         System.out.println(solution2.size() + " Cost " + span2);
+    }
+
+    //my way
+    public ArrayList<String> letterCombinationsMy(String digits) {
+        ArrayList<String>[] solutions = new ArrayList[2];
+        solutions[0] = new ArrayList<>();
+        solutions[1] = new ArrayList<>();
+        HashMap<Integer, Character[]> mapper = new HashMap<>();
+        mapper.put(0, new Character[]{'@'});
+        mapper.put(1, new Character[]{'$'});
+        mapper.put(2, new Character[]{'a', 'b', 'c'});
+        mapper.put(3, new Character[]{'d', 'e', 'f'});
+        mapper.put(4, new Character[]{'g', 'h', 'i'});
+        mapper.put(5, new Character[]{'j', 'k', 'l'});
+        mapper.put(6, new Character[]{'m', 'n', 'o'});
+        mapper.put(7, new Character[]{'p', 'q', 'r', 's'});
+        mapper.put(8, new Character[]{'t', 'u', 'v'});
+        mapper.put(9, new Character[]{'w', 'x', 'y', 'z'});
+        int len = digits.length(), i;
+        for (i = 0; i < len; i++) {
+            ArrayList<String> cur = solutions[i % 2];
+            ArrayList<String> pre = solutions[(1 + i) % 2];
+            cur.clear();
+            char ch = digits.charAt(i);
+            Character[] char_list = mapper.get(ch - '0');
+            if (pre.isEmpty()) {
+                for (Character character : char_list) {
+                    cur.add(String.valueOf(character));
+                }
+            } else {
+                for (String string : pre) {
+                    for (Character character : char_list) {
+                        cur.add(String.valueOf(string + character));
+                    }
+                }
+            }
+        }
+        return solutions[(i + 1) % 2];
     }
 }

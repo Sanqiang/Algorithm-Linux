@@ -37,9 +37,35 @@ public class Q124_ZigzagConversion {
     }
 
     public static void main(String[] args) {
-        String s = "ABCDEFGHIJKL";
-        int nRows = 4;
-        String rotate = new Q124_ZigzagConversion().convert(s, nRows);
+        String s = "ABCDEFGHIJKLO";
+        int nRows = 3;
+        String rotate = new Q124_ZigzagConversion().convertMy(s, nRows);
         System.out.println(rotate);
+        String rotate2 = new Q124_ZigzagConversion().convert(s, nRows);
+        System.out.println(rotate2);
+    }
+
+    public String convertMy(String s, int nRows) {
+        StringBuilder sb = new StringBuilder();
+        int sector = nRows * 2 - 2, len = s.length(), num_sector = len % sector == 0 ? len / sector : 1 + len / sector;
+        for (int pos = 0; pos < nRows; pos++) {
+            for (int si = 0; si < num_sector; si++) {
+                int cur = si * sector + pos;
+                if (cur >= len) {
+                    continue;
+                }
+                if (pos == 0 || pos == nRows - 1) {
+                    sb.append(s.charAt(cur));
+                } else {
+                    sb.append(s.charAt(cur));
+                    if (cur + nRows/2+1 >= len) {
+                        continue;
+                    } else {
+                        sb.append(s.charAt(cur + nRows / 2 + 1));
+                    }
+                }
+            }
+        }
+        return sb.toString();
     }
 }

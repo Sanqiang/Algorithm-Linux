@@ -3,7 +3,7 @@
  */
 package CareerCup.SortAndSearch;
 
-public class SortRotatedArray {
+public class Q11_3_SortRotatedArray {
 
     public int find(int[] arr, int s, int e, int target) {
         if (s > e) {

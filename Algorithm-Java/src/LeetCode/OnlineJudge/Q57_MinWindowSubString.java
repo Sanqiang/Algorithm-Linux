@@ -45,14 +45,50 @@ public class Q57_MinWindowSubString {
                 }
             }
         }
-
         return S.substring(min_start, min_start + min_length);
     }
 
     public static void main(String[] args) {
-        String S = "ADOBFCDEBACKD";
-        String T = "ABDC";
-        String text = new Q57_MinWindowSubString().MinimumWindowSubstring(S, T);
+        String S = "abwwwaxxxxab";
+        String T = "aab";
+        String text = new Q57_MinWindowSubString().MinimumWindowSubstringMy(S, T);
         System.out.println(text);
+    }
+
+    public String MinimumWindowSubstringMy(String S, String T) {
+        HashMap<Character, Queue<Integer>> checker = new HashMap<>();
+        int s_len = S.length(), t_len = T.length(), min_s = 0, min_len = Integer.MAX_VALUE, matched = 0, s = 0, e = 0;
+        for (int i = 0; i < t_len; i++) {
+            char ch = T.charAt(i);
+            if (!checker.containsKey(ch)) {
+                Queue<Integer> temp = new LinkedList<>();
+                checker.put(ch, temp);
+            }
+            checker.get(ch).add(-1);
+        }
+        for (int i = 0; i < s_len; i++) {
+            char ch = S.charAt(i);
+            if (checker.containsKey(ch)) {
+                if (checker.get(ch).peek() == -1) {
+                    ++matched;
+                }
+                checker.get(ch).poll();
+                checker.get(ch).add(i);
+                if (matched == t_len) {
+                    int start = s_len;
+                    for (Queue<Integer> queue : checker.values()) {
+                        if (queue.peek() < start) {
+                            start = queue.peek();
+                        }
+                    }
+                    int cur_len = i - start + 1;
+                    if (cur_len < min_len) {
+                        min_len = cur_len;
+                        min_s = start;
+                    }
+                }
+            }
+        }
+        return S.substring(min_s, min_s + min_len);
     }
 }

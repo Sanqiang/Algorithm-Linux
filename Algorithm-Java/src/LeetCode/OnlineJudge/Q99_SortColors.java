@@ -15,10 +15,6 @@ public class Q99_SortColors {
             } else if (A[k] == 3) {
                 swap(A, r--, k);
             }
-            for (int i = 0; i < length; i++) {
-                System.out.print(A[i]);
-            }
-            System.out.println();
         }
     }
 
@@ -45,7 +41,7 @@ public class Q99_SortColors {
 
     public static void main(String[] args) {
         int A[] = {1, 2, 3, 2, 3, 1, 1, 2, 3};
-        new Q99_SortColors().sortColorsTwoLoop(A);
+        new Q99_SortColors().sortColorsMy(A);
         for (int i : A) {
             System.out.print(i);
         }
@@ -54,6 +50,22 @@ public class Q99_SortColors {
         new Q99_SortColors().sortColorsOneLoop(A2);
         for (int i : A2) {
             System.out.print(i);
+        }
+    }
+
+    public void sortColorsMy(int[] A) {
+        int len = A.length, i = 0, j = 0, k = len - 1;
+        while (j <= k) {
+            if (A[j] == 1) {
+                swap(A, i, j);
+                ++i;
+                ++j;
+            } else if (A[j] == 2) {
+                ++j;
+            } else if (A[j] == 3) {
+                swap(A, j, k);
+                --k;
+            }
         }
     }
 }

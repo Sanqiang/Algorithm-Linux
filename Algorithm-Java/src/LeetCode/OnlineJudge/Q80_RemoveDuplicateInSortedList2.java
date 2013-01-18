@@ -32,7 +32,32 @@ public class Q80_RemoveDuplicateInSortedList2 {
         LinkedListNode<Integer> n1 = LinkedListNode.getSampleLinkedList4();
         n1.print();
         System.out.println("-=-=-=-=-=-=-");
-        LinkedListNode<Integer> n2 = new Q80_RemoveDuplicateInSortedList2().deleteDuplicates(n1);
+        LinkedListNode<Integer> n2 = new Q80_RemoveDuplicateInSortedList2().deleteDuplicatesMy(n1);
         n2.print();
+    }
+
+    public LinkedListNode<Integer> deleteDuplicatesMy(LinkedListNode<Integer> head) {
+        LinkedListNode<Integer> runner = head, newhead = new LinkedListNode<>(Integer.MIN_VALUE), loop, last = newhead;
+        newhead.Next = runner;
+        boolean duplicate = false;
+        while (runner != null) {
+            duplicate = false;
+
+            loop = runner.Next;
+            while (loop != null && loop.Data == runner.Data) {
+                duplicate = true;
+                loop = loop.Next;
+            }
+
+            if (duplicate) {
+                last.Next = loop;
+                runner = loop;
+            } else {
+                last = runner;
+                runner = runner.Next;
+            }
+        }
+
+        return newhead.Next;
     }
 }

@@ -39,9 +39,34 @@ public class Q2_3SumClosest {
         return SmallestDistance;
     }
 
+    //My way actually the correct way
+    public int threeSumClosestEx(int[] num, int target) {
+        java.util.Arrays.sort(num);
+        int cloest = Integer.MAX_VALUE;
+        int i, length = num.length;
+        for (i = 0; i < length - 3; i++) {
+            int s = i + 1;
+            int e = length - 1;
+            while (s < e) {
+                int sum = Math.abs(num[i] + num[s] + num[e]);
+                if (sum == target) {
+                    return 0;
+                } else if (sum < target) {
+                    ++s;
+                } else if (sum > target) {
+                    --e;
+                }
+
+                int temp = Math.abs(sum - target);
+                cloest = Math.min(cloest, temp);
+            }
+        }
+        return cloest;
+    }
+
     public static void main(String[] args) {
         int[] num = {-1, 2, 1, -4};
-        int SmallestDistance = new Q2_3SumClosest().threeSumClosest(num, 1);
+        int SmallestDistance = new Q2_3SumClosest().threeSumClosestEx(num, 1);
         System.out.print(SmallestDistance);
     }
 }

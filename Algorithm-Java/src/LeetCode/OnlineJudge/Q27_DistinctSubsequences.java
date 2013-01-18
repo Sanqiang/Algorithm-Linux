@@ -37,7 +37,37 @@ public class Q27_DistinctSubsequences {
     public static void main(String[] args) {
         String S = "rabb";
         String T = "rab";
-        int num = new Q27_DistinctSubsequences().numDistinct(S, T);
+        int num = new Q27_DistinctSubsequences().numDistinctMy(S, T);
         System.out.println(num);
+    }
+
+    //my way
+    int numDistinctMy(String S, String T) {
+        int s_len = S.length(), t_len = T.length(), i, j, k;
+        int[][] tab = new int[1 + s_len][1 + t_len];
+        tab[0][0] = 1;
+        for (i = 1; i <= s_len; i++) {
+            tab[i][0] = 0;
+        }
+        for (i = 1; i <= t_len; i++) {
+            tab[0][i] = 0;
+        }
+        for (i = 1; i <= s_len; i++) {
+            for (j = 1; j <= t_len; j++) {
+                if (S.charAt(i - 1) == T.charAt(j - 1)) {
+                    tab[i][j] = 0;
+                    for (k = 0; k < j; k++) {
+                        tab[i][j] += tab[k][j - 1];
+                    }
+                } else {
+                    tab[i][j] = 0;
+                }
+            }
+        }
+        int sum = 0;
+        for (i = 0; i < s_len + 1; ++i) {
+            sum += tab[i][t_len];
+        }
+        return sum;
     }
 }

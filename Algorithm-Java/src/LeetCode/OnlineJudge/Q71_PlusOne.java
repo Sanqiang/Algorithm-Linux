@@ -21,9 +21,27 @@ public class Q71_PlusOne {
 
     public static void main(String[] args) {
         int[] digits = {2, 9, 9};
-        int[] solution = new Q71_PlusOne().plusOne(digits);
+        int[] solution = new Q71_PlusOne().plusOneMy(digits);
         for (int i : solution) {
             System.out.print(i);
         }
+    }
+
+    public int[] plusOneMy(int[] digits) {
+        int[] solution = new int[digits.length + 1];
+        int carry = 0;
+        for (int i = digits.length - 1; i >= 0; i--) {
+            int sum = carry + digits[i];
+            if (i == digits.length - 1) {
+                sum += 1;
+            }
+            int digit = sum % 10;
+            solution[i + 1] = digit;
+            carry = sum / 10;
+        }
+        if (carry > 0) {
+            solution[0] = carry;
+        }
+        return solution;
     }
 }

@@ -35,7 +35,34 @@ public class Q111_TrappingRainWater {
 
     public static void main(String[] args) {
         int[] A = {0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1};
-        int water = new Q111_TrappingRainWater().trap(A);
+        int water = new Q111_TrappingRainWater().trapMy(A);
         System.out.println(water);
+    }
+
+    public int trapMy(int[] A) {
+        int water = 0, len = A.length, h = A[0], hi = 0;
+        for (int i = 1; i < len; i++) {
+            if (A[i] > h) {
+                h = A[i];
+                hi = i;
+            }
+        }
+        int p = A[0];
+        for (int i = 1; i < hi; i++) {
+            if (A[i] > p) {
+                p = A[i];
+            } else {
+                water += p - A[i];
+            }
+        }
+        p = A[len - 1];
+        for (int i = len - 2; i > hi; i--) {
+            if (A[i] > p) {
+                p = A[i];
+            } else {
+                water += p - A[i];
+            }
+        }
+        return water;
     }
 }

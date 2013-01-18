@@ -53,7 +53,27 @@ public class Q102_Sqrt {
         double binary = new Q102_Sqrt().sqrt(val);
         System.out.println(binary);
 
-        double newton = new Q102_Sqrt().sqrtNewton(val);
-        System.out.println(newton);
+        double my = new Q102_Sqrt().sqrtMy(val);
+        System.out.println(my);
+
+        /*
+         double newton = new Q102_Sqrt().sqrtNewton(val);
+         System.out.println(newton);
+         */
+    }
+
+    public double sqrtMy(double x) {
+        double num = x / 2;
+        double dif = x / 4;
+        while (true) {
+            if (Math.abs(num * num - x) <= precis) {
+                return num;
+            } else if (num * num > x) {
+                num -= dif;
+            } else if (num * num < x) {
+                num += dif;
+            }
+            dif /= 2;
+        }
     }
 }

@@ -28,6 +28,22 @@ public class Q31_FlattenBinaryTreeToLinkedList {
 
     public static void main(String[] args) {
         BinaryTreeNode<Integer> root = BinaryTreeNode.getSampleTree();
-        new Q31_FlattenBinaryTreeToLinkedList().flatten(root);
+        new Q31_FlattenBinaryTreeToLinkedList().flattenMy(root);
+    }
+    BinaryTreeNode<Integer> LastNodeMy = null;
+
+    public void flattenMy(BinaryTreeNode<Integer> root) {
+        if (root == null) {
+            return;
+        }
+        flattenMy(root.Left);
+        if (LastNodeMy != null) {
+            LastNodeMy.Right = root;
+            root.Parent = LastNodeMy;
+        }
+        root.Left =null;
+        LastNodeMy = root;
+        
+        flatten(root.Right);
     }
 }

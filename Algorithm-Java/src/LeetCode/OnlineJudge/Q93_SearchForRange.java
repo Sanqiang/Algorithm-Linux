@@ -83,7 +83,7 @@ public class Q93_SearchForRange {
 
     public static void main(String[] args) {
         int A[] = {5, 7, 7, 8, 8, 8, 8, 8, 8, 8, 10};
-        int range[] = new Q93_SearchForRange().searchRangeEx(A, 8);
+        int range[] = new Q93_SearchForRange().searchRangeMy(A, 8);
         System.out.println(range[0] + "," + range[1]);
         int range2[] = new Q93_SearchForRange().searchRange(A, 8);
         System.out.println(range2[0] + "," + range2[1]);
@@ -93,10 +93,45 @@ public class Q93_SearchForRange {
         long l1 = System.currentTimeMillis();
         int testr1[] = new Q93_SearchForRange().searchRange(test, 1);
         long l2 = System.currentTimeMillis();
-        int testr2[] = new Q93_SearchForRange().searchRangeEx(test, 1);
+        int testr2[] = new Q93_SearchForRange().searchRangeMy(test, 1);
         long l3 = System.currentTimeMillis();
         long span1 = l2 - l1, span2 = l3 - l2;
         System.out.println(testr1[0] + "," + testr1[1] + " Cost " + span1);
         System.out.println(testr2[0] + "," + testr2[1] + " Cost " + span2);
+    }
+
+    public int[] searchRangeMy(int[] A, int target) {
+        int range[] = new int[2], length = A.length;
+        range[0] = BinarySearchLowMy(A, 0, length - 1, target);
+        range[1] = BinarySearchHighMy(A, 0, length - 1, target);
+        return range;
+    }
+
+    private int BinarySearchLowMy(int A[], int s, int e, int target) {
+        if (s > e) {
+            return -1;
+        }
+        int m = s + (e - s) / 2;
+        if (A[m] == target && (m == 0 || A[m - 1] < A[m])) {
+            return m;
+        } else if (A[m] < target) {
+            return BinarySearchLowMy(A, m + 1, e, target);
+        } else {
+            return BinarySearchLowMy(A, s, m - 1, target);
+        }
+    }
+
+    private int BinarySearchHighMy(int A[], int s, int e, int target) {
+        if (s > e) {
+            return -1;
+        }
+        int m = s + (e - s) / 2;
+        if (A[m] == target && (m == A.length - 1 || A[m + 1] > A[m])) {
+            return m;
+        } else if (A[m] > target) {
+            return BinarySearchHighMy(A, s, m - 1, target);
+        } else {
+            return BinarySearchHighMy(A, m + 1, e, target);
+        }
     }
 }

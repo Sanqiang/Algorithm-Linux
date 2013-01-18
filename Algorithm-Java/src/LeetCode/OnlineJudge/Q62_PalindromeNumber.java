@@ -78,5 +78,24 @@ public class Q62_PalindromeNumber {
         System.out.println(ispalindrome2);
         boolean ispalindrome3 = new Q62_PalindromeNumber().isPalindrome2(x);
         System.out.println(ispalindrome3);
+        boolean ispalindrome4 = new Q62_PalindromeNumber().isPalindromeMy(x);
+        System.out.println(ispalindrome4);
+    }
+    static int num = -1;
+
+    public boolean isPalindromeMy(int x) {
+        if ((x > 0 && x < 10) || x == 0) {
+            return true;
+        }
+        if (num == -1) {
+            num = x;
+        }
+        int r = x / 100;
+        boolean success = isPalindrome1(r);
+        if (num % 10 != r) {
+            success &= false;
+        }
+        num /= 100;
+        return success;
     }
 }

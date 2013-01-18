@@ -21,8 +21,25 @@ public class Q41_LengthOfLastWord {
     }
 
     public static void main(String[] args) {
-        String text = "hello world  h";
-        int l = new Q41_LengthOfLastWord().lengthOfLastWord(text);
+        String text = "hello world  ha";
+        int l = new Q41_LengthOfLastWord().lengthOfLastWordMy(text);
         System.out.println(l);
+    }
+
+    //my way
+    public int lengthOfLastWordMy(String s) {
+        int len = s.length(), i;
+        boolean start = false;
+        for (i = len - 1; i >= 0; i--) {
+            if (s.charAt(i) != ' ') {
+                start = true;
+            }
+            if (start) {
+                if (s.charAt(i) == ' ') {
+                    return len - i - 1;
+                }
+            }
+        }
+        return -1;
     }
 }
