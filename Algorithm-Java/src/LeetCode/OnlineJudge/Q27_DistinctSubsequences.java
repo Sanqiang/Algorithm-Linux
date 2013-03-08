@@ -35,13 +35,13 @@ public class Q27_DistinctSubsequences {
     }
 
     public static void main(String[] args) {
-        String S = "rabb";
-        String T = "rab";
-        int num = new Q27_DistinctSubsequences().numDistinctMy(S, T);
+        String S = "abab";
+        String T = "ab";
+        int num = new Q27_DistinctSubsequences().numDistinct(S, T);
         System.out.println(num);
     }
 
-    //my way
+    //my way WRONG!
     int numDistinctMy(String S, String T) {
         int s_len = S.length(), t_len = T.length(), i, j, k;
         int[][] tab = new int[1 + s_len][1 + t_len];

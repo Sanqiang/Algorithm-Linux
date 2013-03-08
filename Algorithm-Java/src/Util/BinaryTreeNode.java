@@ -75,6 +75,28 @@ public class BinaryTreeNode<T> {
         return btn10;
     }
 
+    public static BinaryTreeNode<Integer> getSampleTree4() {
+        BinaryTreeNode<Integer> btn2 = new BinaryTreeNode<Integer>(10);
+        BinaryTreeNode<Integer> btn7 = new BinaryTreeNode<Integer>(10);
+        BinaryTreeNode<Integer> btn5 = new BinaryTreeNode<Integer>(10, btn2, btn7);
+        BinaryTreeNode<Integer> btn12 = new BinaryTreeNode<Integer>(12);
+        BinaryTreeNode<Integer> btn17 = new BinaryTreeNode<Integer>(17);
+        BinaryTreeNode<Integer> btn15 = new BinaryTreeNode<Integer>(15, btn12, btn17);
+        BinaryTreeNode<Integer> btn10 = new BinaryTreeNode<Integer>(10, btn5, btn15);
+        return btn10;
+    }
+
+    public static BinaryTreeNode<Character> getCharSampleTree() {
+        BinaryTreeNode<Character> btn2 = new BinaryTreeNode<Character>('1');
+        BinaryTreeNode<Character> btn7 = new BinaryTreeNode<Character>('2');
+        BinaryTreeNode<Character> btn5 = new BinaryTreeNode<Character>('+', btn2, btn7);
+        BinaryTreeNode<Character> btn12 = new BinaryTreeNode<Character>('4');
+        BinaryTreeNode<Character> btn17 = new BinaryTreeNode<Character>('3');
+        BinaryTreeNode<Character> btn15 = new BinaryTreeNode<Character>('+', btn12, btn17);
+        BinaryTreeNode<Character> btn10 = new BinaryTreeNode<Character>('*', btn5, btn15);
+        return btn10;
+    }
+
     private static void ReverseOrder(BinaryTreeNode<Integer> root) {
         if (root == null) {
             return;

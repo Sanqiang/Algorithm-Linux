@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import java.util.Iterator;
 
 public class Q15_BinaryTreeZigzagLevelOrderTraversal {
-
+    
     public ArrayList<ArrayList<Integer>> zigzagLevelOrder(BinaryTreeNode<Integer> root) {
         ArrayList<ArrayList<Integer>> solutions = new ArrayList<ArrayList<Integer>>();
         int height = getHeight(root), i = 0;
@@ -18,14 +18,14 @@ public class Q15_BinaryTreeZigzagLevelOrderTraversal {
         zigzagLevelOrderHelper(root, 0, solutions);
         return solutions;
     }
-
+    
     private void zigzagLevelOrderHelper(BinaryTreeNode<Integer> root, int level, ArrayList<ArrayList<Integer>> solutions) {
         if (root == null) {
             return;
         }
         zigzagLevelOrderHelper(root.Left, level + 1, solutions);
         zigzagLevelOrderHelper(root.Right, level + 1, solutions);
-
+        
         ArrayList<Integer> list = solutions.get(level);
         if (level % 2 == 0) {
             list.add(root.Data);
@@ -33,7 +33,7 @@ public class Q15_BinaryTreeZigzagLevelOrderTraversal {
             list.add(0, root.Data);
         }
     }
-
+    
     private int getHeight(BinaryTreeNode<Integer> root) {
         if (root == null) {
             return 0;
@@ -42,10 +42,10 @@ public class Q15_BinaryTreeZigzagLevelOrderTraversal {
         int r = getHeight(root.Right);
         return Math.max(l, r) + 1;
     }
-
+    
     public static void main(String[] args) {
         BinaryTreeNode<Integer> root = BinaryTreeNode.getSampleTree();
-        ArrayList<ArrayList<Integer>> solutions = new Q15_BinaryTreeZigzagLevelOrderTraversal().zigzagLevelOrder(root);
+        ArrayList<ArrayList<Integer>> solutions = new Q15_BinaryTreeZigzagLevelOrderTraversal().zigzagLevelOrderMy(root);
         for (Iterator<ArrayList<Integer>> it = solutions.iterator(); it.hasNext();) {
             ArrayList<Integer> arrayList = it.next();
             System.out.print("[");
@@ -56,5 +56,30 @@ public class Q15_BinaryTreeZigzagLevelOrderTraversal {
             System.out.print("]");
             System.out.println();
         }
+    }
+    
+    public ArrayList<ArrayList<Integer>> zigzagLevelOrderMy(BinaryTreeNode<Integer> root) {
+        ArrayList<ArrayList<Integer>> solutions = new ArrayList<>();
+        MyHelper(solutions, root, 0);
+        return solutions;
+    }
+    
+    void MyHelper(ArrayList<ArrayList<Integer>> solutions, BinaryTreeNode<Integer> head, int level) {
+        if (head == null) {
+            return;
+        }
+        
+        if (level == solutions.size()) {
+            ArrayList<Integer> solution = new ArrayList<>();
+            solutions.add(solution);
+        }
+        if (level % 2 == 0) {
+            solutions.get(level).add(head.Data);
+        } else {
+            solutions.get(level).add(0, head.Data);
+        }
+        
+        MyHelper(solutions, head.Left, level + 1);
+        MyHelper(solutions, head.Right, level + 1);
     }
 }

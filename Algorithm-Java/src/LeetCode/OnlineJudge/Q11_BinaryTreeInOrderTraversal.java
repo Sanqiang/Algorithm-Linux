@@ -34,9 +34,29 @@ public class Q11_BinaryTreeInOrderTraversal {
     public static void main(String[] args) {
         BinaryTreeNode<Integer> root = BinaryTreeNode.getSampleTree();
         Q11_BinaryTreeInOrderTraversal q11 = new Q11_BinaryTreeInOrderTraversal();
-        ArrayList<Integer> solution = q11.inorderTraversal(root);
+        ArrayList<Integer> solution = q11.inorderTraversalMy(root);
         for (Integer integer : solution) {
             System.out.println(integer);
         }
+    }
+
+    public ArrayList<Integer> inorderTraversalMy(BinaryTreeNode<Integer> root) {
+        ArrayList<Integer> solution = new ArrayList<>();
+        BinaryTreeNode<Integer> runner = root;
+        Stack<BinaryTreeNode<Integer>> stack = new Stack<>();
+        while (!stack.isEmpty() || runner != null) {
+            while (runner != null) {
+                stack.push(runner);
+                runner = runner.Left;
+            }
+            if (!stack.isEmpty()) {
+                runner = stack.pop();
+                solution.add(runner.Data);
+            }
+            if (runner != null) {
+                runner = runner.Right;
+            }
+        }
+        return solution;
     }
 }
