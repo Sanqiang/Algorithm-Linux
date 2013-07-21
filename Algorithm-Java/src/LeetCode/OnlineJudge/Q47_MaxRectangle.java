@@ -13,7 +13,6 @@ public class Q47_MaxRectangle {
                 if (matrix[i][j] == '1') {
                     if (j >= 1) {
                         dp[i][j] = dp[i][j - 1] + 1;
-
                     } else {
                         dp[i][j] = 1;
                     }
@@ -43,14 +42,15 @@ public class Q47_MaxRectangle {
         char[][] matrix = {
             {'1', '1', '1', '0'},
             {'1', '1', '1', '0'},
-            {'1', '0', '0', '0'},
-            {'1', '0', '0', '0'}
+            {'0', '1', '1', '1'},
+            {'0', '1', '1', '1'}
         };
-        int area = new Q47_MaxRectangle().maximalRectangleMy(matrix);
+        int area = new Q47_MaxRectangle().maximalRectangle(matrix);
         System.out.println(area);
     }
 
     //my way
+    //wrong!!!
     public int maximalRectangleMy(char[][] matrix) {
         int height = matrix.length, width = matrix[0].length, col, row, max = 0;
         int[][] tab = new int[height][width];

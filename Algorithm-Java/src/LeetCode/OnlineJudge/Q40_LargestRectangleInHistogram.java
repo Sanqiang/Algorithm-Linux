@@ -59,10 +59,10 @@ public class Q40_LargestRectangleInHistogram {
     }
 
     public static void main(String[] args) {
-        int[] height = {2, 1, 5, 6, 2, 3};
+        int[] height = {2, 1, 5, 6, 2,2,2, 3};
         int area = new Q40_LargestRectangleInHistogram().largestRectangleAreaMy(height);
         System.out.println(area);
-        int area2 = new Q40_LargestRectangleInHistogram().largestRectangleAreaEx(height);
+        int area2 = new Q40_LargestRectangleInHistogram().largestRectangleAreaEx(height);//wrong way
         System.out.println(area2);
 
         int[] height_test = {2, 5, 4, 1};//TestUtil.generateArray(9, 9, false);

@@ -8,6 +8,15 @@ import java.util.Random;
 
 public class TestUtil {
 
+    public static Integer[] intToInteger(int[] arr)
+    {
+        Integer[] trans = new Integer[arr.length];
+        for (int i = 0; i < arr.length; i++) {
+            trans[i] = arr[i];
+        }
+        return trans;
+    }
+    
     public static int[] generateArray(int n) {
         return generateArray(n, 100, true);
     }
