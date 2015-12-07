@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e6cc683d-3b91-4417-a26c-12a2554640d8" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/minimum-depth-of-binary-tree.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Algorithm-C/collobert11a.xcworkspace/xcuserdata/sanqiangzhao.xcuserdatad/UserInterfaceState.xcuserstate" afterPath="$PROJECT_DIR$/../Algorithm-C/collobert11a.xcworkspace/xcuserdata/sanqiangzhao.xcuserdatad/UserInterfaceState.xcuserstate" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/minimum-depth-of-binary-tree.py" afterPath="$PROJECT_DIR$/minimum-depth-of-binary-tree.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Algorithm-Python.iws" />
@@ -38,8 +37,8 @@
       <file leaf-file-name="minimum-depth-of-binary-tree.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/minimum-depth-of-binary-tree.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.68947905">
-              <caret line="45" column="64" selection-start-line="45" selection-start-column="64" selection-end-line="45" selection-end-column="64" />
+            <state vertical-scroll-proportion="0.63227785">
+              <caret line="52" column="34" selection-start-line="52" selection-start-column="34" selection-end-line="52" selection-end-column="34" />
               <folding />
             </state>
           </provider>
@@ -335,8 +334,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/minimum-depth-of-binary-tree.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.68947905">
-          <caret line="45" column="64" selection-start-line="45" selection-start-column="64" selection-end-line="45" selection-end-column="64" />
+        <state vertical-scroll-proportion="0.63227785">
+          <caret line="52" column="34" selection-start-line="52" selection-start-column="34" selection-end-line="52" selection-end-column="34" />
           <folding />
         </state>
       </provider>

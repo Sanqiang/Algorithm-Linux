@@ -43,22 +43,26 @@ class Solution(object):
             if level % 2 == 1: #for odd
                 del q_even[:]
                 for node in q_odd:
-                    if node.left is None and node.right is None:
+                    ll = node.left is None
+                    rr = node.right is None
+                    if ll and rr:
                         return level
                     else:
-                        if node.left is not None:
+                        if not ll:
                             q_even.append(node.left)
-                        if node.right is not None:
+                        if not rr:
                             q_even.append(node.right)
             else: #for even
+                del q_odd[:]
                 for node in q_even:
-                    del q_odd[:]
-                    if node.left is None and node.right is None:
+                    ll = node.left is None
+                    rr = node.right is None
+                    if ll and rr:
                         return level
                     else:
-                        if node.left is not None:
+                        if not ll:
                             q_odd.append(node.left)
-                        if node.right is not None:
+                        if not rr:
                             q_odd.append(node.right)
             level += 1
 
