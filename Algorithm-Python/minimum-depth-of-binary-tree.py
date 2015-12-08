@@ -1,3 +1,4 @@
+from Queue import Queue
 # Definition for a binary tree node.
 class TreeNode(object):
     def __init__(self, x):
@@ -27,7 +28,7 @@ class Solution(object):
                 return 1+self.minDepth(root.left)
 
 
-    def minDepth(self, root):
+    def minDepth3(self, root):
         """
         :type root: TreeNode
         :rtype: int
@@ -66,6 +67,29 @@ class Solution(object):
                             q_odd.append(node.right)
             level += 1
 
+    def minDepth(self, root):
+        if root is None:
+            return 0
+        q = Queue()
+        q.put(root)
+        next_num = 0
+        cur_num = 1
+        level = 0
+        while not q.empty():
+            node = q.get()
+            cur_num -= 1
+            ll = node.left is None
+            rr = node.right is None
+            if ll and rr:
+                return level
+            if not ll:
+                q.put(node.left)
+                next_num += 1
+            if not rr:
+                q.put(node.right)
+                next_num += 1
+            if cur_num == 0:
+                cur_num = next_num
+                next_num = 0
+                level += 1
 
-
-        
