@@ -10,10 +10,13 @@ public class ThreeSum {
      */
     public ArrayList<ArrayList<Integer>> threeSum(int[] numbers) {
     	ArrayList<ArrayList<Integer>> solutions = new ArrayList<ArrayList<Integer>>();
-    	
     	Arrays.sort(numbers);
     	for (int k = numbers.length-1; k >= 0; k--) {
-			int num_k = numbers[k];
+    		int num_k = numbers[k];
+    		if(k+1<numbers.length && numbers[k+1] == numbers[k]){
+    			continue;
+    		}
+			
 			int i = 0, j = k-1;
 			while (i < j) {
 				int num_i = numbers[i], num_j = numbers[j];
