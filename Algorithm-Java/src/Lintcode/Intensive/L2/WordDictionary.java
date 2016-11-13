@@ -1,5 +1,7 @@
 package Lintcode.Intensive.L2;
 
+import java.util.ArrayList;
+
 import Lintcode.Util.Trie;
 
 public class WordDictionary {
@@ -26,9 +28,34 @@ public class WordDictionary {
     // Returns if the word is in the data structure. A word could
     // contain the dot character '.' to represent any one letter.
     public boolean search(String word) {
-    	Trie temp = root;
+    	ArrayList<Trie> temp = new ArrayList<Trie>();
+    	temp.add(root);
     	for (int i = 0; i < word.length(); i++) {
-			
+    		char ch = word.charAt(i);
+    		
+    		ArrayList<Trie> next_temp = new ArrayList<Trie>();
+    		if (ch == '.') {
+    			for (Trie trie : temp) {
+					for (char next_ch : trie.children.keySet()) {
+						next_temp.add(trie.children.get(next_ch));
+					}
+				}
+			}else{
+				for (Trie trie : temp) {
+					if (trie.children.containsKey(ch)) {
+						next_temp.add(trie.children.get(ch));
+					}
+				}
+			}
+    		temp = next_temp;
+    		if (temp.isEmpty()) {
+				return false;
+			}
+		}
+    	for (Trie trie : temp) {
+			if (trie.marked) {
+				return true;
+			}
 		}
     	return false;
     }

@@ -3,9 +3,17 @@ package Lintcode.Util;
  * http://www.geeksforgeeks.org/segment-tree-set-1-sum-of-given-range/
  * http://www.geeksforgeeks.org/segment-tree-set-1-range-minimum-query/
  */
+
+public class SegmentTree{
+	public SegmentTree(int[] arr){
+		
+	}
+	
+}
+
 //Java Program to show segment tree operations like construction,
 //query and update
-class SegmentTree {
+class SegmentTreeSample {
 	int st[]; // The array that stores segment tree nodes
 
 	/*
@@ -13,7 +21,7 @@ class SegmentTree {
 	 * allocates memory for segment tree and calls constructSTUtil() to fill the
 	 * allocated memory
 	 */
-	SegmentTree(int arr[], int n) {
+	SegmentTreeSample(int arr[], int n) {
 		// Allocate memory for segment tree
 		// Height of segment tree
 		int x = (int) (Math.ceil(Math.log(n) / Math.log(2)));
@@ -129,7 +137,7 @@ class SegmentTree {
 	public static void main(String args[]) {
 		int arr[] = { 1, 3, 5, 7, 9, 11 };
 		int n = arr.length;
-		SegmentTree tree = new SegmentTree(arr, n);
+		SegmentTreeSample tree = new SegmentTreeSample(arr, n);
 
 		// Build segment tree from given array
 
