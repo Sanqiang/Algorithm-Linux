@@ -40,12 +40,13 @@ public class NestedIterator implements Iterator<Integer> {
 	// @return {int} the next element in the iteration
 	@Override
 	public Integer next() {
-		
+		return 0;
 	}
 
 	// @return {boolean} true if the iteration has more element or false
 	@Override
 	public boolean hasNext() {
+		return false;
 	}
 
 	@Override
