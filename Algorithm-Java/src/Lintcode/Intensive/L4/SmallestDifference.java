@@ -16,12 +16,16 @@ public class SmallestDifference {
 
 		int i = 0, j = 0;
 		while (i < A.length && j < B.length) {
-			if ((j == B.length && i < A.length) || A[i] <= A[j]) {
+			if (A[i] <= B[j]) {
 				smallest = Math.min(smallest, Math.abs(A[i] - B[j]));
-				++i;
-			} else if ((i == A.length && j < B.length) || A[i] > A[j]) {
+				if (i < A.length) {
+					++i;
+				}
+			} else if (A[i] > B[j]) {
 				smallest = Math.min(smallest, Math.abs(A[i] - B[j]));
-				++j;
+				if (j < B.length) {
+					++j;
+				}
 			}
 		}
 
