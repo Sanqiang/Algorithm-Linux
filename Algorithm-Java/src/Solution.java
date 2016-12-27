@@ -1,226 +1,97 @@
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.HashMap;
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
 
 public class Solution {
-	class HeapNode {
-		int pos_;
-		int cnt_;
 
-		public HeapNode(int pos, int cnt) {
-			this.pos_ = pos;
-			this.cnt_ = cnt;
+	static String processE(String line) {
+		StringBuilder temp = new StringBuilder();
+		boolean process_flag = false;
+		for (int i = line.length() - 1; i >= 3; i--) {
+			char ch = line.charAt(i);
+			if (process_flag) {
+				temp.insert(0, ch);
+				break;
+			} else {
+				temp.insert(0, ch);
+			}
+			if (ch == '@') {
+				process_flag = true;
+			}
 		}
+		for (int i = 0; i < 5; i++) {
+			temp.insert(0, "*");
+		}
+		temp.insert(0, line.charAt(2));
+		temp.insert(0, "E:");
+		return temp.toString();
 	}
 
-	class HashHeap {
-
-		private ArrayList<Integer> heap_;
-		private HashMap<Integer, HeapNode> hash_;
-		private boolean is_max_;
-		private int size_;
-
-		public HashHeap(boolean is_max) {
-			this.heap_ = new ArrayList<Integer>();
-			this.hash_ = new HashMap<Integer, HeapNode>();
-			this.is_max_ = is_max;
+	static String processP(String line) {
+		StringBuilder temp = new StringBuilder();
+		int i = line.length() - 1;
+		for (; i >= line.length() - 4; i--) {
+			char ch = line.charAt(i);
+			temp.insert(0, ch);
 		}
-
-		// ==============================implementation
-		// functions==============================//
-
-		public void push(int value) {
-			if (this.hash_.containsKey(value)) {
-				HeapNode node = this.hash_.get(value);
-				node.cnt_++;
-			} else {
-				this.heap_.add(value);
-				this.hash_.put(value, new HeapNode(this.heap_.size() - 1, 1));
-				rise(this.heap_.size() - 1);
-			}
-			++this.size_;
-		}
-
-		public int poll() {
-			int value = this.heap_.get(0);
-			HeapNode node = this.hash_.get(value);
-			if (node.cnt_ == 1) {
-				swap(0, this.heap_.size() - 1);
-				this.heap_.remove(this.heap_.size() - 1);
-				this.hash_.remove(value);
-				sink(0);
-			} else {
-				node.cnt_--;
-			}
-			--this.size_;
-			return value;
-		}
-
-		public int peek() {
-			int value = this.heap_.get(0);
-			return value;
-		}
-
-		public void delete(int value) {
-			HeapNode node = this.hash_.get(value);
-			if (node.cnt_ == 1) {
-				int idx = node.pos_;
-				swap(idx, this.heap_.size() - 1);
-				this.hash_.remove(value);
-				this.heap_.remove(this.heap_.size() - 1);
-				if (idx == heap_.size() - 1) {
-					rise(idx);
-					sink(idx);
-				}
-			} else {
-				node.cnt_--;
-			}
-			--this.size_;
-		}
-
-		public int getSize() {
-			return this.size_;
-		}
-
-		public void sink(int idx) {
-			while (true) {
-				int left_idx = getLeftChild(idx);
-				int right_idx = getRightChild(idx);
-				int son_idx = idx;
-				if (left_idx < this.heap_.size() && isPrior(left_idx, idx)) {
-					son_idx = left_idx;
-				}
-				if (right_idx < this.heap_.size() && isPrior(right_idx, idx)) {
-					son_idx = right_idx;
-				}
-				if (son_idx == idx) {
-					break;
-				} else {
-					swap(son_idx, idx);
-				}
-			}
-		}
-
-		public void rise(int idx) {
-			while (getParent(idx) != idx) {
-				int parent_idx = getParent(idx);
-				if (isPrior(idx, parent_idx)) {
-					swap(idx, parent_idx);
-					idx = parent_idx;
-				} else {
+		int cnt = 6;
+		temp.insert(0, "***-***-");
+		for (; i >= 2; i--) {
+			char ch = line.charAt(i);
+			if (ch >= '0' && ch <= '9') {
+				--cnt;
+				if (cnt == 0) {
+					--i;
 					break;
 				}
 			}
 		}
-
-		// ==============================helper
-		// functions==============================//
-		public int getLeftChild(int i) {
-			return i * 2 + 1;
-		}
-
-		public int getRightChild(int i) {
-			return i * 2 + 2;
-		}
-
-		public int getParent(int i) {
-			return (i - 1) / 2;
-		}
-
-		public void swap(int i, int j) {
-			int temp = heap_.get(i);
-			heap_.set(i, heap_.get(j));
-			heap_.set(j, temp);
-
-			HeapNode node_i = hash_.get(i), node_j = hash_.get(j);
-			hash_.put(j, node_j);
-			hash_.put(i, node_i);
-		}
-
-		public boolean isPrior(int left, int right) {
-			if (this.is_max_) {
-				return heap_.get(left) >= heap_.get(right);
+		boolean process_flag = true;
+		for (; i >= 2; i--) {
+			char ch = line.charAt(i);
+			if (ch >= '0' && ch <= '9') {
+				temp.insert(0, "*");
+				process_flag = true;
+			} else if (ch == '+') {
+				temp.insert(0, ch);
+				process_flag = true;
 			} else {
-				return heap_.get(left) <= heap_.get(right);
-			}
-		}
-	}
-
-	/**
-	 * @param buildings:
-	 *            A list of lists of integers
-	 * @return: Find the outline of those buildings
-	 */
-	class BuildEntry {
-		public int index, height;
-		boolean start;
-
-		public BuildEntry(int index, boolean start, int height) {
-			this.index = index;
-			this.height = height;
-			this.start = start;
-		}
-	}
-
-	class BuildComparator implements Comparator<BuildEntry> {
-
-		@Override
-		public int compare(BuildEntry o1, BuildEntry o2) {
-			return o1.index - o2.index;
-		}
-
-	}
-
-	/**
-	 * @param buildings:
-	 *            A list of lists of integers
-	 * @return: Find the outline of those buildings
-	 */
-	public ArrayList<ArrayList<Integer>> buildingOutline(int[][] buildings) {
-		ArrayList<ArrayList<Integer>> results = new ArrayList<ArrayList<Integer>>();
-		if (buildings == null || buildings.length == 0 || buildings[0].length == 0) {
-			return results;
-		}
-
-		ArrayList<BuildEntry> entries = new ArrayList<BuildEntry>();
-		for (int i = 0; i < buildings.length; i++) {
-			entries.add(new BuildEntry(buildings[i][0], true, buildings[i][2]));
-			entries.add(new BuildEntry(buildings[i][1], false, buildings[i][2]));
-		}
-		Collections.sort(entries, new BuildComparator());
-
-		HashHeap heap = new HashHeap(true);
-		BuildEntry pre_entry = null;
-		for (int i = 0; i < entries.size(); i++) {
-			if (heap.getSize() == 0) {
-				pre_entry = entries.get(i);
-			} else {
-				if (entries.get(i).height > heap.peek()) {
-					ArrayList<Integer> temp = new ArrayList<Integer>();
-					temp.add(pre_entry.index);
-					temp.add(entries.get(i).index);
-					temp.add(heap.peek());
-					results.add(temp);
-					pre_entry = entries.get(i);
-				}
-				if (entries.get(i).start) {
-					heap.push(entries.get(i).height);
-				} else {
-					int temp_height = entries.get(i).height;
-					heap.delete(temp_height);
-					if (heap.getSize() == 0) {
-						ArrayList<Integer> temp = new ArrayList<Integer>();
-						temp.add(pre_entry.index);
-						temp.add(entries.get(i).index);
-						temp.add(temp_height);
-						results.add(temp);
-					}
+				if (process_flag) {
+					temp.insert(0, "-");
+					process_flag = false;
 				}
 			}
 		}
-
-		return results;
+		if (temp.toString().startsWith("-")) {
+			temp.deleteCharAt(0);
+		}
+		temp.insert(0, "P:");
+		return temp.toString();
 	}
 
+	public static void main(String args[]) throws Exception {
+		Scanner scan = new Scanner(System.in);
+		String line = null;
+
+		StringBuilder sBuilder = new StringBuilder();
+
+		while (scan.hasNextLine()) {
+			line = scan.nextLine();
+			if (line.length() == 0) {
+				break;
+			}
+			
+			if (line.startsWith("E")) {
+				sBuilder.append(processE(line)).append("\n");
+			} else if (line.startsWith("P")) {
+				sBuilder.append(processP(line)).append("\n");
+			}
+		}
+		sBuilder.setLength(sBuilder.length() - 1);
+		scan.close();
+
+		System.out.println(sBuilder.toString());
+	}
 }
