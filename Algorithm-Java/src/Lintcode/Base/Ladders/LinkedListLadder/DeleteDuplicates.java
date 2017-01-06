@@ -33,16 +33,17 @@ public class DeleteDuplicates {
 		ListNode temp = pre_head;
 
 		while (temp != null) {
-			if (temp.next != null && temp.next.next != null && temp.next.val == temp.next.next.val) {
+			if (temp.next != null && temp.next.next != null 
+					&& temp.next.val == temp.next.next.val) {
 				int val = temp.next.val;
 				ListNode loop = temp.next;
 				while(loop != null && loop.val == val){
 					loop = loop.next;
 				}
 				temp.next = loop;
+			}else{
+				temp = temp.next;
 			}
-
-			temp = temp.next;
 		}
 
 		return pre_head.next;

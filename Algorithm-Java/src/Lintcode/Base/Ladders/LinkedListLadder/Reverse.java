@@ -34,7 +34,24 @@ public class Reverse {
 	public ListNode reverseBetween(ListNode head, int m, int n) {
 		ListNode pre_head = new ListNode(0);
 		pre_head.next = head;
-
+		
+		ListNode pri = pre_head;
+		for(int i = 0; i < m - 1; ++i){
+			pri = pri.next;
+		}
+		ListNode left1 = pri;
+		pri = pri.next;
+		ListNode left2 = pri;
+		ListNode cur = pri.next;
+		for(int i = m; i < n; ++i){
+			ListNode next = cur.next;
+			cur.next = pri;
+			pri = cur;
+			cur = next;
+		}
+		left1.next = pri;
+		left2.next = cur;
+		
 		return pre_head.next;
 	}
 }
